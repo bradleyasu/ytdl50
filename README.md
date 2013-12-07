@@ -1,11 +1,14 @@
-ytdl50
+YouTube Dowonloader 5.0 HD
 ======
 
-YouTube Dowonloader 5.0 HD
+PLEASE DO NOT JUDGE ME ON THIS CODE!  I whipped up most of this software in a weekend.  I am currently going through and cleaning it up/adding comments.  I've decided to share the code anyway as I have noticed there is some interest in it.
+
+
 
 Download Compiled Versions at: http://hexotic.net/software/ytdownloader/
 
 This project is a front end for the YouTube-DL command-line utility.
+
 
 USER AGREEMENT
 
