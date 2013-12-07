@@ -1,0 +1,64 @@
+Hey Everyone!
+
+
+Version 5.0.6:
+
+Good God, I am sorry guys.  Found another bug :(
+
+Bug fix: Downloads were fixed, but ID3 tags weren't being added.
+
+Should be fixed now!
+
+--------------
+
+
+Version 5.0.5:
+
+Bug fix: all downloads were showing as Unresolved Destination.  
+Should be fixed now.
+
+Sorry guys, please forgive me!
+
+--------------
+
+
+Version 5.0.4:
+
+This update is mainly a bugfix.  There have been users
+having issues with a NullPointerException when a download
+completes at 100%.  This fix should resolve that issue.
+
+Please let me know if you are still experiencing any problems.
+
+Thanks!
+
+support@hexotic.net
+
+
+--------------
+
+Version 5.0.3:
+
+1: Now you can download YouTube playlists!  
+   - Just make sure you use the playlist url.  
+   - For example: http://www.youtube.com/playlist?list=PL51DD6D9C28308039
+      
+2: Some small bug fixes.  Better performance for you! :)
+
+3: And finally, the addition of download sites.  Including: (but not limited to) 
+
+- 8tracks.com
+- vimeo.com
+- bandcamp.com
+- break.com
+- collegehumor.com
+- redtube.com
+- xhamster.com
+- xvideos.com
+- And many others.
+
+Please email me with any bugs, comments, or questions!  
+
+I promise more enhancements are on the way :D
+
+support@hexotic.net
