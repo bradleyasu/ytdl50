@@ -1,8 +1,17 @@
 package com.hexotic.cons;
-
+/**
+ * This class contains constant variables that will be used throughout the
+ * software.
+ * 
+ * The version number is will be sent to updater software to decide if updates
+ * are required.
+ * 
+ * @author Bradley Sheets
+ *
+ */
 public class Constants {
 
-	public static final String VERSION = "5.0.6";
+	public static final String VERSION = "5.0.7";
 	
 	public static final String PROG_NAME = "YouTube Downloader";
 	public static final String COMPANY_NAME = "Hexotic Software";

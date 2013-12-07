@@ -1,5 +1,18 @@
 Hey Everyone!
 
+Version 5.0.7:
+
+You can now download playlists from both types of urls!
+
+You no longer have to be in "playlist view" on youtube.  You can copy the url from the address
+bar while viewing a video in the playlist
+
+SOURCE CODE IS NOW AVAILABLE FOR VIEWING: 
+
+http://github.com/bradleyasu/ytdl50
+
+--------------
+
 
 Version 5.0.6:
 

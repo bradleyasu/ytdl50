@@ -13,6 +13,13 @@ import com.hexotic.cons.Constants;
 import com.hexotic.gui.DownloadItem;
 import com.hexotic.gui.MessageBox;
 
+/**
+ * This class is responsible for downloading media.  It will execute the 
+ * youtube-dl open source software
+ * 
+ * @author Bradley Sheets
+ *
+ */
 public class Downloader {
 
 	private String downloader = null;

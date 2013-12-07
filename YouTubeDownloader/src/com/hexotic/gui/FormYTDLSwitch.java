@@ -12,6 +12,12 @@ import javax.swing.JPanel;
 
 import com.hexotic.utils.Settings;
 
+/**
+ * This is a Swith Control view switching between "Video" and "MP3" mode
+ * 
+ * @author Bradley Sheets
+ */
+
 public class FormYTDLSwitch extends JPanel{
 	private String downloadFormat = "video";
 	private JLabel label;
