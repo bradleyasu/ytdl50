@@ -1,5 +1,19 @@
 Hey Everyone!
 
+Version 5.0.8:
+
+Added even more accepted web sites!
+
+Including:
+- comedycentral.com
+- tube8.com
+- pornhub.com
+- and more!
+
+If you would like a full list, please contact support@hexotic.net
+
+--------------
+
 Version 5.0.7:
 
 You can now download playlists from both types of urls!

@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import javax.swing.filechooser.FileSystemView;
-
 import org.blinkenlights.jid3.ID3Exception;
 import org.blinkenlights.jid3.v1.ID3V1Tag.Genre;
 
