@@ -59,7 +59,7 @@ public class CentralDownloadControl extends Observable{
 						"tumblr.com",
 						"mtv.com",
 						"youku.com",
-						"xnxx.com",
+						"xnxx.com", 
 						"youjizz.com",
 						"pornotube.com",
 						"youporn.com",
