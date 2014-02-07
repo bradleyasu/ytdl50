@@ -14,7 +14,14 @@ import org.apache.commons.validator.routines.UrlValidator;
 import com.hexotic.cons.Constants;
 import com.hexotic.gui.DownloadItem;
 import com.hexotic.gui.MessageBox;
-
+/**
+ * 
+ * CentralDownloadControl is responsible for verifying URL's and
+ * downloading managing each item for download to local file system
+ * 
+ * @author Bradley Sheets
+ *
+ */
 public class CentralDownloadControl extends Observable{
 	private ArrayList<DownloadItem> downloads = new ArrayList<DownloadItem>();
 	private static CentralDownloadControl instance = null;
