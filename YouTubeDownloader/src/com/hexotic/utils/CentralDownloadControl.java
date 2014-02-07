@@ -69,7 +69,14 @@ public class CentralDownloadControl extends Observable{
 						"nick.com",
 						"colbertnation.com",
 						"thedailyshow.com",
-						"vimeo.com"};
+						"vimeo.com",
+						"vk.com",
+						"malemotion.com",
+						"extremetube.com",
+						"southparkstudios.com",
+						"ted.com",
+						"xtube.com"};
+	
 	private CentralDownloadControl(){
 		downloadDirectory = Settings.getInstance().getProperty("downloadDir");
 		if(downloadDirectory == null || downloadDirectory.equals("")){
