@@ -124,7 +124,7 @@ class MessagePanel extends JPanel{
 		JLabel indentLabel = new JLabel("");
 		indentLabel.setPreferredSize(new Dimension(344, 10));
 		this.add(indentLabel);
-		XButton close = new XButton("    okay");
+		XButton close = new XButton("okay");
 		close.setPreferredSize(new Dimension(100, 22));
 		close.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){

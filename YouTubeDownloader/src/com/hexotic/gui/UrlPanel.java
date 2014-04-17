@@ -43,7 +43,7 @@ public class UrlPanel extends JPanel implements FlavorListener, ClipboardOwner, 
 
 	private JLabel urlLabel = new JLabel("URL:");
 	private XTextField url;
-	private XButton downloadButton = new XButton("Download");;
+	private XButton downloadButton = new XButton("Download");
 	private String clipboardCache = "";
 	
 	public UrlPanel(){

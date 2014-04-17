@@ -28,7 +28,7 @@ import com.hexotic.utils.CentralDownloadControl;
 import com.hexotic.utils.Downloader;
 import com.hexotic.utils.VerticalWrapLayout;
 
-public class DownloadItem extends JXPanel implements Runnable{
+public class DownloadItem extends JXPanel implements Runnable, Comparable<DownloadItem>{
 	private String url;
 	private JLabel thumbnail;
 	private JProgressBar prog;
@@ -39,7 +39,10 @@ public class DownloadItem extends JXPanel implements Runnable{
 	private JPanel control; 
 	private ClassLoader cldr = this.getClass().getClassLoader();
 	private boolean mp3Format = false;
+	private int id;
+	
 	public DownloadItem(String url){
+		this.id = CentralDownloadControl.getInstance().nextId();
 		mp3Format = CentralDownloadControl.getInstance().downloadAsMP3();
 		this.setOpaque(false);
 		if(!CentralDownloadControl.getInstance().isValid(url)){
@@ -328,4 +331,13 @@ public class DownloadItem extends JXPanel implements Runnable{
          }
          
 	 }
+
+	public int getId(){
+		return id;
+	}
+	 
+	@Override
+	public int compareTo(DownloadItem o) {
+		return o.getId() - this.id;
+	}
 }

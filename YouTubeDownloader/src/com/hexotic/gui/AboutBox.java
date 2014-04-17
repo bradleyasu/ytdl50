@@ -90,8 +90,7 @@ class AboutPanel extends JPanel{
 		this.add(info);
 		JLabel spaceLabel = new JLabel("");
 		spaceLabel.setPreferredSize(new Dimension(450,35));
-		XButton close = new XButton("    Close");
-		close.setPreferredSize(new Dimension(100, 22));
+		XButton close = new XButton("Close");
 		close.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				parent.dispose();

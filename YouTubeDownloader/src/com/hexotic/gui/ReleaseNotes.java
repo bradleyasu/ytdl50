@@ -94,7 +94,7 @@ class ReleaseNotesPanel extends JPanel{
 		this.add(scroller);
 		JLabel spaceLabel = new JLabel("");
 		spaceLabel.setPreferredSize(new Dimension(450,35));
-		XButton close = new XButton("    Close");
+		XButton close = new XButton("Close");
 		close.setPreferredSize(new Dimension(100, 22));
 		close.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){

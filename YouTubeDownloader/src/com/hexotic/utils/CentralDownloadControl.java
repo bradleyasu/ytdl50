@@ -29,6 +29,7 @@ public class CentralDownloadControl extends Observable{
 	private boolean downloadAsMp3 = false;
 	private String downloader = null;
 	private String downloadDirectory = "";
+	private int id = 0;
 	
 	String[] validUrls = { "youtube.com/watch?v=",
 						"bandcamp.com",
@@ -203,6 +204,10 @@ public class CentralDownloadControl extends Observable{
 			instance = new CentralDownloadControl();
 		}
 		return instance;
+	}
+	
+	public int nextId(){
+		return id++;
 	}
 	
 }

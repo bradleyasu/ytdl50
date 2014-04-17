@@ -4,43 +4,22 @@ import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Point;
-import java.awt.RenderingHints;
 
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
+import com.hexotic.lib.ui.buttons.SoftButton;
 
-public class XButton extends JButton{
+public class XButton extends SoftButton{
+
+	private static final long serialVersionUID = 4425782501114150434L;
 
 	public XButton(String text){
 		super(text);
-		setFont(new Font("Arial", Font.BOLD, 1));
+		setFont(new Font("Arial", Font.BOLD, 12));
 		setBackground(Color.WHITE);
-        setBorder(BorderFactory.createLineBorder(Color.black));
-		setBorder(BorderFactory.createEmptyBorder());
-        setPreferredSize(new Dimension(100, 23));
+		this.setBackgroundColor(new Color(0x434353));
+		this.setForeground(new Color(0xf2f2f2));
+		this.setArc(7);
+        setPreferredSize(new Dimension(100, 22));
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 	}
 
-
-	 protected void paintComponent(Graphics g) {
-		 super.paintComponent(g);
-		 Color[] colors = { new Color(255,34,102),
-		 			new Color(255,85,51),
-		 			new Color(255,68,85),
-					new Color(255,0,153),
-		 };
-         Graphics2D g2 = (Graphics2D) g.create();
-         g2.setPaint(new GradientPaint(new Point(0, 0), new Color(0x515151), new Point(0,
-                 getHeight()), new Color(0x121212)));         
-         g2.fillRoundRect(0, 0, getWidth(), getHeight(), 0,0);
-         g2.setPaint(new Color(0xf4f4f4));
-         g2.setFont(new Font("Arial", Font.BOLD, 11));
-         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-         g2.drawString(getText(), 24, 15);
-         g2.dispose();
-	 }
 }

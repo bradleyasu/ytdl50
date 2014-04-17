@@ -119,7 +119,7 @@ class OptionsPanel extends JPanel{
         spacer.setForeground(new Color(0xa0a0a0));
         this.add(spacer);
         
-        XButton saveAll = new XButton("  Save All");
+        XButton saveAll = new XButton("Save All");
         saveAll.addActionListener(new ActionListener(){
         	public void actionPerformed(ActionEvent e){
         		CentralDownloadControl.getInstance().setDownloadDirectory(folderChooser.getInput());

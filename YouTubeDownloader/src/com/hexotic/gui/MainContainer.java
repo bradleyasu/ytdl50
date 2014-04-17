@@ -18,9 +18,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 
+import com.hexotic.lib.ui.layout.AnimatedGridLayout;
 import com.hexotic.utils.CentralDownloadControl;
-import com.hexotic.utils.VerticalFlowLayout;
-import com.hexotic.utils.VerticalWrapLayout;
 import com.hexotic.utils.XHorizontalScrollBar;
 
 public class MainContainer extends JPanel{
@@ -56,7 +55,9 @@ class DownloadContainer extends JPanel implements Observer{
 	private ExecutorService pool = Executors.newFixedThreadPool(16);
 	public DownloadContainer(){
 		this.setBackground(Color.WHITE);
-		this.setLayout(new VerticalWrapLayout(VerticalFlowLayout.TOP));
+		//this.setLayout(new VerticalWrapLayout(VerticalFlowLayout.TOP));
+		AnimatedGridLayout layout = new AnimatedGridLayout(true);
+		this.setLayout(layout);
 		CentralDownloadControl.getInstance().addObserver(this);
 		this.setOpaque(false);
 		
