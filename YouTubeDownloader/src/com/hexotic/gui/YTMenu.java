@@ -35,8 +35,8 @@ public class YTMenu extends JMenuBar{
 
 		XMenuItem openList = new XMenuItem("Open List");
 		XMenuItem saveList = new XMenuItem("Save List");
-//		file.add(openList);
-//		file.add(saveList);
+		file.add(openList);
+		file.add(saveList);
 		JSeparator seperator = new JSeparator();
 		seperator.setForeground(new Color(210,210,210));
 		seperator.setBorder(BorderFactory.createEmptyBorder());
@@ -103,6 +103,9 @@ public class YTMenu extends JMenuBar{
 	}
 	
 	private JMenu getAboutMenu(){
+		
+		
+		
 		XMenu about = new XMenu("About");
 		XMenuItem license = new XMenuItem("About and License");
 		license.setPreferredSize(new Dimension(125, 20));
@@ -111,6 +114,15 @@ public class YTMenu extends JMenuBar{
 				new AboutBox();
 			}
 		});
+
+		XMenuItem releaseNotes = new XMenuItem("Release Notes");
+		releaseNotes.setPreferredSize(new Dimension(125, 20));
+		releaseNotes.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				new ReleaseNotes();
+			}
+		});
+//		about.add(releaseNotes);
 		about.add(license);
 		return about;
 	}

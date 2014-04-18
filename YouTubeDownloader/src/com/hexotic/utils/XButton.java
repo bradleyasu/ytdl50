@@ -15,7 +15,7 @@ public class XButton extends SoftButton{
 		super(text);
 		setFont(new Font("Arial", Font.BOLD, 12));
 		setBackground(Color.WHITE);
-		this.setBackgroundColor(new Color(0x434353));
+		this.setBackgroundColor(new Color(0x434547));
 		this.setForeground(new Color(0xf2f2f2));
 		this.setArc(7);
         setPreferredSize(new Dimension(100, 22));

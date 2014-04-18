@@ -25,6 +25,7 @@ import javax.swing.JPanel;
 
 import org.jdesktop.swingx.border.DropShadowBorder;
 
+import com.hexotic.lib.ui.layout.AnimatedGridLayout;
 import com.hexotic.utils.CentralDownloadControl;
 import com.hexotic.utils.Settings;
 import com.hexotic.utils.XButton;
