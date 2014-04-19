@@ -30,6 +30,11 @@ public class Settings {
 		return prop.getProperty(property);
 	}
 	
+	
+	public String getProperty(String property, String def){
+		return prop.getProperty(property, def);
+	}
+	
 	public void saveProperty(String property, String value){
 		prop.setProperty(property, value);
 		try {

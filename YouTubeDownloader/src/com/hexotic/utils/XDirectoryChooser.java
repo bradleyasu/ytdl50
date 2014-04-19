@@ -107,7 +107,7 @@ class DirectoryChooserPanel extends JPanel{
         treeScroll.setPreferredSize(new Dimension(350,300));
         this.add(treeScroll);
         
-        submitButton = new XButton("   Submit");
+        submitButton = new XButton("Submit");
         this.add(submitButton);
         submitButton.addActionListener(new ActionListener(){
         	public void actionPerformed(ActionEvent e){

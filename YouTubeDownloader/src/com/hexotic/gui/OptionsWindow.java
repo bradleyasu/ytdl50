@@ -25,7 +25,10 @@ import javax.swing.JPanel;
 
 import org.jdesktop.swingx.border.DropShadowBorder;
 
-import com.hexotic.lib.ui.layout.AnimatedGridLayout;
+import com.hexotic.cons.Constants;
+import com.hexotic.lib.audio.SoundFX;
+import com.hexotic.lib.ui.notificationbar.Notification;
+import com.hexotic.lib.ui.notificationbar.NotificationBar;
 import com.hexotic.utils.CentralDownloadControl;
 import com.hexotic.utils.Settings;
 import com.hexotic.utils.XButton;
@@ -47,7 +50,7 @@ public class OptionsWindow extends JFrame{
 		this.setBackground(new Color(0, 255, 0, 0));
 		pack();
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-		this.setSize(new Dimension(500, 235));
+		this.setSize(new Dimension(500, 305));
 		int w = this.getSize().width;
 		int h = this.getSize().height;
 		int x = (dim.width-w)/2;
@@ -102,14 +105,27 @@ class OptionsPanel extends JPanel{
         });
         this.add(closeBtn);
         
-        JLabel seperator = new JLabel("even more options coming soon :)");
+        
+        JLabel seperator = new JLabel(Constants.PROG_NAME+" version: "+Constants.VERSION);
         seperator.setPreferredSize(new Dimension(480, 30));
         seperator.setHorizontalAlignment(JLabel.CENTER);
         seperator.setForeground(new Color(0xa0a0a0));
         this.add(seperator);
+
         
-        final FormYTDLSwitch ytSwitch = new FormYTDLSwitch();
-        this.add(ytSwitch);
+        
+//        String downloadFormat = Settings.getInstance().getProperty("defaultDownloadMode", "video");
+        
+        final SwitchForm autoremoveSwitch = new SwitchForm("Automatically remove completed downloads?", false);
+        this.add(autoremoveSwitch);
+        
+        final SwitchForm animationSwitch = new SwitchForm("Enable UI animations?", false);
+        this.add(animationSwitch);
+        
+        
+        String downloadFormat = Settings.getInstance().getProperty("defaultDownloadMode", "video");
+        final SwitchForm asMp3Switch = new SwitchForm("Download videos in MP3 format by default?", downloadFormat.equals("video") ? false : true);
+        this.add(asMp3Switch);
         
         folderChooser = new FormFolderChooserPanel("Download To:", CentralDownloadControl.getInstance().getDownloadDirectory());
         this.add(folderChooser);
@@ -124,7 +140,9 @@ class OptionsPanel extends JPanel{
         saveAll.addActionListener(new ActionListener(){
         	public void actionPerformed(ActionEvent e){
         		CentralDownloadControl.getInstance().setDownloadDirectory(folderChooser.getInput());
-        		Settings.getInstance().saveProperty("defaultDownloadMode", ytSwitch.getDownloadFormat());
+        		
+        		boolean downloadAsMp3 = asMp3Switch.isSet();
+        		Settings.getInstance().saveProperty("defaultDownloadMode", downloadAsMp3 ? "audio" : "video");
         		parent.dispose();
         	}
         });
@@ -153,5 +171,5 @@ class OptionsPanel extends JPanel{
 			 g.setColor(colors[index]);
 			 g.fillRect(i*2, getHeight()-7, 10, 2);
 		}
-	 }
+	}
 }
