@@ -7,10 +7,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JSeparator;
 
 import com.hexotic.utils.CentralDownloadControl;
@@ -18,6 +16,7 @@ import com.hexotic.utils.Settings;
 import com.hexotic.utils.XCheckBoxMenuItem;
 import com.hexotic.utils.XMenu;
 import com.hexotic.utils.XMenuItem;
+import com.hexotic.lib.ui.windows.dialog.IODialog;
 
 public class YTMenu extends JMenuBar{
 	private ClassLoader cldr = this.getClass().getClassLoader();
@@ -34,6 +33,12 @@ public class YTMenu extends JMenuBar{
 		XMenu file = new XMenu("File");
 
 		XMenuItem openList = new XMenuItem("Open List");
+		openList.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				new IODialog(null, "Open a file", "Hello");
+			}
+		});
+		
 		XMenuItem saveList = new XMenuItem("Save List");
 		file.add(openList);
 		file.add(saveList);

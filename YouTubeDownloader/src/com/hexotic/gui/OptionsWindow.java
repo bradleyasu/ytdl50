@@ -26,7 +26,6 @@ import javax.swing.JPanel;
 import org.jdesktop.swingx.border.DropShadowBorder;
 
 import com.hexotic.cons.Constants;
-import com.hexotic.lib.audio.SoundFX;
 import com.hexotic.lib.ui.notificationbar.Notification;
 import com.hexotic.lib.ui.notificationbar.NotificationBar;
 import com.hexotic.utils.CentralDownloadControl;
@@ -111,6 +110,7 @@ class OptionsPanel extends JPanel{
         seperator.setHorizontalAlignment(JLabel.CENTER);
         seperator.setForeground(new Color(0xa0a0a0));
         this.add(seperator);
+        
 
         
         
