@@ -92,6 +92,7 @@ class AboutPanel extends JPanel{
 		spaceLabel.setPreferredSize(new Dimension(450,35));
 		XButton close = new XButton("Close");
 		close.addActionListener(new ActionListener(){
+			@Override
 			public void actionPerformed(ActionEvent e){
 				parent.dispose();
 			}
@@ -101,7 +102,8 @@ class AboutPanel extends JPanel{
 		
 	}
 	
-	 protected void paintComponent(Graphics g) {
+	 @Override
+	protected void paintComponent(Graphics g) {
 		// Allow super to paint
 		super.paintComponent(g);
 		

@@ -23,6 +23,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
 
 import org.jdesktop.swingx.border.DropShadowBorder;
 
@@ -80,21 +81,26 @@ class DirectoryChooserPanel extends JPanel{
         
         final JLabel closeBtn = new JLabel("X");
         closeBtn.setPreferredSize(new Dimension(10,30));
-        closeBtn.setVerticalAlignment(JLabel.TOP);
+        closeBtn.setVerticalAlignment(SwingConstants.TOP);
         closeBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         closeBtn.setForeground(new Color(0xababab));
         closeBtn.addMouseListener(new MouseListener(){
+			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				parent.dispose();
 			}
+			@Override
 			public void mouseEntered(MouseEvent arg0) {
 				closeBtn.setForeground(new Color(0x484848));
 			}
+			@Override
 			public void mouseExited(MouseEvent arg0) {
 				closeBtn.setForeground(new Color(0xababab));
 			}
+			@Override
 			public void mousePressed(MouseEvent arg0) {
 			}
+			@Override
 			public void mouseReleased(MouseEvent arg0) {
 			}
         	
@@ -110,14 +116,16 @@ class DirectoryChooserPanel extends JPanel{
         submitButton = new XButton("Submit");
         this.add(submitButton);
         submitButton.addActionListener(new ActionListener(){
-        	public void actionPerformed(ActionEvent e){
+        	@Override
+			public void actionPerformed(ActionEvent e){
         		parent.getControl().setText(tree.getSelected());
         		parent.dispose();
         	}
         });
 	}
 	
-	 protected void paintComponent(Graphics g) {
+	 @Override
+	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g.create();
 		

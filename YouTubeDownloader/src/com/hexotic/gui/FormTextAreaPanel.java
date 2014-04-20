@@ -5,10 +5,9 @@ import java.awt.FlowLayout;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
 
 import com.hexotic.utils.FormInput;
-import com.hexotic.utils.XInputBox;
 import com.hexotic.utils.XTextArea;
 
 public class FormTextAreaPanel extends JPanel implements FormInput{
@@ -19,13 +18,14 @@ public class FormTextAreaPanel extends JPanel implements FormInput{
 		this.setOpaque(false);
 		JLabel promptLbl = new JLabel(prompt);
 		promptLbl.setPreferredSize(new Dimension(450,20));
-		promptLbl.setHorizontalAlignment(JLabel.LEFT);
+		promptLbl.setHorizontalAlignment(SwingConstants.LEFT);
 		((FlowLayout)this.getLayout()).setVgap(0);
 		this.add(promptLbl);
 		this.add(input);		
 		this.setPreferredSize(new Dimension(450, 80));
 	}
 
+	@Override
 	public String getInput() {
 		return input.getText();
 	}

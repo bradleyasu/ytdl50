@@ -25,6 +25,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 
 import org.blinkenlights.jid3.v1.ID3V1Tag;
@@ -119,22 +120,27 @@ class TagEditorPanel extends JPanel{
         header.setPreferredSize(new Dimension(520, 30));
         header.setFont(new Font("Arial", Font.BOLD, 24));
         final JLabel closeBtn = new JLabel("X");
-        closeBtn.setVerticalAlignment(JLabel.TOP);
+        closeBtn.setVerticalAlignment(SwingConstants.TOP);
         closeBtn.setPreferredSize(new Dimension(12,30));
         closeBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         closeBtn.setForeground(new Color(0xababab));
         closeBtn.addMouseListener(new MouseListener(){
+			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				parent.dispose();
 			}
+			@Override
 			public void mouseEntered(MouseEvent arg0) {
 				closeBtn.setForeground(new Color(0x484848));
 			}
+			@Override
 			public void mouseExited(MouseEvent arg0) {
 				closeBtn.setForeground(new Color(0xababab));
 			}
+			@Override
 			public void mousePressed(MouseEvent arg0) {
 			}
+			@Override
 			public void mouseReleased(MouseEvent arg0) {
 			}
         	
@@ -146,7 +152,7 @@ class TagEditorPanel extends JPanel{
         
         JLabel footer = new JLabel(downloadTitle);
         footer.setPreferredSize(new Dimension(550, 15));
-        footer.setHorizontalAlignment(JLabel.RIGHT);
+        footer.setHorizontalAlignment(SwingConstants.RIGHT);
         footer.setForeground(new Color(0xc2c2c2));
         this.add(footer, BorderLayout.SOUTH);
        
@@ -157,7 +163,7 @@ class TagEditorPanel extends JPanel{
         albumInput = new FormInputPanel("Album", (String)currentTags[2]);
         yearInput = new FormInputPanel("Year", (String)currentTags[3]);
         
-        genreInput = new FormComboPanel("Genre", downloader.getTagger().getGenres(),(ID3V1Tag.Genre)currentTags[4]);
+        genreInput = new FormComboPanel("Genre", downloader.getTagger().getGenres(),currentTags[4]);
         ((Component)genreInput).setPreferredSize(new Dimension(505,30));
         commentsInput = new FormTextAreaPanel("Comments", (String)currentTags[5]);
         formPanel.add((Component) titleInput);
@@ -170,7 +176,8 @@ class TagEditorPanel extends JPanel{
         
         XButton saveTags = new XButton("Save Tags");
         saveTags.addActionListener(new ActionListener(){
-        	public void actionPerformed(ActionEvent e){
+        	@Override
+			public void actionPerformed(ActionEvent e){
         		downloader.applyTags((String)albumInput.getInput(), 
 			        				(String)artistInput.getInput(), 
 			        				(String)commentsInput.getInput(), 
@@ -186,7 +193,8 @@ class TagEditorPanel extends JPanel{
         this.add(formPanel);
 	}
 	
-	 protected void paintComponent(Graphics g) {
+	 @Override
+	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g.create();
 		

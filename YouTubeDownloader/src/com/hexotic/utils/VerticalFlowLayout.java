@@ -221,7 +221,8 @@ public class VerticalFlowLayout implements LayoutManager, java.io.Serializable
      * @param name the name of the component
      * @param comp the component to be added
      */
-    public void addLayoutComponent(String name, Component comp) {
+    @Override
+	public void addLayoutComponent(String name, Component comp) {
     }
 
     /**
@@ -230,7 +231,8 @@ public class VerticalFlowLayout implements LayoutManager, java.io.Serializable
      * @param comp the component to remove
      * @see    java.awt.Container#removeAll
      */
-    public void removeLayoutComponent(Component comp) {
+    @Override
+	public void removeLayoutComponent(Component comp) {
     }
 
     /**
@@ -244,7 +246,8 @@ public class VerticalFlowLayout implements LayoutManager, java.io.Serializable
      * @see #minimumLayoutSize
      * @see    java.awt.Container#getPreferredSize
      */
-    public Dimension preferredLayoutSize(Container target)
+    @Override
+	public Dimension preferredLayoutSize(Container target)
     {
     synchronized (target.getTreeLock())
     {
@@ -291,7 +294,8 @@ public class VerticalFlowLayout implements LayoutManager, java.io.Serializable
      * @see    java.awt.Container
      * @see    java.awt.Container#doLayout
      */
-    public Dimension minimumLayoutSize(Container target)
+    @Override
+	public Dimension minimumLayoutSize(Container target)
     {
     synchronized (target.getTreeLock())
     {
@@ -339,7 +343,8 @@ public class VerticalFlowLayout implements LayoutManager, java.io.Serializable
      * @see Container
      * @see    java.awt.Container#doLayout
      */
-    public void layoutContainer(Container target)
+    @Override
+	public void layoutContainer(Container target)
     {
     synchronized (target.getTreeLock())
     {
@@ -441,7 +446,8 @@ public class VerticalFlowLayout implements LayoutManager, java.io.Serializable
      * object and its values.
      * @return   a string representation of this layout
      */
-    public String toString()
+    @Override
+	public String toString()
     {
         String str = "";
 
@@ -475,7 +481,8 @@ public class VerticalFlowLayout implements LayoutManager, java.io.Serializable
         {
             private int i = 8;
 
-            public void actionPerformed(ActionEvent e)
+            @Override
+			public void actionPerformed(ActionEvent e)
             {
                 buttons.add( new JRadioButton("button R Us" + i++) );
                 buttons.revalidate();

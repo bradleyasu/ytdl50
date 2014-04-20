@@ -82,7 +82,8 @@ public class Main {
 		UIManager.put( "control", new Color(0xe1e1e1) );
 		
 		UIManager.put("CheckBoxMenuItem.checkIcon", new Icon() {
-			  public void paintIcon(Component c, Graphics g, int x, int y) {
+			  @Override
+			public void paintIcon(Component c, Graphics g, int x, int y) {
 			    Graphics2D g2 = (Graphics2D)g;
 			    g2.translate(x,y);
 			    ButtonModel m = ((AbstractButton)c).getModel();
@@ -93,26 +94,13 @@ public class Main {
 			    g2.fillOval( 0, 2, 10, 10 );
 			    g2.translate(-x,-y);
 			  }
-			  public int getIconWidth()  { return 14; }
-			  public int getIconHeight() { return 14; }
+			  @Override
+			public int getIconWidth()  { return 14; }
+			  @Override
+			public int getIconHeight() { return 14; }
 			});
 		new MainWindow();
 		new Updater();
-		
-		boolean showRelease = false;
-		String release = Settings.getInstance().getProperty("release"); 
-		if (release != null){
-			if (!release.equals(Constants.VERSION)){
-				showRelease = true;
-			}
-		} else {
-			showRelease = true;
-		}
-		
-		if (showRelease){
-			new ReleaseNotes();
-			Settings.getInstance().saveProperty("release", Constants.VERSION);
-		}
 	}
 
 }

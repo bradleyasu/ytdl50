@@ -16,6 +16,7 @@ import com.hexotic.utils.Settings;
 import com.hexotic.utils.XCheckBoxMenuItem;
 import com.hexotic.utils.XMenu;
 import com.hexotic.utils.XMenuItem;
+import com.hexotic.cons.Constants;
 import com.hexotic.lib.ui.windows.dialog.IODialog;
 
 public class YTMenu extends JMenuBar{
@@ -34,6 +35,7 @@ public class YTMenu extends JMenuBar{
 
 		XMenuItem openList = new XMenuItem("Open List");
 		openList.addActionListener(new ActionListener(){
+			@Override
 			public void actionPerformed(ActionEvent e){
 				new IODialog(null, "Open a file", "Hello");
 			}
@@ -50,6 +52,7 @@ public class YTMenu extends JMenuBar{
 
 		XMenuItem quit = new XMenuItem("Quit");
 		quit.addActionListener(new ActionListener(){
+			@Override
 			public void actionPerformed(ActionEvent e){
 				System.exit(0);
 			}
@@ -64,6 +67,7 @@ public class YTMenu extends JMenuBar{
 		XCheckBoxMenuItem autoDownload = new XCheckBoxMenuItem("Auto Download From Clipboard");
 		autoDownload.setPreferredSize(new Dimension(210, 20));
 		autoDownload.addActionListener(new ActionListener(){
+			@Override
 			public void actionPerformed(ActionEvent e){
 				XCheckBoxMenuItem temp = (XCheckBoxMenuItem)e.getSource();
 				CentralDownloadControl.getInstance().setDownloadOnCopy(temp.isSelected());
@@ -73,6 +77,7 @@ public class YTMenu extends JMenuBar{
 		XCheckBoxMenuItem mp3Download = new XCheckBoxMenuItem("Convert To MP3 on Download");
 		mp3Download.setPreferredSize(new Dimension(210, 20));
 		mp3Download.addActionListener(new ActionListener(){
+			@Override
 			public void actionPerformed(ActionEvent e){
 				XCheckBoxMenuItem temp = (XCheckBoxMenuItem)e.getSource();
 				CentralDownloadControl.getInstance().setDownloadAsMP3(temp.isSelected());
@@ -95,6 +100,7 @@ public class YTMenu extends JMenuBar{
 		XMenuItem prefs = new XMenuItem("Custom Settings");
 		
 		prefs.addActionListener(new ActionListener(){
+			@Override
 			public void actionPerformed(ActionEvent e){
 				new OptionsWindow();
 			}
@@ -115,24 +121,27 @@ public class YTMenu extends JMenuBar{
 		XMenuItem license = new XMenuItem("About and License");
 		license.setPreferredSize(new Dimension(125, 20));
 		license.addActionListener(new ActionListener(){
+			@Override
 			public void actionPerformed(ActionEvent e){
 				new AboutBox();
 			}
 		});
 
-		XMenuItem releaseNotes = new XMenuItem("Release Notes");
-		releaseNotes.setPreferredSize(new Dimension(125, 20));
+		XMenuItem releaseNotes = new XMenuItem("Release Notes ("+Constants.VERSION+")");
+		releaseNotes.setPreferredSize(new Dimension(155, 20));
 		releaseNotes.addActionListener(new ActionListener(){
+			@Override
 			public void actionPerformed(ActionEvent e){
 				new ReleaseNotes();
 			}
 		});
-//		about.add(releaseNotes);
+		about.add(releaseNotes);
 		about.add(license);
 		return about;
 	}
 	
-	 protected void paintComponent(Graphics g) {
+	 @Override
+	protected void paintComponent(Graphics g) {
 		 super.paintComponent(g);
 		 Color[] colors = { new Color(255,34,102),
 				 			new Color(255,85,51),

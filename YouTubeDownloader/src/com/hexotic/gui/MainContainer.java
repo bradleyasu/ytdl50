@@ -32,10 +32,12 @@ public class MainContainer extends JPanel{
 		scroller.setHorizontalScrollBar(new XHorizontalScrollBar());
 		scroller.getHorizontalScrollBar().setUI(new BasicScrollBarUI()
 	    {   
-	        protected JButton createDecreaseButton(int orientation) {
+	        @Override
+			protected JButton createDecreaseButton(int orientation) {
 	            return createButton();
 	        }
-	        protected JButton createIncreaseButton(int orientation) {
+	        @Override
+			protected JButton createIncreaseButton(int orientation) {
 	            return createButton();
 	        }
 	        private JButton createButton() {
@@ -63,6 +65,7 @@ class DownloadContainer extends JPanel implements Observer{
 		
 	}
 
+	@Override
 	public void update(Observable o, Object arg) {
 		if(arg instanceof DownloadItem){
 			DownloadItem download = CentralDownloadControl.getInstance().getLast();
@@ -76,7 +79,8 @@ class DownloadContainer extends JPanel implements Observer{
 		}
 	}
 	
-	 protected void paintComponent(Graphics g) {
+	 @Override
+	protected void paintComponent(Graphics g) {
 		 super.paintComponent(g);
          Graphics2D g2d = (Graphics2D) g;
          g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,

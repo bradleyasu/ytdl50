@@ -1,6 +1,5 @@
 package com.hexotic.utils;
 
-import javax.swing.BorderFactory;
 import javax.swing.JMenu;
 
 public class XMenu extends JMenu {

@@ -22,12 +22,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 import org.jdesktop.swingx.border.DropShadowBorder;
 
 import com.hexotic.cons.Constants;
-import com.hexotic.lib.ui.notificationbar.Notification;
-import com.hexotic.lib.ui.notificationbar.NotificationBar;
 import com.hexotic.utils.CentralDownloadControl;
 import com.hexotic.utils.Settings;
 import com.hexotic.utils.XButton;
@@ -83,21 +82,26 @@ class OptionsPanel extends JPanel{
         
         final JLabel closeBtn = new JLabel("X");
         closeBtn.setPreferredSize(new Dimension(10,30));
-        closeBtn.setVerticalAlignment(JLabel.TOP);
+        closeBtn.setVerticalAlignment(SwingConstants.TOP);
         closeBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         closeBtn.setForeground(new Color(0xababab));
         closeBtn.addMouseListener(new MouseListener(){
+			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				parent.dispose();
 			}
+			@Override
 			public void mouseEntered(MouseEvent arg0) {
 				closeBtn.setForeground(new Color(0x484848));
 			}
+			@Override
 			public void mouseExited(MouseEvent arg0) {
 				closeBtn.setForeground(new Color(0xababab));
 			}
+			@Override
 			public void mousePressed(MouseEvent arg0) {
 			}
+			@Override
 			public void mouseReleased(MouseEvent arg0) {
 			}
         	
@@ -107,7 +111,7 @@ class OptionsPanel extends JPanel{
         
         JLabel seperator = new JLabel(Constants.PROG_NAME+" version: "+Constants.VERSION);
         seperator.setPreferredSize(new Dimension(480, 30));
-        seperator.setHorizontalAlignment(JLabel.CENTER);
+        seperator.setHorizontalAlignment(SwingConstants.CENTER);
         seperator.setForeground(new Color(0xa0a0a0));
         this.add(seperator);
         
@@ -132,13 +136,14 @@ class OptionsPanel extends JPanel{
         
         JLabel spacer = new JLabel("");
         spacer.setPreferredSize(new Dimension(480, 30));
-        spacer.setHorizontalAlignment(JLabel.CENTER);
+        spacer.setHorizontalAlignment(SwingConstants.CENTER);
         spacer.setForeground(new Color(0xa0a0a0));
         this.add(spacer);
         
         XButton saveAll = new XButton("Save All");
         saveAll.addActionListener(new ActionListener(){
-        	public void actionPerformed(ActionEvent e){
+        	@Override
+			public void actionPerformed(ActionEvent e){
         		CentralDownloadControl.getInstance().setDownloadDirectory(folderChooser.getInput());
         		
         		boolean downloadAsMp3 = asMp3Switch.isSet();
@@ -149,7 +154,8 @@ class OptionsPanel extends JPanel{
         this.add(saveAll);
 	}
 	
-	 protected void paintComponent(Graphics g) {
+	 @Override
+	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g.create();
 		

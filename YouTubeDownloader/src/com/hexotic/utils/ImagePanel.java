@@ -3,7 +3,6 @@ import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.Image;
-import java.awt.image.ImageObserver;
 import java.net.MalformedURLException;
 import java.net.URL;
 import javax.swing.JButton;

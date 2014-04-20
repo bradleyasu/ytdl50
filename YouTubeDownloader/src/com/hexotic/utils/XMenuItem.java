@@ -19,7 +19,8 @@ public class XMenuItem extends JMenuItem{
 		this.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 	}
 	
-	 protected void paintComponent(Graphics g) {
+	 @Override
+	protected void paintComponent(Graphics g) {
 		 super.paintComponent(g);
 		 Color[] colors = { new Color(255,34,102),
 				 			new Color(255,85,51),

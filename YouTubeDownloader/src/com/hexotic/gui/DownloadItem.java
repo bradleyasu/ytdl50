@@ -2,6 +2,7 @@ package com.hexotic.gui;
 
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -64,7 +65,7 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 		
 		infoPanel.add(titleLabel);
 		titleLabel.setFont(new Font("Arial",Font.BOLD, 14));
-		titleLabel.setAlignmentX(JLabel.LEFT_ALIGNMENT);
+		titleLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
 		titleLabel.setPreferredSize(new Dimension(170, 15));
 
 		
@@ -77,11 +78,12 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 			urlLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		}
 		urlLabel.setFont(new Font("Arial",Font.PLAIN, 10));
-		urlLabel.setAlignmentX(JLabel.LEFT_ALIGNMENT);
-		urlLabel.setAlignmentY(JLabel.TOP_ALIGNMENT);
+		urlLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
+		urlLabel.setAlignmentY(Component.TOP_ALIGNMENT);
 		urlLabel.setPreferredSize(new Dimension(170, 14));
 		urlLabel.setToolTipText(getUrl());
 		urlLabel.addMouseListener(new MouseListener(){
+			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				try {
 					java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
@@ -90,12 +92,16 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 					new MessageBox(Constants.MSG_5, "Your computer sucks", "I couldn't launch the browser",e.toString());
 				}
 			}
+			@Override
 			public void mouseEntered(MouseEvent arg0) {
 			}
+			@Override
 			public void mouseExited(MouseEvent arg0) {
 			}
+			@Override
 			public void mousePressed(MouseEvent arg0) {
 			}
+			@Override
 			public void mouseReleased(MouseEvent arg0) {
 			}
 		});
@@ -142,15 +148,20 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 	    cancel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 	    cancel.setToolTipText("Cancel Download");
 	    cancel.addMouseListener(new MouseListener(){
+			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				cancelDownload();
 			}
+			@Override
 			public void mouseEntered(MouseEvent arg0) {
 			}
+			@Override
 			public void mouseExited(MouseEvent arg0) {
 			}
+			@Override
 			public void mousePressed(MouseEvent arg0) {
 			}
+			@Override
 			public void mouseReleased(MouseEvent arg0) {
 			}
 	    });
@@ -163,15 +174,20 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 		    tagBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		    tagBtn.setToolTipText("Edit ID3 Tags");
 		    tagBtn.addMouseListener(new MouseListener(){
+				@Override
 				public void mouseClicked(MouseEvent arg0) {
 					new TagEditor(downloader);
 				}
+				@Override
 				public void mouseEntered(MouseEvent arg0) {
 				}
+				@Override
 				public void mouseExited(MouseEvent arg0) {
 				}
+				@Override
 				public void mousePressed(MouseEvent arg0) {
 				}
+				@Override
 				public void mouseReleased(MouseEvent arg0) {
 				}
 		    });
@@ -193,15 +209,20 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 		    tagBtnComplete.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		    tagBtnComplete.setToolTipText("Edit ID3 Tags");
 		    tagBtnComplete.addMouseListener(new MouseListener(){
+				@Override
 				public void mouseClicked(MouseEvent arg0) {
 					new TagEditor(downloader);
 				}
+				@Override
 				public void mouseEntered(MouseEvent arg0) {
 				}
+				@Override
 				public void mouseExited(MouseEvent arg0) {
 				}
+				@Override
 				public void mousePressed(MouseEvent arg0) {
 				}
+				@Override
 				public void mouseReleased(MouseEvent arg0) {
 				}
 		    });
@@ -225,15 +246,20 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 	    restartBtn.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 	    restartBtn.setToolTipText("Continue Download");
 	    restartBtn.addMouseListener(new MouseListener(){
+			@Override
 			public void mouseClicked(MouseEvent e) {
 				new Thread(downloader.getDownloadItem()).start();
 			}
+			@Override
 			public void mouseEntered(MouseEvent e) {
 			}
+			@Override
 			public void mouseExited(MouseEvent e) {
 			}
+			@Override
 			public void mousePressed(MouseEvent e) {
 			}
+			@Override
 			public void mouseReleased(MouseEvent e) {
 			}
 	    });
@@ -271,6 +297,7 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 		titleLabel.setText("Queued For Download");
 	}
 	
+	@Override
 	public void run() {
 		try{
 			java.net.URL thumb   = cldr.getResource("images/defaultThumbnail.png");
@@ -311,11 +338,13 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 		}
 	}
 	
+	@Override
 	public String toString(){
 		return url;
 	}
 	
-	 protected void paintComponent(Graphics g) {
+	 @Override
+	protected void paintComponent(Graphics g) {
 		 super.paintComponent(g);
 		 Color[] colors = { new Color(255,34,102),
 				 			new Color(255,85,51),

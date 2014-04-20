@@ -61,13 +61,16 @@ public class UrlPanel extends JPanel implements FlavorListener, ClipboardOwner, 
 		this.add(urlLabel, BorderLayout.WEST);
 		this.add(url, BorderLayout.CENTER);
 		url.addKeyListener(new KeyListener(){
+			@Override
 			public void keyPressed(KeyEvent e) {
 				if(e.getKeyChar() == KeyEvent.VK_ENTER){
 					addDownload();
 				}
 			}
+			@Override
 			public void keyReleased(KeyEvent e) {
 			}
+			@Override
 			public void keyTyped(KeyEvent e) {
 			}
 		});
@@ -75,6 +78,7 @@ public class UrlPanel extends JPanel implements FlavorListener, ClipboardOwner, 
 		
 		this.add(downloadButton, BorderLayout.EAST);
 		downloadButton.addActionListener(new ActionListener(){
+			@Override
 			public void actionPerformed(ActionEvent e){
 				addDownload();
 			}
@@ -209,6 +213,7 @@ public class UrlPanel extends JPanel implements FlavorListener, ClipboardOwner, 
 		System.out.println("Clipboard Turned off");
 	}
 
+	@Override
 	public void update(Observable o, Object arg) {
 		if(arg instanceof String){
 			if(((String)arg).equals("MENU")){

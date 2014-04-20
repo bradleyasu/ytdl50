@@ -10,7 +10,6 @@ import javax.swing.JPanel;
 import com.hexotic.lib.switches.BasicSwitch;
 import com.hexotic.lib.switches.SwitchEvent;
 import com.hexotic.lib.switches.SwitchListener;
-import com.hexotic.utils.Settings;
 /**
  * This is a Swith Control view switching between "Video" and "MP3" mode
  * 

@@ -6,7 +6,6 @@ import java.io.InputStreamReader;
 import java.lang.management.ManagementFactory;
 
 import com.hexotic.cons.Constants;
-import com.hexotic.gui.MessageBox;
 
 public class Updater {
 	private String updater;

@@ -2,8 +2,6 @@ package com.hexotic.utils;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Graphics;
-
 import javax.swing.BorderFactory;
 import javax.swing.JTextField;
 

@@ -9,7 +9,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 import com.hexotic.cons.Constants;
+import com.hexotic.lib.ui.notificationbar.Notification;
+import com.hexotic.lib.ui.notificationbar.NotificationCenter;
+import com.hexotic.lib.ui.notificationbar.NotificationListener;
 import com.hexotic.utils.CentralDownloadControl;
+import com.hexotic.utils.Settings;
 
 public class MainWindow extends JFrame{
 	
@@ -44,7 +48,38 @@ public class MainWindow extends JFrame{
 		} catch (IOException e) {
 			new MessageBox(Constants.MSG_2, "Update Failed", "There was a problem updating core components", e.toString());
 		}
+		
+		
+		
+		checkVersion();
+		
+
 	}
 	
-	
+	public void checkVersion(){
+		boolean showRelease = false;
+		String release = Settings.getInstance().getProperty("release"); 
+		if (release != null){
+			if (!release.equals(Constants.VERSION)){
+				showRelease = true;
+			}
+		} else {
+			showRelease = true;
+		}
+		
+		if (showRelease){
+			Settings.getInstance().saveProperty("release", Constants.VERSION);
+			Notification updatedNotification = new Notification(Notification.ACCEPT, Notification.YES_NO, "Your version of the YouTube Downloader ("+Constants.VERSION+") is now up to date! Would you like to know what all was updated?");
+			updatedNotification.addNotificationListener(new NotificationListener(){
+				@Override
+				public void optionSelected(String arg0) {
+					if(arg0.toLowerCase().equals("yes")){
+						new ReleaseNotes();
+					}
+					NotificationCenter.getInstance().closeNotification("primary");
+				}
+			});
+			NotificationCenter.getInstance().sendNotification("primary", updatedNotification);
+		}
+	}
 }

@@ -57,6 +57,7 @@ public VerticalWrapLayout(int align, int hgap, int vgap)
 * subcomponents of the specified container
 */
 
+@Override
 public Dimension preferredLayoutSize(Container target)
 {
     return layoutSize(target, true);
@@ -70,6 +71,7 @@ public Dimension preferredLayoutSize(Container target)
 * subcomponents of the specified container
 */
 
+@Override
 public Dimension minimumLayoutSize(Container target)
 {
     Dimension minimum = layoutSize(target, false);

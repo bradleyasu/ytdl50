@@ -21,6 +21,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneConstants;
 
 import org.jdesktop.swingx.JXEditorPane;
 import org.jdesktop.swingx.border.DropShadowBorder;
@@ -86,17 +87,20 @@ class ReleaseNotesPanel extends JPanel{
 			new MessageBox(Constants.MSG_2, "I Dunno how this happens", "I couldn't find the help document",e.toString());			
 		}
 		info.setPreferredSize(new Dimension(450,250));
-		info.setBorder(BorderFactory.createLineBorder(new Color(0xe0e0e0)));
+		info.setBorder(BorderFactory.createEmptyBorder());
 		info.setEditable(false);
 		info.setFont(new Font("Arial", Font.BOLD, 12));
 		JScrollPane scroller = new JScrollPane(info);
-		scroller.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		scroller.setPreferredSize(new Dimension(450,250));
+		scroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		scroller.setBorder(BorderFactory.createLineBorder(new Color(0xe0e0e0)));
 		this.add(scroller);
 		JLabel spaceLabel = new JLabel("");
 		spaceLabel.setPreferredSize(new Dimension(450,35));
 		XButton close = new XButton("Close");
 		close.setPreferredSize(new Dimension(100, 22));
 		close.addActionListener(new ActionListener(){
+			@Override
 			public void actionPerformed(ActionEvent e){
 				parent.dispose();
 			}
@@ -106,7 +110,8 @@ class ReleaseNotesPanel extends JPanel{
 		
 	}
 	
-	 protected void paintComponent(Graphics g) {
+	 @Override
+	protected void paintComponent(Graphics g) {
 		// Allow super to paint
 		super.paintComponent(g);
 		

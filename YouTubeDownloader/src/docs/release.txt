@@ -1,3 +1,17 @@
+"Good News Everyone!"
+
+Major UI & Feature Update
+
+Version 5.1.0
+
++ New UI implements Hexotic UI Library
++ Ability to save/open/share download lists
++ More settings and options
++ Added Notification bar
++ Added additional supported sites
+
+--------------
+
 Hey Everyone!
 
 Version 5.0.8:

@@ -16,6 +16,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 import com.hexotic.utils.FormInput;
 import com.hexotic.utils.XDirectoryChooser;
@@ -30,7 +31,7 @@ public class FormFolderChooserPanel extends JPanel implements FormInput{
 		this.setOpaque(false);
 		JLabel promptLbl = new JLabel(prompt);
 		promptLbl.setPreferredSize(new Dimension(80,25));
-		promptLbl.setHorizontalAlignment(JLabel.RIGHT);
+		promptLbl.setHorizontalAlignment(SwingConstants.RIGHT);
 		this.add(promptLbl);
 		this.add(input);
 		input.setPreferredSize(new Dimension(320, 24));
@@ -40,12 +41,14 @@ public class FormFolderChooserPanel extends JPanel implements FormInput{
 		browse.setPreferredSize(new Dimension(20,24));
 		this.add(browse);
 		browse.addActionListener(new ActionListener(){
+			@Override
 			public void actionPerformed(ActionEvent e){
 				new XDirectoryChooser(input);
 			}
 		});
 	}
 
+	@Override
 	public String getInput() {
 		return input.getText();
 	}
@@ -61,7 +64,8 @@ class BrowseButton extends JButton{
         setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 	}
 	
-	 protected void paintComponent(Graphics g) {
+	 @Override
+	protected void paintComponent(Graphics g) {
 		 super.paintComponent(g);
 
          Graphics2D g2 = (Graphics2D) g.create();

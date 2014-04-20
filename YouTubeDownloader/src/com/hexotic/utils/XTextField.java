@@ -16,6 +16,7 @@ public class XTextField extends JTextField{
 	public XTextField(){
 		setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 		this.addMouseListener(new MouseListener(){
+			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(SwingUtilities.isRightMouseButton(e)){
 					try {
@@ -24,12 +25,16 @@ public class XTextField extends JTextField{
 					} catch (Exception ex){}
 				}
 			}
+			@Override
 			public void mouseEntered(MouseEvent arg0) {
 			}
+			@Override
 			public void mouseExited(MouseEvent arg0) {
 			}
+			@Override
 			public void mousePressed(MouseEvent arg0) {
 			}
+			@Override
 			public void mouseReleased(MouseEvent arg0) {
 			}
 		});
@@ -39,6 +44,7 @@ public class XTextField extends JTextField{
 		this.setText(text);
 	}
 	
+	@Override
 	public void paintComponent(Graphics g) {  
 	     super.paintComponent(g);
 	     g.setColor(new Color(24,24,24));

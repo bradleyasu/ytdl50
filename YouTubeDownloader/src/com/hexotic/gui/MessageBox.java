@@ -2,6 +2,7 @@ package com.hexotic.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
@@ -26,7 +27,6 @@ import javax.swing.JPanel;
 import org.jdesktop.swingx.JXEditorPane;
 import org.jdesktop.swingx.border.DropShadowBorder;
 
-import com.hexotic.cons.Constants;
 import com.hexotic.utils.XButton;
 
 public class MessageBox extends JFrame{
@@ -64,6 +64,7 @@ public class MessageBox extends JFrame{
 		this.setVisible(true);
 	}
 	
+	@Override
 	public String getTitle(){
 		return title;
 	}
@@ -106,7 +107,7 @@ class MessagePanel extends JPanel{
 		JLabel infoLabel = new JLabel(parent.getMessage());
 		infoLabel.setPreferredSize(new Dimension(450, 20));
 		infoLabel.setFont(new Font("Arial", Font.BOLD, 14));
-		infoLabel.setAlignmentX(JLabel.RIGHT_ALIGNMENT);
+		infoLabel.setAlignmentX(Component.RIGHT_ALIGNMENT);
 		this.add(infoLabel);
 		
 		if(parent.getInfo() != null && !(parent.getInfo().equals(""))){
@@ -127,6 +128,7 @@ class MessagePanel extends JPanel{
 		XButton close = new XButton("okay");
 		close.setPreferredSize(new Dimension(100, 22));
 		close.addActionListener(new ActionListener(){
+			@Override
 			public void actionPerformed(ActionEvent e){
 				parent.dispose();
 			}
@@ -135,7 +137,8 @@ class MessagePanel extends JPanel{
 		//playSound("tick.wav");
 	}
 	
-	 protected void paintComponent(Graphics g) {
+	 @Override
+	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g.create();
         g2d.setPaint(new GradientPaint(new Point(0, 0), new Color(0xf8f8f8), new Point(0,
@@ -158,7 +161,8 @@ class MessagePanel extends JPanel{
 	 
 	  private synchronized void playSound(final String url) {
 		    new Thread(new Runnable() { 
-		      public void run() {
+		      @Override
+			public void run() {
 		        try {
 		          Clip clip = AudioSystem.getClip();
 		          ClassLoader cldr = this.getClass().getClassLoader();

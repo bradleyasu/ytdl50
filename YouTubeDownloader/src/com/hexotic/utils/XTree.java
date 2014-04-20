@@ -24,6 +24,7 @@ public class XTree extends JTree{
 		
 		this.setBorder(BorderFactory.createEmptyBorder());
 		this.addTreeSelectionListener(new TreeSelectionListener(){
+			@Override
 			public void valueChanged(TreeSelectionEvent e) {
 				try{
 					DefaultMutableTreeNode node = (DefaultMutableTreeNode)e.getNewLeadSelectionPath().getLastPathComponent();
@@ -79,6 +80,7 @@ class XTreeRenderer extends DefaultTreeCellRenderer {
 		openFolderIcon = new ImageIcon(folder);
 	}
 	
+	@Override
 	public Component getTreeCellRendererComponent(JTree tree, Object value,boolean sel,boolean expanded,boolean leaf,int row,boolean hasFocus) {
 		super.getTreeCellRendererComponent(tree, value, sel,expanded, leaf, row,hasFocus);
 		if (leaf) {
