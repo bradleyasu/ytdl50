@@ -83,7 +83,11 @@ public class CentralDownloadControl extends Observable{
 						"extremetube.com",
 						"southparkstudios.com",
 						"ted.com",
-						"xtube.com"};
+						"xtube.com",
+						"videoweed.es",
+						"nowvideo.sx",
+						"divxstage.eu",
+						"movshare.net"};
 	
 	private CentralDownloadControl(){
 		downloadDirectory = Settings.getInstance().getProperty("downloadDir");

@@ -193,6 +193,7 @@ public class UrlPanel extends JPanel implements FlavorListener, ClipboardOwner, 
 				clip.setContents(emptyString, this);				
 			}
 		} catch (Exception ex){
+			ex.printStackTrace();
 			new MessageBox(Constants.MSG_5, "That's weird", "I couldn't use your clipboard",e.toString());	
 		}
 	}

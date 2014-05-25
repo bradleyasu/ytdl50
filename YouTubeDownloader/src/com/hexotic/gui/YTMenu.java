@@ -106,7 +106,15 @@ public class YTMenu extends JMenuBar{
 			}
 		});
 		
+		XMenuItem auths = new XMenuItem("Site Authentication");
+		auths.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				new AuthenticationWindow();
+			}
+		});
+		
 		options.add(prefs);
+		options.add(auths);
 		options.add(seperator);
 		options.add(autoDownload);
 		options.add(mp3Download);

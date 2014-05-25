@@ -10,6 +10,9 @@ import org.blinkenlights.jid3.v1.ID3V1Tag.Genre;
 import com.hexotic.cons.Constants;
 import com.hexotic.gui.DownloadItem;
 import com.hexotic.gui.MessageBox;
+import com.hexotic.lib.ui.notificationbar.Notification;
+import com.hexotic.lib.ui.notificationbar.NotificationCenter;
+import com.hexotic.lib.ui.notificationbar.NotificationListener;
 
 /**
  * This class is responsible for downloading media.  It will execute the 
@@ -90,12 +93,18 @@ public class Downloader {
 		
 		String saveTo = CentralDownloadControl.getInstance().getDownloadDirectory();
 		
-		String[] cmd = { downloader+"", "-x", "--audio-format", "mp3", "-o", "\""+saveTo+"\\%(title)s.%(ext)s\"", download.getUrl()};
+		String[] cmd = { downloader+"", "", "", "-x", "--audio-format", "mp3", "-o", "\""+saveTo+"\\%(title)s.%(ext)s\"", download.getUrl()};
 		if(!asMP3){
-			cmd[1] = "";
-			cmd[2] = "";
 			cmd[3] = "";
-			cmd[5] = "\""+saveTo+"\\%(title)s.%(ext)s\"";
+			cmd[4] = "";
+			cmd[5] = "";
+			cmd[7] = "\""+saveTo+"\\%(title)s.%(ext)s\"";
+		}
+		String auth = Settings.getInstance().getProperty("auth.youtube.com", "null");
+		if(!auth.equals("null")){
+			String[] loginInfo = auth.split(",");
+			cmd[1] = "-u "+loginInfo[0];
+			cmd[2] = "-p "+loginInfo[1];
 		}
 		proc = rt.exec(cmd);
 		for(String str: cmd)
@@ -121,11 +130,31 @@ public class Downloader {
 				if(destination != null){
 					try{
 						tagger.applyID3(destination, getTitle());
-					}catch(Exception e){ 
-						new MessageBox(Constants.MSG_5, "OhNos!", "I had a problem applying your ID3 Tags", e.toString());
+					}catch(final Exception e){ 
+						Notification notification = new Notification(Notification.ERROR, Notification.YES_NO, "There was a problem applying ID3 Tags to a file.  Would you like to view the error message?");
+						notification.addNotificationListener(new NotificationListener(){
+							@Override
+							public void optionSelected(String arg0) {
+								if(arg0.toLowerCase().equals("yes")){
+									new MessageBox(Constants.MSG_5, "OhNos!", "I had a problem applying your ID3 Tags", e.toString());
+								}
+								NotificationCenter.getInstance().closeNotification("primary");
+							}
+						});
+						NotificationCenter.getInstance().sendNotification("primary", notification);
 					}
 				}else{
-					new MessageBox(Constants.MSG_5, "OhNos!", "I had a problem applying your ID3 Tags", "Unresolved Destination");
+					Notification notification = new Notification(Notification.ERROR, Notification.YES_NO, "There was a problem applying ID3 Tags to a file.  Would you like to view the error message?");
+					notification.addNotificationListener(new NotificationListener(){
+						@Override
+						public void optionSelected(String arg0) {
+							if(arg0.toLowerCase().equals("yes")){
+								new MessageBox(Constants.MSG_5, "OhNos!", "I had a problem applying your ID3 Tags", "Unresolved Destination.  It's possible that the MP3 file wasn't successfully downloaded: "+destination);
+							}
+							NotificationCenter.getInstance().closeNotification("primary");
+						}
+					});
+					NotificationCenter.getInstance().sendNotification("primary", notification);
 				}
 			}
 			downloadStatus = Constants.DOWNLOAD_COMPLETE;
