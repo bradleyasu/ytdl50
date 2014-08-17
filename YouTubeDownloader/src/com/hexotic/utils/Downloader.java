@@ -31,12 +31,14 @@ public class Downloader {
 	private String destination = null;
 	private Tagger tagger;
 	private int downloadStatus;
+	private boolean useProxy = false;
 	
 	public Downloader(DownloadItem d){
 		download = d;
 		tagger = new Tagger();
 		downloader = CentralDownloadControl.getInstance().getDownloader();
 		downloadStatus = Constants.DOWNLOAD_READY;
+		
 	}
 	
 	public String getThumbnailUrl() throws IOException{
@@ -85,6 +87,10 @@ public class Downloader {
 		return this.title;
 	}
 	
+    public void useProxy(boolean useProxy){
+		this.useProxy = useProxy;
+	}
+	
 	public void download(boolean asMP3) throws IOException, NumberFormatException, ID3Exception{
 		downloadStatus = Constants.DOWNLOAD_INPROGRESS;
 		this.download.setState(Constants.INPROGRESS);
@@ -92,8 +98,12 @@ public class Downloader {
 		Runtime rt = Runtime.getRuntime();
 		
 		String saveTo = CentralDownloadControl.getInstance().getDownloadDirectory();
+		String proxyServer = "";
+		if(useProxy){
+			proxyServer = Settings.getInstance().getProperty("proxyAddress", "");
+		}
 		
-		String[] cmd = { downloader+"", "", "", "-x", "--audio-format", "mp3", "-o", "\""+saveTo+"\\%(title)s.%(ext)s\"", download.getUrl()};
+		String[] cmd = { downloader+"", "", "", "-x", "--audio-format", "mp3", "-o", "\""+saveTo+"\\%(title)s.%(ext)s\"", "--proxy", "\""+proxyServer+"\"", download.getUrl()};
 		if(!asMP3){
 			cmd[3] = "";
 			cmd[4] = "";

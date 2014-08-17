@@ -42,10 +42,12 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 	private ClassLoader cldr = this.getClass().getClassLoader();
 	private boolean mp3Format = false;
 	private int id;
+	private boolean useProxy = false;
 	
 	public DownloadItem(String url){
 		this.id = CentralDownloadControl.getInstance().nextId();
 		mp3Format = CentralDownloadControl.getInstance().downloadAsMP3();
+		useProxy = CentralDownloadControl.getInstance().useProxy();
 		this.setOpaque(false);
 		if(!CentralDownloadControl.getInstance().isValid(url)){
 			url = "ytsearch:"+url;
@@ -315,6 +317,7 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 			titleLabel.setToolTipText(title);
 			this.revalidate();
 			this.repaint();
+			downloader.useProxy(this.useProxy);
 			downloader.download(mp3Format);
 			if(Settings.getInstance().getProperty("removeOnDownload").equals("yes"))
 				this.setVisible(false);
@@ -322,6 +325,8 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 			new MessageBox(Constants.MSG_2, "A Download Crashed", this.url,e.toString());
 		}
 	}
+	
+	
 
 	public String getUrl(){
 		return url;
@@ -355,6 +360,12 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 		 					new Color(255,0,153),
 		 };
 
+		 if(this.useProxy){
+			 colors[0] = new Color(125,177,113);
+			 colors[1] = new Color(66,85,128);
+			 colors[2] = new Color(33,32,44);
+			 colors[3] = new Color(132,147,203);
+		 }
          for(int i = 2; i < getHeight()-57; i++){
         	 Random rand = new Random();
         	 int index = rand.nextInt(colors.length);

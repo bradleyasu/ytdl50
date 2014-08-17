@@ -1,3 +1,36 @@
+Minor update Numero Dos
+
+Version 5.0.10
+
++ Added Proxy Server Support
+
+Need to download something unavailable in your country?
+Paranoid of being tracked by the government?
+
+Use A Proxy! 
+
+Disclaimer: Proxy use will slow down your download speed
+
+A good resource for Proxy servers is:
+
+--->  http://proxylist.hidemyass.com/
+
+Go to "Options" and set the proxy server address
+
+[http/https]://[ip address]:[port]
+
+Example: http://123.123.123.123:8080
+
+Then make sure you've 'ticked' the "Use Proxy Server to Download" 
+option in the "Option" menu
+
+This update is a "stepping-stone" towards a much larger
+UI/Feature update.  Stay tuned! :)
+
+Questions, Comments, Concerns: support@hexotic.net
+
+--------------
+
 "Good News Everyone!"
 
 Minor UI & Features update

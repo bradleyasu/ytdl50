@@ -27,6 +27,7 @@ import javax.swing.SwingConstants;
 import org.jdesktop.swingx.border.DropShadowBorder;
 
 import com.hexotic.cons.Constants;
+import com.hexotic.lib.ui.input.textfield.BasicTextField;
 import com.hexotic.utils.CentralDownloadControl;
 import com.hexotic.utils.Settings;
 import com.hexotic.utils.XButton;
@@ -48,7 +49,7 @@ public class OptionsWindow extends JFrame{
 		this.setBackground(new Color(0, 255, 0, 0));
 		pack();
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-		this.setSize(new Dimension(500, 235));
+		this.setSize(new Dimension(500, 285));
 		int w = this.getSize().width;
 		int h = this.getSize().height;
 		int x = (dim.width-w)/2;
@@ -115,18 +116,18 @@ class OptionsPanel extends JPanel{
         seperator.setForeground(new Color(0xa0a0a0));
         this.add(seperator);
         
-
         
-        
-//        String downloadFormat = Settings.getInstance().getProperty("defaultDownloadMode", "video");
         String remove = Settings.getInstance().getProperty("removeOnDownload", "no");
         final SwitchForm autoremoveSwitch = new SwitchForm("Automatically remove completed downloads?", remove.equals("yes"));
         this.add(autoremoveSwitch);
+        
+        String proxyDefault = Settings.getInstance().getProperty("defaultUseProxy", "no");
+        final SwitchForm proxySwitch = new SwitchForm("Use Proxy Server By Default?", proxyDefault.equals("yes"));
+        this.add(proxySwitch);
 //        
 //        final SwitchForm animationSwitch = new SwitchForm("Enable UI animations?", false);
 //        this.add(animationSwitch);
-//        
-        
+//       
         String downloadFormat = Settings.getInstance().getProperty("defaultDownloadMode", "video");
         final SwitchForm asMp3Switch = new SwitchForm("Download videos in MP3 format by default?", downloadFormat.equals("video") ? false : true);
         this.add(asMp3Switch);
@@ -134,8 +135,15 @@ class OptionsPanel extends JPanel{
         folderChooser = new FormFolderChooserPanel("Download To:", CentralDownloadControl.getInstance().getDownloadDirectory());
         this.add(folderChooser);
         
+        this.add(new JLabel("Proxy Address:"));
+        final BasicTextField proxyUrl = new BasicTextField();
+        proxyUrl.setText(Settings.getInstance().getProperty("proxyAddress", ""));
+        proxyUrl.setPreferredSize(new Dimension(362, 25));
+        proxyUrl.setBorder(BorderFactory.createLineBorder(new Color(0xababab)));
+        this.add(proxyUrl);
+        
         JLabel spacer = new JLabel("");
-        spacer.setPreferredSize(new Dimension(480, 30));
+        spacer.setPreferredSize(new Dimension(480, 10));
         spacer.setHorizontalAlignment(SwingConstants.CENTER);
         spacer.setForeground(new Color(0xa0a0a0));
         this.add(spacer);
@@ -148,8 +156,11 @@ class OptionsPanel extends JPanel{
         		
         		boolean downloadAsMp3 = asMp3Switch.isSet();
         		boolean removeAfter = autoremoveSwitch.isSet();
+        		boolean defaultProxy = proxySwitch.isSet();
         		Settings.getInstance().saveProperty("defaultDownloadMode", downloadAsMp3 ? "audio" : "video");
         		Settings.getInstance().saveProperty("removeOnDownload", removeAfter? "yes" : "no");
+        		Settings.getInstance().saveProperty("defaultUseProxy", defaultProxy? "yes" : "no");
+        		Settings.getInstance().saveProperty("proxyAddress", proxyUrl.getText());
         		parent.dispose();
         	}
         });

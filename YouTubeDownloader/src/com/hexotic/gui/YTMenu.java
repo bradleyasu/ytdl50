@@ -93,6 +93,26 @@ public class YTMenu extends JMenuBar{
 			}
 		}
 		
+		
+		XCheckBoxMenuItem useProxy = new XCheckBoxMenuItem("Use Proxy Server To Download");
+		useProxy.setPreferredSize(new Dimension(210, 20));
+		useProxy.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e){
+				XCheckBoxMenuItem temp = (XCheckBoxMenuItem)e.getSource();
+				CentralDownloadControl.getInstance().setUseProxy(temp.isSelected());
+			}
+		});
+		
+		
+		String defaultUseProxy = Settings.getInstance().getProperty("defaultUseProxy", "no");
+		if(defaultUseProxy.equals("yes")){
+			useProxy.setState(true);
+			CentralDownloadControl.getInstance().setUseProxy(useProxy.isSelected());
+		}
+		
+		
+		
 		JSeparator seperator = new JSeparator();
 		seperator.setForeground(new Color(210,210,210));
 		seperator.setBorder(BorderFactory.createEmptyBorder());
@@ -116,14 +136,13 @@ public class YTMenu extends JMenuBar{
 		options.add(prefs);
 //		options.add(auths);
 		options.add(seperator);
+		options.add(useProxy);
 		options.add(autoDownload);
 		options.add(mp3Download);
 		return options;
 	}
 	
 	private JMenu getAboutMenu(){
-		
-		
 		
 		XMenu about = new XMenu("About");
 		XMenuItem license = new XMenuItem("About and License");

@@ -27,6 +27,7 @@ public class CentralDownloadControl extends Observable{
 	private static CentralDownloadControl instance = null;
 	private boolean downloadOnCopy = false;
 	private boolean downloadAsMp3 = false;
+	private boolean useProxy = false;
 	private String downloader = null;
 	private String downloadDirectory = "";
 	private int id = 0;
@@ -183,6 +184,14 @@ public class CentralDownloadControl extends Observable{
 	
 	public boolean downloadAsMP3(){
 		return downloadAsMp3;
+	}
+	
+	public void setUseProxy(boolean useProxy){
+		this.useProxy = useProxy;
+	}
+	
+	public boolean useProxy(){
+		return useProxy;
 	}
 	
 	private boolean checkUrl(String url){

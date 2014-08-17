@@ -11,7 +11,7 @@ package com.hexotic.cons;
  */
 public class Constants {
 
-	public static final String VERSION = "5.0.9";
+	public static final String VERSION = "5.0.10";
 	
 	public static final String PROG_NAME = "YouTube Downloader";
 	public static final String COMPANY_NAME = "Hexotic Software";
