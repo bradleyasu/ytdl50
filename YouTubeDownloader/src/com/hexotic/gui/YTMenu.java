@@ -42,8 +42,8 @@ public class YTMenu extends JMenuBar{
 		});
 		
 		XMenuItem saveList = new XMenuItem("Save List");
-		file.add(openList);
-		file.add(saveList);
+//		file.add(openList);
+//		file.add(saveList);
 		JSeparator seperator = new JSeparator();
 		seperator.setForeground(new Color(210,210,210));
 		seperator.setBorder(BorderFactory.createEmptyBorder());
@@ -114,7 +114,7 @@ public class YTMenu extends JMenuBar{
 		});
 		
 		options.add(prefs);
-		options.add(auths);
+//		options.add(auths);
 		options.add(seperator);
 		options.add(autoDownload);
 		options.add(mp3Download);

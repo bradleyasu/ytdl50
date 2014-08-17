@@ -27,6 +27,7 @@ import org.jdesktop.swingx.border.DropShadowBorder;
 import com.hexotic.cons.Constants;
 import com.hexotic.utils.CentralDownloadControl;
 import com.hexotic.utils.Downloader;
+import com.hexotic.utils.Settings;
 import com.hexotic.utils.VerticalWrapLayout;
 
 public class DownloadItem extends JXPanel implements Runnable, Comparable<DownloadItem>{
@@ -315,6 +316,8 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 			this.revalidate();
 			this.repaint();
 			downloader.download(mp3Format);
+			if(Settings.getInstance().getProperty("removeOnDownload").equals("yes"))
+				this.setVisible(false);
 		}catch(Exception e){
 			new MessageBox(Constants.MSG_2, "A Download Crashed", this.url,e.toString());
 		}

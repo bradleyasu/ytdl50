@@ -87,7 +87,10 @@ public class CentralDownloadControl extends Observable{
 						"videoweed.es",
 						"nowvideo.sx",
 						"divxstage.eu",
-						"movshare.net"};
+						"movshare.net",
+						"nbc.com",
+						"veoh.com",
+						"video.google.com"};
 	
 	private CentralDownloadControl(){
 		downloadDirectory = Settings.getInstance().getProperty("downloadDir");
@@ -168,7 +171,7 @@ public class CentralDownloadControl extends Observable{
 	public boolean isValid(String url){
 		String[] schemes = {"http","https"};
 		UrlValidator urlValidator = new UrlValidator(schemes);
-		if(urlValidator.isValid(url) && checkUrl(url)){
+		if((urlValidator.isValid(url) || url.contains("nowvideo.sx")) && checkUrl(url)){
 			return true;
 		}
 		return false;

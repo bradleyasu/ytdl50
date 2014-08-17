@@ -100,11 +100,11 @@ public class Downloader {
 			cmd[5] = "";
 			cmd[7] = "\""+saveTo+"\\%(title)s.%(ext)s\"";
 		}
-		String auth = Settings.getInstance().getProperty("auth.youtube.com", "null");
+		String auth = Settings.getInstance().getProperty("auth.vk.com", "null");
 		if(!auth.equals("null")){
 			String[] loginInfo = auth.split(",");
-			cmd[1] = "-u "+loginInfo[0];
-			cmd[2] = "-p "+loginInfo[1];
+			cmd[1] = "--username \""+loginInfo[0]+"\"";
+			cmd[2] = "--password \""+loginInfo[1]+"\"";
 		}
 		proc = rt.exec(cmd);
 		for(String str: cmd)

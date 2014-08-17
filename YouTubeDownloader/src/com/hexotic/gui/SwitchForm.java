@@ -23,11 +23,12 @@ public class SwitchForm extends JPanel{
 		this.setOpaque(false);
 		this.setLayout(new BorderLayout());
 		label = new JLabel(option);
-		label.setPreferredSize(new Dimension(334, 30));
+		label.setPreferredSize(new Dimension(334, 20));
 						
 		this.add(label, BorderLayout.CENTER);
-		BasicSwitch sw = new BasicSwitch("nope", "yep", 100, 25, 10);
-		sw.setBackground(new Color(0xFF5533));
+		BasicSwitch sw = new BasicSwitch("OFF", "ON", 90, 20, 2);
+		sw.setBackground(new Color(0xffffff));
+		sw.setForeground(new Color(0x525252));
 		if(activated){
 			sw.setState(true);
 			optionActivated = true;

@@ -48,7 +48,7 @@ public class OptionsWindow extends JFrame{
 		this.setBackground(new Color(0, 255, 0, 0));
 		pack();
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-		this.setSize(new Dimension(500, 305));
+		this.setSize(new Dimension(500, 235));
 		int w = this.getSize().width;
 		int h = this.getSize().height;
 		int x = (dim.width-w)/2;
@@ -76,7 +76,7 @@ class OptionsPanel extends JPanel{
         this.setLayout(new FlowLayout());
 
         JLabel header = new JLabel("Options");
-        header.setPreferredSize(new Dimension(450, 30));
+        header.setPreferredSize(new Dimension(460, 30));
         header.setFont(new Font("Arial", Font.BOLD, 22));
         this.add(header);
         
@@ -119,13 +119,13 @@ class OptionsPanel extends JPanel{
         
         
 //        String downloadFormat = Settings.getInstance().getProperty("defaultDownloadMode", "video");
-        
-        final SwitchForm autoremoveSwitch = new SwitchForm("Automatically remove completed downloads?", false);
+        String remove = Settings.getInstance().getProperty("removeOnDownload", "no");
+        final SwitchForm autoremoveSwitch = new SwitchForm("Automatically remove completed downloads?", remove.equals("yes"));
         this.add(autoremoveSwitch);
-        
-        final SwitchForm animationSwitch = new SwitchForm("Enable UI animations?", false);
-        this.add(animationSwitch);
-        
+//        
+//        final SwitchForm animationSwitch = new SwitchForm("Enable UI animations?", false);
+//        this.add(animationSwitch);
+//        
         
         String downloadFormat = Settings.getInstance().getProperty("defaultDownloadMode", "video");
         final SwitchForm asMp3Switch = new SwitchForm("Download videos in MP3 format by default?", downloadFormat.equals("video") ? false : true);
@@ -147,7 +147,9 @@ class OptionsPanel extends JPanel{
         		CentralDownloadControl.getInstance().setDownloadDirectory(folderChooser.getInput());
         		
         		boolean downloadAsMp3 = asMp3Switch.isSet();
+        		boolean removeAfter = autoremoveSwitch.isSet();
         		Settings.getInstance().saveProperty("defaultDownloadMode", downloadAsMp3 ? "audio" : "video");
+        		Settings.getInstance().saveProperty("removeOnDownload", removeAfter? "yes" : "no");
         		parent.dispose();
         	}
         });

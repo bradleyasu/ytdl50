@@ -1,14 +1,18 @@
 "Good News Everyone!"
 
-Major UI & Feature Update
+Minor UI & Features update
 
-Version 5.1.0
+Version 5.0.9
 
 + New UI implements Hexotic UI Library
-+ Ability to save/open/share download lists
 + More settings and options
 + Added Notification bar
 + Added additional supported sites
+
+This update is a "stepping-stone" towards a much larger
+UI/Feature update.  Stay tuned! :)
+
+Questions, Comments, Concerns: support@hexotic.net
 
 --------------
 
