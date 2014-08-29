@@ -14,6 +14,10 @@ import org.apache.commons.validator.routines.UrlValidator;
 import com.hexotic.cons.Constants;
 import com.hexotic.gui.DownloadItem;
 import com.hexotic.gui.MessageBox;
+import com.hexotic.gui.OptionsWindow;
+import com.hexotic.lib.ui.notificationbar.Notification;
+import com.hexotic.lib.ui.notificationbar.NotificationCenter;
+import com.hexotic.lib.ui.notificationbar.NotificationListener;
 /**
  * 
  * CentralDownloadControl is responsible for verifying URL's and
@@ -95,10 +99,24 @@ public class CentralDownloadControl extends Observable{
 	
 	private CentralDownloadControl(){
 		downloadDirectory = Settings.getInstance().getProperty("downloadDir");
-		if(downloadDirectory == null || downloadDirectory.equals("")){
+		if(downloadDirectory == null || downloadDirectory.equals("") || !(new File(downloadDirectory)).exists()){
+			Notification updatedNotification = new Notification(Notification.WARN, Notification.YES_NO, "Your download directory: "+downloadDirectory+" doesn't exist.  Would you like to change this now?");
+			
 			FileSystemView filesys = FileSystemView.getFileSystemView();
 			downloadDirectory = filesys.getHomeDirectory().toString();
 			System.out.println("Couldn't find saved download directory location.  Using desktop instead");
+			updatedNotification.addNotificationListener(new NotificationListener(){
+				@Override
+				public void optionSelected(String arg0) {
+					if(arg0.toLowerCase().equals("yes")){
+						new OptionsWindow();
+					}
+					NotificationCenter.getInstance().closeNotification("primary");
+				}
+			});
+			NotificationCenter.getInstance().sendNotification("primary", updatedNotification);
+		} else {
+			System.out.println("Central Download Control: "+ downloadDirectory);
 		}
 	}
 	

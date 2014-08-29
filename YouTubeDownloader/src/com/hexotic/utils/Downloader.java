@@ -104,6 +104,7 @@ public class Downloader {
 		}
 		
 		String[] cmd = { downloader+"", "", "", "-x", "--audio-format", "mp3", "-o", "\""+saveTo+"\\%(title)s.%(ext)s\"", "--proxy", "\""+proxyServer+"\"", download.getUrl()};
+		
 		if(!asMP3){
 			cmd[3] = "";
 			cmd[4] = "";
@@ -123,11 +124,19 @@ public class Downloader {
         BufferedReader stdInput = new BufferedReader(new 
         InputStreamReader(proc.getInputStream()));
 		while ((s = stdInput.readLine()) != null) {
+			System.out.println(s);
 		    if(s.contains("%")){
 			    String[] data = s.split("\\s+");
 			    String percent = data[1];
 			    String[] percentData = percent.split("\\.");
-			    download.setStatus(Integer.parseInt(percentData[0].replaceAll("[^0-9]", "")));
+			    
+			    String status = percentData[0].replaceAll("[^0-9]", "");
+			    // If there was an error parsing the
+			    if ("".equals(status)) {
+			    	status = "0";
+			    }
+			    
+			    download.setStatus(Integer.parseInt(status));
 		    }
 		    if(s.contains("[download] Destination: ")){
 		    	destination = s.replace("[download] Destination: ", "");
@@ -167,8 +176,13 @@ public class Downloader {
 					NotificationCenter.getInstance().sendNotification("primary", notification);
 				}
 			}
-			downloadStatus = Constants.DOWNLOAD_COMPLETE;
-			this.download.setState(Constants.COMPLETE);
+			if(this.download.getStatus() >= 99){
+				downloadStatus = Constants.DOWNLOAD_COMPLETE;
+				this.download.setState(Constants.COMPLETE);
+			} else {
+				downloadStatus = Constants.DOWNLOAD_FAILED;
+				this.download.setState(Constants.FAILED);
+			}
 		}
 	}
 	

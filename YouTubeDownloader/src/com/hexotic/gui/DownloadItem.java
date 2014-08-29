@@ -92,7 +92,11 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 					java.awt.Desktop desktop = java.awt.Desktop.getDesktop();
 					desktop.browse(new URI(getUrl()));
 				} catch (Exception e){
-					new MessageBox(Constants.MSG_5, "Your computer sucks", "I couldn't launch the browser",e.toString());
+					String s = "";
+					for( StackTraceElement element : e.getStackTrace()){
+						s = s+element.toString()+"\n";
+					}
+					new MessageBox(Constants.MSG_5, "Your computer sucks", "I couldn't launch the browser",s);
 				}
 			}
 			@Override
@@ -238,6 +242,15 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 	    }
 	    
 	    
+	    /* FAILED PANEL */
+	    JPanel failedPanel = new JPanel(new FlowLayout());
+	    failedPanel.setBackground(Color.WHITE);
+	    failedPanel.add(new JLabel("Uhoh, download failed"));
+    	java.net.URL sadUrl   = cldr.getResource("images/sad.png");
+    	ImageIcon sadIco = new ImageIcon(sadUrl);
+    	JLabel btn = new JLabel(sadIco);
+    	failedPanel.add(btn);
+    	
 	    
 	    /* CANCELED PANEL */
 	    JPanel cancelPanel = new JPanel(new FlowLayout());
@@ -275,6 +288,7 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 	    control.add(Constants.INPROGRESS, progPanel);
 	    control.add(Constants.COMPLETE, completePanel);
 	    control.add(Constants.CANCELED, cancelPanel);
+	    control.add(Constants.FAILED, failedPanel);
 	  	setState(Constants.READY);
 		return control;
 	}
@@ -285,6 +299,10 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 		
 	public void setState(String state){
 		panels.show(control, state);
+	}
+	
+	public int getStatus(){
+		return prog.getValue();
 	}
 	
 	public void setStatus(int progress){

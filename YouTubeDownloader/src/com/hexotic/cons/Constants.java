@@ -11,7 +11,7 @@ package com.hexotic.cons;
  */
 public class Constants {
 
-	public static final String VERSION = "5.0.10";
+	public static final String VERSION = "5.0.11";
 	
 	public static final String PROG_NAME = "YouTube Downloader";
 	public static final String COMPANY_NAME = "Hexotic Software";
@@ -29,11 +29,13 @@ public class Constants {
 	public static final String COMPLETE = "complete";
 	public static final String INPROGRESS = "inprogress";
 	public static final String CANCELED = "canceled";
+	public static final String FAILED = "failed";
 	
 	public static final int DOWNLOAD_READY = -1;
 	public static final int DOWNLOAD_INPROGRESS = 0;
 	public static final int DOWNLOAD_COMPLETE = 1;
 	public static final int DOWNLOAD_ABORTED = 2;
+	public static final int DOWNLOAD_FAILED = 3;
 	
 	public static final String[] PHRASES = {"I pity the fool",
 												"Beam me up, Scotty",

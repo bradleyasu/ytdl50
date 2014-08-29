@@ -53,7 +53,6 @@ public class MainWindow extends JFrame{
 		
 		checkVersion();
 		
-
 	}
 	
 	public void checkVersion(){

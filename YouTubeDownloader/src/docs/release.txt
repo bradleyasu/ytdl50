@@ -1,3 +1,12 @@
+Yet another minor update
+
+Version 5.0.11
+
++ Added check to make sure download directory exists
++ If a download fails, it will say it failed god damn it! 
+  no more of this "Woo" business when things fail!
++ BugFix: Number parsing error when formatting percentage for GUI.
+
 Minor update Numero Dos
 
 Version 5.0.10
