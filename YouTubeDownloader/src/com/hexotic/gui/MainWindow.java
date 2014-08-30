@@ -57,7 +57,7 @@ public class MainWindow extends JFrame{
 	
 	public void checkVersion(){
 		boolean showRelease = false;
-		String release = Settings.getInstance().getProperty("release"); 
+		String release = Settings.getInstance().getProperty("release", null); 
 		if (release != null){
 			if (!release.equals(Constants.VERSION)){
 				showRelease = true;

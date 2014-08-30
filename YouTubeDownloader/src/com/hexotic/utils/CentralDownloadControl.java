@@ -98,13 +98,15 @@ public class CentralDownloadControl extends Observable{
 						"video.google.com"};
 	
 	private CentralDownloadControl(){
-		downloadDirectory = Settings.getInstance().getProperty("downloadDir");
+		downloadDirectory = Settings.getInstance().getProperty("downloadDir", "");
 		if(downloadDirectory == null || downloadDirectory.equals("") || !(new File(downloadDirectory)).exists()){
 			Notification updatedNotification = new Notification(Notification.WARN, Notification.YES_NO, "Your download directory: "+downloadDirectory+" doesn't exist.  Would you like to change this now?");
 			
 			FileSystemView filesys = FileSystemView.getFileSystemView();
 			downloadDirectory = filesys.getHomeDirectory().toString();
 			System.out.println("Couldn't find saved download directory location.  Using desktop instead");
+
+			// If the download directory is simply not configured, just use the desktop without prompt
 			updatedNotification.addNotificationListener(new NotificationListener(){
 				@Override
 				public void optionSelected(String arg0) {

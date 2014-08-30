@@ -112,7 +112,7 @@ public class Downloader {
 			cmd[7] = "\""+saveTo+"\\%(title)s.%(ext)s\"";
 		}
 		String auth = Settings.getInstance().getProperty("auth.vk.com", "null");
-		if(!auth.equals("null")){
+		if(!"null".equals(auth)){
 			String[] loginInfo = auth.split(",");
 			cmd[1] = "--username \""+loginInfo[0]+"\"";
 			cmd[2] = "--password \""+loginInfo[1]+"\"";
@@ -121,8 +121,7 @@ public class Downloader {
 		for(String str: cmd)
 			System.out.print(str+" ");
 		System.out.println();
-        BufferedReader stdInput = new BufferedReader(new 
-        InputStreamReader(proc.getInputStream()));
+        BufferedReader stdInput = new BufferedReader(new InputStreamReader(proc.getInputStream()));
 		while ((s = stdInput.readLine()) != null) {
 			System.out.println(s);
 		    if(s.contains("%")){
@@ -133,7 +132,7 @@ public class Downloader {
 			    String status = percentData[0].replaceAll("[^0-9]", "");
 			    // If there was an error parsing the
 			    if ("".equals(status)) {
-			    	status = "0";
+			    	status = "99";
 			    }
 			    
 			    download.setStatus(Integer.parseInt(status));
@@ -205,7 +204,7 @@ public class Downloader {
 					new MessageBox(Constants.MSG_5, "OhNos!", "I had a problem applying your ID3 Tags", e.toString());
 				}
 			}else{
-				new MessageBox(Constants.MSG_5, "OhNos!", "I had a problem applying your ID3 Tags", "Unresolved Destination");
+				new MessageBox(Constants.MSG_5, "OhNos!", "I had a problem applying your ID3 Tags", "Unresolved Destination\nThe reason you are getting this error is most likely that your download failed and there is no MP3 file found (hence unresolved destination) to apply ID3 tags to");
 			}
 		}
 	}

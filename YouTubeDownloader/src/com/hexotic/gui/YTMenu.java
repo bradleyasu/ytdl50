@@ -85,7 +85,7 @@ public class YTMenu extends JMenuBar{
 		});
 		
 		//CHECK DEFAULT STATE FOR DOWNLOADS
-		String defaultState = Settings.getInstance().getProperty("defaultDownloadMode");
+		String defaultState = Settings.getInstance().getProperty("defaultDownloadMode", "video");
 		if(defaultState != null){
 			if(defaultState.equals("audio")){
 				mp3Download.setState(true);

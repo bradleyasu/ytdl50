@@ -23,12 +23,7 @@ public class Settings {
 			}
 		}
 	}
-	
-	public String getProperty(String property){
-		return prop.getProperty(property);
-	}
-	
-	
+		
 	public String getProperty(String property, String def){
 		return prop.getProperty(property, def);
 	}

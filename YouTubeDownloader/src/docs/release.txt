@@ -6,6 +6,12 @@ Version 5.0.11
 + If a download fails, it will say it failed god damn it! 
   no more of this "Woo" business when things fail!
 + BugFix: Number parsing error when formatting percentage for GUI.
++ BugFix: Possible NullPointerException when custom user configurations
+
+
+Questions, Comments, Concerns: support@hexotic.net
+
+--------------
 
 Minor update Numero Dos
 

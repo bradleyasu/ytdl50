@@ -337,7 +337,7 @@ public class DownloadItem extends JXPanel implements Runnable, Comparable<Downlo
 			this.repaint();
 			downloader.useProxy(this.useProxy);
 			downloader.download(mp3Format);
-			if(Settings.getInstance().getProperty("removeOnDownload").equals("yes"))
+			if(Settings.getInstance().getProperty("removeOnDownload", "no").equals("yes"))
 				this.setVisible(false);
 		}catch(Exception e){
 			new MessageBox(Constants.MSG_2, "A Download Crashed", this.url,e.toString());
