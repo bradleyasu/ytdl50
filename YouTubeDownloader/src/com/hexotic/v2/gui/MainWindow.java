@@ -1,6 +1,7 @@
 package com.hexotic.v2.gui;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
@@ -10,12 +11,14 @@ import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLayeredPane;
+import javax.swing.JScrollPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 import com.hexotic.cons.Constants;
 import com.hexotic.gui.FooterAnimation;
 import com.hexotic.gui.TopPanel;
 import com.hexotic.lib.resource.Resources;
+import com.hexotic.lib.ui.panels.SimpleScroller;
 import com.hexotic.lib.util.WinOps;
 import com.hexotic.v2.console.Console;
 import com.hexotic.v2.console.Log;
@@ -41,7 +44,7 @@ public class MainWindow extends JFrame{
 		desktop.add(main);
 		desktop.add(console);
 		main.setVisible(true);
-		console.setVisible(true);
+		console.setVisible(false);
 
 		
 		pack();
@@ -82,7 +85,12 @@ public class MainWindow extends JFrame{
 		
 		main.add(new TopPanel(), BorderLayout.NORTH);
 		
-		main.add(new DownloadContainer(), BorderLayout.CENTER);
+		JScrollPane downloads= new JScrollPane(new DownloadContainer());
+		downloads.getVerticalScrollBar().setUI(new SimpleScroller());
+		downloads.getVerticalScrollBar().setPreferredSize(new Dimension(5,5));
+		downloads.getVerticalScrollBar().setUnitIncrement(25);
+		downloads.setBorder(BorderFactory.createEmptyBorder());
+		main.add(downloads, BorderLayout.CENTER);
 		main.add(new FooterAnimation(), BorderLayout.SOUTH);
 		main.setSize(1000, 700);
 		main.setBorder(BorderFactory.createEmptyBorder());
