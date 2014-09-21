@@ -21,7 +21,7 @@ public class FormInputPanel extends JPanel implements FormInput{
 		promptLbl.setHorizontalAlignment(SwingConstants.RIGHT);
 		this.add(promptLbl);
 		this.add(input);		
-		this.setPreferredSize(new Dimension(250, 30));
+		this.setPreferredSize(new Dimension(800, 30));
 	}
 
 	@Override

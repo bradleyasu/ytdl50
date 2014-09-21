@@ -18,6 +18,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 
+import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.layout.AnimatedGridLayout;
 import com.hexotic.utils.CentralDownloadControl;
 import com.hexotic.utils.XHorizontalScrollBar;
@@ -93,6 +94,7 @@ class DownloadContainer extends JPanel implements Observer{
 
          g2d.setPaint(gp);
          g2d.fillRect(0, 0, getWidth(), getHeight());
+         
          g.setColor(new Color(255,255,255));
          g.drawLine(0, 0, getWidth(), 0);
          g.setColor(new Color(240,240,240));
