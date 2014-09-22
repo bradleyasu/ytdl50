@@ -45,7 +45,6 @@ public class MainWindow extends JFrame{
 		desktop.add(console);
 		main.setVisible(true);
 		console.setVisible(false);
-
 		
 		pack();
 		this.setSize(new Dimension(1000, 700));
@@ -55,7 +54,7 @@ public class MainWindow extends JFrame{
 		this.addComponentListener(new ComponentListener() {
 		    public void componentResized(ComponentEvent e) {
 		    	main.setSize(e.getComponent().getWidth()-16, e.getComponent().getHeight()-38);
-		    	console.setLocation(e.getComponent().getWidth()-console.getWidth()-16,e.getComponent().getHeight()-console.getHeight()-38);
+		    	console.setLocation(4,e.getComponent().getHeight()-console.getHeight()-42);
 		    }
 			@Override
 			public void componentHidden(ComponentEvent e) {

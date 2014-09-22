@@ -55,7 +55,6 @@ public class ProgressCircle implements Drawable, Runnable {
 		if (progress < 0) {
 			progress = 0;
 		}
-		
 		this.progress = progress;
 	}
 
