@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JDesktopPane;
@@ -108,6 +110,22 @@ public class MainWindow extends JFrame {
 		main.add(app, BorderLayout.CENTER);
 		main.setSize(1000, 700);
 		main.setBorder(BorderFactory.createEmptyBorder());
+		
+		main.addMouseMotionListener(new MouseMotionListener(){
+			@Override
+			public void mouseDragged(MouseEvent e) {
+			}
+			@Override
+			public void mouseMoved(MouseEvent e) {
+				if(e.getX() < 10 && sidebar.isCollapsed()) {
+					sidebar.toggle();
+				}
+				if(e.getX() > 220 && !sidebar.isCollapsed()) {
+					sidebar.toggle();
+				}
+			}
+		});
+		
 		// Remove the title bar
 		((BasicInternalFrameUI) main.getUI()).setNorthPane(null);
 

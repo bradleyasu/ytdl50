@@ -17,8 +17,16 @@ import javax.swing.JTextField;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.v2.console.Log;
 
+/**
+ * This is a custom "pretty" looking input box with placeholder
+ * functionality for the YouTube Downloader UI
+ * 
+ * @author Bradley Sheets
+ *
+ */
 public class TextFieldWithPrompt extends JTextField {
 
+	private static final long serialVersionUID = 127422547464506328L;
 	private String prompt;
 	private Image confirm = Resources.getInstance().getImage("status/accept.png");
 	private Image deny = Resources.getInstance().getImage("status/deny.png");
@@ -68,7 +76,10 @@ public class TextFieldWithPrompt extends JTextField {
 			g2d.drawImage(confirm, getWidth() - 20, getHeight() / 2 - 8, null);
 		} else if (!getText().isEmpty() && !acceptedInput) {
 			g2d.drawImage(deny, getWidth() - 20, getHeight() / 2 - 8, null);
+		} else {
+			g2d.setColor(new Color(0x888888));
+			g2d.setFont(new Font("Arial", Font.BOLD, 12));
+			g2d.drawString(prompt, 5, 21);
 		}
-
 	}
 }

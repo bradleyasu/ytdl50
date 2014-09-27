@@ -24,7 +24,7 @@ import com.hexotic.v2.gui.theme.Theme;
 public class Sidebar extends JXCollapsiblePane {
 
 	public Sidebar() {
-		this.setCollapsed(true);
+		this.setCollapsed(false);
 		this.setAnimated(true);
 		this.setDirection(Direction.RIGHT);
 		this.setContentPane(new SideBarPanel());
