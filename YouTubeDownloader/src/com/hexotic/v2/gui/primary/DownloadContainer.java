@@ -13,13 +13,10 @@ public class DownloadContainer extends JPanel{
 		this.setBackground(Theme.MAIN_BACKGROUND);
 		this.setLayout(new AnimatedGridLayout());
 
-		for (int i = 0 ; i < 32; i++ ) {
-			Item item = new Item();
-			this.add(item);
-			
-			new Thread(item).start();
-			Log.getInstance().consolePrint("Loaded Item: "+i);
-		}
+		Item item = new Item("http://www.youtube.com/watch?v=fS4XjXAIvsA");
+		this.add(item);
+		
+		new Thread(item).start();
 	}
 	
 }

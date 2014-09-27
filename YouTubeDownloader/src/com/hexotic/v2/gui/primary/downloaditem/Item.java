@@ -7,13 +7,15 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.RenderingHints;
-import java.util.Random;
+import java.io.IOException;
 
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.v2.console.Log;
+import com.hexotic.v2.downloader.DownloadListener;
+import com.hexotic.v2.downloader.Downloader;
 import com.hexotic.v2.gui.theme.Theme;
 
 /**
@@ -33,7 +35,10 @@ public class Item extends JPanel implements Runnable {
 	private static final long serialVersionUID = -7562231924818463232L;
 
 	/* URL submitted from user for download */
-	private String url = "http://www.youtube.com/watch?v=ZauC0ZTqggI";
+	private String url;
+
+	/* The youtube-dl attached for this download */
+	private Downloader downloader;
 
 	/* By default, 0 percent of the download is complete */
 	private ProgressCircle progress;
@@ -44,10 +49,17 @@ public class Item extends JPanel implements Runnable {
 	/* Use default thumbnail to start */
 	private Image thumbnail = Resources.getInstance().getImage("item_default.png");
 
-	public Item() {
+	/* by default, the item isn't downloaded yet */
+	private boolean downloaded = false;
+	
+	private boolean failed = false;
+
+	public Item(String url) {
 		this.setPreferredSize(new Dimension(Theme.DOWNLOAD_ITEM_WIDTH, Theme.DOWNLOAD_ITEM_HEIGHT));
 		this.setBackground(Theme.DOWNLOAD_ITEM_BACKGROUND);
 		this.setBorder(BorderFactory.createLineBorder(Theme.DOWNLOAD_ITEM_BORDER));
+		this.url = url;
+		downloader = new Downloader();
 
 		// Create a new progress for this item
 		progress = new ProgressCircle();
@@ -74,7 +86,7 @@ public class Item extends JPanel implements Runnable {
 			g2d.fillRect(0, 0, getWidth(), getHeight() - 40);
 			int size = getWidth() / 2;
 			progress.Draw(g, getWidth() / 2 - size / 2, 10, size, size);
-		} 
+		}
 
 		// Draw thumbnail splitter
 		g2d.setColor(Theme.DOWNLOAD_ITEM_BORDER);
@@ -104,26 +116,81 @@ public class Item extends JPanel implements Runnable {
 
 	}
 
+	private void updateImage() {
+		try {
+			thumbnail = downloader.getThumbnailUrl(url);
+		} catch (IOException e) {
+			Log.getInstance().error(this, "Couldn't load thumbnail image for url: " + url, e);
+		}
+	}
+
+	
+	private void updateTitle() {
+		try {
+			title = downloader.getTitle(url);
+		} catch (IOException e) {
+			Log.getInstance().error(this, "Couldn't load title for url: " + url, e);
+		}
+	}
+	
+	private void startDownload() {
+		downloader.addDownloadListener(new DownloadListener() {
+			@Override
+			public void outputUpdated(String output) {
+				if(output.contains("%")){
+				    String[] data = output.split("\\s+");
+				    String percent = data[1];
+				    String[] percentData = percent.split("\\.");
+				    
+				    String status = percentData[0].replaceAll("[^0-9]", "");
+				    // If there was an error parsing the
+				    if ("".equals(status)) {
+				    	status = "99";
+				    }
+				    progress.setProgress(Double.parseDouble(status));
+				    if(Double.parseDouble(status) >= 100){
+				    	downloaded = true;
+				    }
+				}
+			}
+		});
+		Log.getInstance().debug(this, "Download Started: " + url);
+		new Thread(new Runnable(){
+			@Override
+			public void run() {
+				try{
+					downloader.download(url, true, "D:\\test");
+				} catch (IOException e) {
+					Log.getInstance().error(this, "Couldn't download video: " + url, e);
+					failed = true;
+				}
+			}
+		}).start();;
+	}
+	
 	/**
 	 * Download the item submitted by the user and update the download item UI
 	 * as the download progresses
 	 */
 	@Override
 	public void run() {
-		Log.getInstance().debug(this, "Download Started: " + url);
-		Random rand = new Random();
-		for (int i = 0; i <= 100; i++) {
-			progress.setProgress(i);
+		updateImage();
+		updateTitle();
+
+		// While the downloader is downloading, add an event to update the percentage/status
+		startDownload();
+		while (!downloaded && !failed) {
 			this.revalidate();
 			this.repaint();
 			try {
-				Thread.sleep(rand.nextInt(100) * 10);
+				Thread.sleep(75);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				Log.getInstance().error(this, "Animation Error", e);
 			}
 		}
-
+		// just one final time to make sure everything is up to date
+		this.revalidate();
+		this.repaint();
 	}
 
 }

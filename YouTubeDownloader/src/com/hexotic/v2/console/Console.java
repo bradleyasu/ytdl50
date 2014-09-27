@@ -62,12 +62,14 @@ public class Console extends JInternalFrame {
 	}
 
 	public synchronized void println(String line) {
-		try {
-			Document doc = output.getDocument();
-			doc.insertString(doc.getLength(), line + "\n", null);
-			output.setCaretPosition(doc.getLength());
-		} catch (BadLocationException exc) {
-			// Nothing to worry about really
+		if(this.isVisible()){
+			try {
+				Document doc = output.getDocument();
+				doc.insertString(doc.getLength(), line + "\n", null);
+				output.setCaretPosition(doc.getLength());
+			} catch (BadLocationException exc) {
+				// Nothing to worry about really
+			}
 		}
 	}
 	
