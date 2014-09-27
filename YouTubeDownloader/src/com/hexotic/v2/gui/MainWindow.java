@@ -10,107 +10,121 @@ import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLayeredPane;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 import com.hexotic.cons.Constants;
 import com.hexotic.gui.FooterAnimation;
-import com.hexotic.gui.TopPanel;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.panels.SimpleScroller;
 import com.hexotic.lib.util.WinOps;
 import com.hexotic.v2.console.Console;
 import com.hexotic.v2.console.Log;
+import com.hexotic.v2.gui.downloadbar.DownloadBar;
 import com.hexotic.v2.gui.primary.DownloadContainer;
+import com.hexotic.v2.gui.sidebar.Sidebar;
 import com.hexotic.v2.gui.theme.Theme;
 
-public class MainWindow extends JFrame{
+public class MainWindow extends JFrame {
 
 	private static final long serialVersionUID = 4600079762459133631L;
 	private JInternalFrame main;
 	private Console console;
-	
-	public MainWindow(){
+	private Sidebar sidebar;
+
+	public MainWindow() {
 		JDesktopPane desktop = new JDesktopPane();
 		this.setContentPane(desktop);
-		this.setTitle(Constants.PROG_NAME+" "+Constants.VERSION+" - "+Constants.COMPANY_NAME);
+		this.setTitle(Constants.PROG_NAME + " " + Constants.VERSION + " - " + Constants.COMPANY_NAME);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setIconImage(Resources.getInstance().getImage("icon.png"));
-		
+
 		createMain();
 		createConsole();
-		
+
 		desktop.add(main);
 		desktop.add(console);
 		main.setVisible(true);
 		console.setVisible(false);
-		
 		pack();
 		this.setSize(new Dimension(1000, 700));
 		WinOps.centreWindow(this);
 		this.setVisible(true);
-		
+
 		this.addComponentListener(new ComponentListener() {
-		    public void componentResized(ComponentEvent e) {
-		    	main.setSize(e.getComponent().getWidth()-16, e.getComponent().getHeight()-38);
-		    	console.setLocation(4,e.getComponent().getHeight()-console.getHeight()-42);
-		    }
+			public void componentResized(ComponentEvent e) {
+				console.setLocation(e.getComponent().getWidth() - console.getWidth() - 20, e.getComponent().getHeight() - console.getHeight() - 42);
+				
+				int targetWidth = e.getComponent().getWidth() - 16;
+				int targetHeight = e.getComponent().getHeight() - 38;
+				main.setSize(targetWidth, targetHeight);
+			}
+
 			@Override
 			public void componentHidden(ComponentEvent e) {
 			}
+
 			@Override
 			public void componentMoved(ComponentEvent e) {
 			}
+
 			@Override
 			public void componentShown(ComponentEvent e) {
 			}
 		});
-		
+
 		desktop.setBackground(Theme.MAIN_BACKGROUND);
-		
-//		main.setFrameIcon(new ImageIcon(Resources.getInstance().getImage("icon_small.png")));
-//		
-//		try {
-//			main.setIcon(true);
-//		} catch (PropertyVetoException e1) {
-//		}
+
+		// main.setFrameIcon(new
+		// ImageIcon(Resources.getInstance().getImage("icon_small.png")));
+		//
+		// try {
+		// main.setIcon(true);
+		// } catch (PropertyVetoException e1) {
+		// }
+		sidebar.toggle();
 	}
 
-	
 	private void createMain() {
 		main = new JInternalFrame();
+
+		JPanel app = new JPanel(new BorderLayout());
+		
 		main.setLayout(new BorderLayout());
+		sidebar = new Sidebar();
+		main.add(sidebar, BorderLayout.WEST);
 		
-		main.add(new TopPanel(), BorderLayout.NORTH);
-		
-		JScrollPane downloads= new JScrollPane(new DownloadContainer());
+		app.add(new DownloadBar(), BorderLayout.NORTH);
+
+		JScrollPane downloads = new JScrollPane(new DownloadContainer());
 		downloads.getVerticalScrollBar().setUI(new SimpleScroller());
-		downloads.getVerticalScrollBar().setPreferredSize(new Dimension(5,5));
+		downloads.getVerticalScrollBar().setPreferredSize(new Dimension(5, 5));
 		downloads.getVerticalScrollBar().setUnitIncrement(25);
 		downloads.setBorder(BorderFactory.createEmptyBorder());
-		main.add(downloads, BorderLayout.CENTER);
-		main.add(new FooterAnimation(), BorderLayout.SOUTH);
+		app.add(downloads, BorderLayout.CENTER);
+		app.add(new FooterAnimation(), BorderLayout.SOUTH);
+		
+		main.add(app, BorderLayout.CENTER);
 		main.setSize(1000, 700);
 		main.setBorder(BorderFactory.createEmptyBorder());
 		// Remove the title bar
-		((BasicInternalFrameUI)main.getUI()).setNorthPane(null);
-		
+		((BasicInternalFrameUI) main.getUI()).setNorthPane(null);
+
 		Log.getInstance().debug(this, "Main Window Created");
 	}
-	
+
 	private void createConsole() {
 		console = new Console();
 		Log.getInstance().setConsole(console);
-		
+
 		// Set the console to always be on top
 		console.getLayeredPane().setLayer(console, JLayeredPane.POPUP_LAYER.intValue());
-	
-		
+
 		Log.getInstance().debug(this, "Console Window Created");
 	}
-	
-	
-	public static void main(String[] args){
-		Log.getInstance().debug(new MainWindow(), "Welcome To " + Constants.PROG_NAME+" "+Constants.VERSION);
+
+	public static void main(String[] args) {
+		Log.getInstance().debug(new MainWindow(), "Welcome To " + Constants.PROG_NAME + " " + Constants.VERSION);
 	}
 }

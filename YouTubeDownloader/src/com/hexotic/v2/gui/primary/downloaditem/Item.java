@@ -105,14 +105,14 @@ public class Item extends JPanel implements Runnable {
 		g2d.drawLine(xpoints[0] + 1, ypoints[0], xpoints[2] - 1, ypoints[2]);
 
 		// Draw the title of the video
-		g2d.setFont(new Font("Arial", Font.PLAIN, 15));
+		g2d.setFont(new Font("Arial", Font.BOLD, 12));
 		g2d.setColor(Color.BLACK);
-		g2d.drawString(title, 5, getHeight() - 27);
+		g2d.drawString(title, 5, getHeight() - 24);
 
 		// Draw the url of the video
 		g2d.setColor(new Color(0x1874CD));
-		g2d.setFont(new Font("Arial", Font.PLAIN, 10));
-		g2d.drawString(url, 7, getHeight() - 17);
+		g2d.setFont(new Font("Arial", Font.PLAIN, 9));
+		g2d.drawString(url, 5, getHeight() - 11);
 
 	}
 

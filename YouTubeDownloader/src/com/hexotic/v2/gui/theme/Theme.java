@@ -12,12 +12,12 @@ public final class Theme {
 	public static final Font CONTROL_BAR_FONT = new Font("Arial", Font.BOLD, 11);
 	
 	
-	public static final Color MAIN_BACKGROUND = new Color(0xf7f7f7);
+	public static final Color MAIN_BACKGROUND = new Color(0xf1f1f1);
 	
 	public static final int DOWNLOAD_ITEM_HEIGHT = 155;
 	public static final int DOWNLOAD_ITEM_WIDTH = 185;
 	
-	public static final Color DOWNLOAD_ITEM_BORDER = new Color(0x989898);
+	public static final Color DOWNLOAD_ITEM_BORDER = new Color(0xababab);
 	public static final Color DOWNLOAD_ITEM_BACKGROUND = new Color(0xffffff);
 	
 	public static final Color MAIN_COLOR_ONE = new Color(0xff0066);
@@ -26,6 +26,8 @@ public final class Theme {
 	public static final Color MAIN_COLOR_FOUR = new Color(255,68,85);
 	public static final Color MAIN_COLOR_FIVE = new Color(255,0,153);
 	
+	public static final Color DARK = new Color(0x302013);
+	public static final Color DARK_SHADOW = new Color(0x181009);
 	
 	private Theme() { /* Private class, whacha gon do */ }
 }

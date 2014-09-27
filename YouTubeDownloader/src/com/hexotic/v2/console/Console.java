@@ -44,7 +44,7 @@ public class Console extends JInternalFrame {
 		this.setOpaque(true);
 		// pssh, who needs borders
 		// this.setBorder(BorderFactory.createEmptyBorder());
-		this.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0, 240)));
+		this.setBorder(BorderFactory.createLineBorder(Theme.DARK_SHADOW));
 
 		((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
 
@@ -77,7 +77,7 @@ public class Console extends JInternalFrame {
 		private static final long serialVersionUID = -8670826262403444979L;
 
 		public ConsoleContent() {
-			this.setBackground(new Color(0, 0, 0, 255));
+			this.setBackground(Theme.DARK);
 			this.setFont(new Font("Courier New", Font.BOLD, 12));
 			this.setForeground(Theme.MAIN_COLOR_TWO);
 			this.setEditable(false);
