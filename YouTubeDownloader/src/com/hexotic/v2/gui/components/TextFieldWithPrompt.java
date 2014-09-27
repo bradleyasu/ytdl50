@@ -9,6 +9,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Paint;
+import java.awt.RenderingHints;
 import java.io.IOException;
 
 import javax.swing.BorderFactory;
@@ -61,7 +62,8 @@ public class TextFieldWithPrompt extends JTextField {
 		super.paintComponent(g);
 
 		Graphics2D g2d = (Graphics2D) g;
-
+		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		
 		g2d.setColor(new Color(0xffffff));
 		g2d.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 1, 4, 4);
 

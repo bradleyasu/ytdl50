@@ -24,6 +24,7 @@ import com.hexotic.lib.util.WinOps;
 import com.hexotic.v2.console.Console;
 import com.hexotic.v2.console.Log;
 import com.hexotic.v2.gui.downloadbar.DownloadBar;
+import com.hexotic.v2.gui.downloadbar.DownloadBarListener;
 import com.hexotic.v2.gui.primary.DownloadContainer;
 import com.hexotic.v2.gui.sidebar.Sidebar;
 import com.hexotic.v2.gui.theme.Theme;
@@ -34,6 +35,8 @@ public class MainWindow extends JFrame {
 	private JInternalFrame main;
 	private Console console;
 	private Sidebar sidebar;
+	private DownloadBar downloadBar;
+	private DownloadContainer downloadContainer;
 
 	public MainWindow() {
 		JDesktopPane desktop = new JDesktopPane();
@@ -97,9 +100,19 @@ public class MainWindow extends JFrame {
 		sidebar = new Sidebar();
 		main.add(sidebar, BorderLayout.WEST);
 		
-		app.add(new DownloadBar(), BorderLayout.NORTH);
+		downloadBar = new DownloadBar();
+		app.add(downloadBar, BorderLayout.NORTH);
 
-		JScrollPane downloads = new JScrollPane(new DownloadContainer());
+		downloadBar.addDownloadBarListener(new DownloadBarListener(){
+			@Override
+			public void inputEntered(String input){
+				downloadContainer.addDownload(input);
+			}
+		});
+		downloadContainer = new DownloadContainer();
+		JScrollPane downloads = new JScrollPane(downloadContainer);
+		
+		
 		downloads.getVerticalScrollBar().setUI(new SimpleScroller());
 		downloads.getVerticalScrollBar().setPreferredSize(new Dimension(5, 5));
 		downloads.getVerticalScrollBar().setUnitIncrement(25);

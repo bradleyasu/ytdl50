@@ -58,7 +58,7 @@ public class Downloader {
 
 	public void download(String url, boolean audio, String downloadDirectory) throws IOException {
 		
-		String[] cmd = {"-x", "--audio-format", "mp3", "-o", "\""+downloadDirectory+"\\%(title)s.%(ext)s\"",  url};
+		String[] cmd = { "-o", "\""+downloadDirectory+"\\%(title)s.%(ext)s\"",  url};
 		execute(cmd);
 	}
 	

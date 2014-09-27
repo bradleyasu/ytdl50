@@ -81,6 +81,11 @@ public class ProgressCircle implements Drawable, Runnable {
 		g2.setPaint(gp);
 
 		int arc = (int) (progress / 100.00 * 360);
+		
+		// Make the arc half full if the progress is 0
+		if(progress == 0){
+			arc = (int) (1 / 100.00 * 360);;
+		}
 		g2.drawArc(x, y, width, height, arcStart, arc * -1);
 
 		// Draw and Center percent String
@@ -103,9 +108,7 @@ public class ProgressCircle implements Drawable, Runnable {
 	@Override
 	public void run() {
 		while(progress < 100) {
-			if(progress > 0) {
 				this.arcStart -= 5;
-			}
 			try {
 				Thread.sleep(75);
 			} catch (InterruptedException e) {
