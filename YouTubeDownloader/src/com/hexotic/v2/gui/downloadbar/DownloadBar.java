@@ -43,7 +43,8 @@ public class DownloadBar extends JPanel {
 		this.setLayout(new BorderLayout());
 		this.setBorder(BorderFactory.createEmptyBorder(24, 22, 24, 12));
 		urlInput = new TextFieldWithPrompt("", "Paste in a URL and click that fancy download button to the right");
-
+		urlInput.setSelectionColor(Theme.MAIN_COLOR_FOUR);
+		
 		JPanel downloadButtonContainer = new JPanel(new FlowLayout(FlowLayout.CENTER, 4, 0));
 		downloadButtonContainer.setOpaque(false);
 

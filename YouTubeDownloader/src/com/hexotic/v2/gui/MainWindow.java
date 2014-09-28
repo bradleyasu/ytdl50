@@ -11,13 +11,14 @@ import javax.swing.BorderFactory;
 import javax.swing.JDesktopPane;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
+import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 import com.hexotic.cons.Constants;
-import com.hexotic.gui.FooterAnimation;
+import com.hexotic.lib.audio.SoundFX;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.panels.SimpleScroller;
 import com.hexotic.lib.util.WinOps;
@@ -64,6 +65,7 @@ public class MainWindow extends JFrame {
 				int targetWidth = e.getComponent().getWidth() - 16;
 				int targetHeight = e.getComponent().getHeight() - 38;
 				main.setSize(targetWidth, targetHeight);
+				main.setLocation(0,0);
 			}
 
 			@Override
@@ -79,8 +81,8 @@ public class MainWindow extends JFrame {
 			}
 		});
 
-		desktop.setBackground(Theme.MAIN_BACKGROUND);
-
+		desktop.setBackground(Theme.DARK_SHADOW);
+		
 		// main.setFrameIcon(new
 		// ImageIcon(Resources.getInstance().getImage("icon_small.png")));
 		//
@@ -106,7 +108,14 @@ public class MainWindow extends JFrame {
 		downloadBar.addDownloadBarListener(new DownloadBarListener(){
 			@Override
 			public void inputEntered(String input){
-				downloadContainer.addDownload(input);
+				// Process Special Commands
+				if(input.startsWith("/")){
+					if(input.contains("console")){
+						console.setVisible(!console.isVisible());
+					} 
+				} else {
+					downloadContainer.addDownload(input);
+				}
 			}
 		});
 		downloadContainer = new DownloadContainer();

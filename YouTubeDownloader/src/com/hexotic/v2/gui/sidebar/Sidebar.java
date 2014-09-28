@@ -34,12 +34,14 @@ public class Sidebar extends JXCollapsiblePane {
 	
 	public Sidebar() {
 		int i = 0;
-		sidebarItems.add(new SidebarItem(i++, "Format", "Video", "Audio"));
-		sidebarItems.add(new SidebarItem(i++, "Use Proxy", "No", "Yes"));
-		sidebarItems.add(new SidebarItem(i++, "Auto-paste?", "No", "Yes"));
-		sidebarItems.add(new SidebarItem(i++, "Remove after complete", "No", "Yes"));
-		sidebarItems.add(new SidebarItem(i++, "Destination", "No", "Yes"));
-		sidebarItems.add(new SidebarItem(i++, "Proxy Settings", "No", "Yes"));
+		sidebarItems.add(new SidebarSwitch(i++, "Download as:", "Video", "Audio"));
+		sidebarItems.add(new SidebarButton("Change Download Directory", i++));
+		sidebarItems.add(new SidebarSwitch(i++, "quick paste:", "Off", "On"));
+		sidebarItems.add(new SidebarSwitch(i++, "on complete:", "Keep", "Remove"));
+		
+		sidebarItems.add(new SidebarSwitch(i++, "Proxy:", "Disabled", "Enabled"));
+		sidebarItems.add(new SidebarButton("Configure Proxy Settings", i++));
+		
 		
 		this.setCollapsed(false);
 		this.setAnimated(true);
@@ -78,6 +80,7 @@ public class Sidebar extends JXCollapsiblePane {
 			// TODO get this fucking scroller color sorted out
 			this.add(new LogoPanel(), BorderLayout.NORTH);
 			this.add(items, BorderLayout.CENTER);
+			this.add(new SidebarInfoPanel(), BorderLayout.SOUTH);
 		}
 		
 		public JScrollPane getScroller(){

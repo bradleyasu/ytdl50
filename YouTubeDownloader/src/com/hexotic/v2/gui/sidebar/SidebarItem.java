@@ -8,35 +8,25 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import com.hexotic.lib.switches.BasicSwitch;
 import com.hexotic.v2.gui.theme.Theme;
 
-public class SidebarItem extends JPanel implements Comparable<SidebarItem> {
-
-	private BasicSwitch basicSwitch;
+public class SidebarItem extends JPanel implements Comparable<SidebarItem>{
+	
 	private int index = 0;
-
-	public SidebarItem(int index, String option, String on, String off) {
+	
+	public SidebarItem(){
 		this.setBackground(Theme.DARK);
 		this.setPreferredSize(new Dimension(199, 50));
 		this.setLayout(new FlowLayout(FlowLayout.LEFT, 4, 17));
-		this.index = index;
-		basicSwitch = new BasicSwitch(on, off, 100, 20, 0);
-		basicSwitch.setForeground(Theme.DARK);
-		basicSwitch.setBackground(Theme.MAIN_COLOR_FOUR);
-		basicSwitch.setFont(Theme.SWITCH_FONT);
-		JLabel label = new JLabel(option);
-		label.setFont(Theme.CONTROL_BAR_FONT);
-		label.setForeground(Theme.MAIN_BACKGROUND);
-		label.setPreferredSize(new Dimension(75, 20));
-		this.add(label);
-		this.add(basicSwitch);
 	}
 
-	public int getIndex(){
+	public void setIndex(int index){
+		this.index = index;
+	}
+	
+	public int getIndex() {
 		return index;
 	}
 	
@@ -44,6 +34,8 @@ public class SidebarItem extends JPanel implements Comparable<SidebarItem> {
 	public int compareTo(SidebarItem item){
 		return getIndex() - item.getIndex();
 	}
+	
+
 	
 	@Override
 	protected void paintComponent(Graphics g) {
