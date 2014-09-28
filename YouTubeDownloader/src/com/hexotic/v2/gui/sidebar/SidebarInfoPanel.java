@@ -2,6 +2,7 @@ package com.hexotic.v2.gui.sidebar;
 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
+import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -18,21 +19,21 @@ public class SidebarInfoPanel extends JPanel{
 	private List<SoftButton> buttons = new ArrayList<SoftButton>();
 	
 	public SidebarInfoPanel() {
-		this.setPreferredSize(new Dimension(200, 50));
+		this.setPreferredSize(new Dimension(200, 70));
 		this.setOpaque(false);
 		
 		this.setLayout(new FlowLayout(FlowLayout.CENTER));
 		
 		SoftButton aboutBtn = new SoftButton("About");
-		SoftButton releaseBtn = new SoftButton("Release");
-		SoftButton bugsBtn = new SoftButton("Bugs");
+		SoftButton releaseBtn = new SoftButton("Release Notes");
+		SoftButton bugsBtn = new SoftButton("Report a bug");
 		
 		buttons.add(aboutBtn);
 		buttons.add(releaseBtn);
 		buttons.add(bugsBtn);
 		
 		for(SoftButton button :buttons){
-			button.setPreferredSize(new Dimension(60,30));
+			button.setPreferredSize(new Dimension(87,25));
 			button.setBackgroundColor(Theme.DARK);
 			button.setForegroundColor(Theme.MAIN_BACKGROUND);
 			button.setFont(Theme.CONTROL_BAR_FONT);
@@ -40,6 +41,8 @@ public class SidebarInfoPanel extends JPanel{
 			
 			this.add(button);
 		}
+		
+		buttons.get(buttons.size()-1).setPreferredSize(new Dimension(179,25));
 		
 	}
 
@@ -50,6 +53,11 @@ public class SidebarInfoPanel extends JPanel{
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		
+		GradientPaint gp1 = new GradientPaint(0, 0, Theme.DARK, 0, getHeight(), Theme.DARK_SHADOW, true);
+
+	    g2d.setPaint(gp1);
+	    g2d.fillRect(0, 0, getWidth(), getHeight());
+
 		
 	}
 }

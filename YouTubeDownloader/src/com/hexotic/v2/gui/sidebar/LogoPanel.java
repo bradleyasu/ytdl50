@@ -31,7 +31,6 @@ public class LogoPanel extends JPanel{
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(clickCount == 10){
-					SoundFX.play("sounds/bwong.wav");
 					img = Resources.getInstance().getImage("doge.png");
 					easterEgg = true;
 					random = new Random();
@@ -78,7 +77,7 @@ public class LogoPanel extends JPanel{
 		if(easterEgg){
 			g2d.setColor(Theme.MAIN_COLOR_FOUR);
 			g2d.drawLine(50, 33, 115, 33);
-			g2d.drawString(doge[random.nextInt(doge.length)], 118, 40);
+			g2d.drawString(doge[random.nextInt(doge.length)], 118, 45);
 		}
 	}
 }
