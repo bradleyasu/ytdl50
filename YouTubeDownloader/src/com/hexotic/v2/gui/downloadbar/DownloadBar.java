@@ -125,10 +125,5 @@ public class DownloadBar extends JPanel {
 		g2d.setColor(Theme.MAIN_COLOR_FOUR);
 		g2d.fillRect(0, y += 10, width, width);
 
-		// g2d.setColor(Theme.DARK);
-		// g2d.drawLine(2, 15, 2, 60);
-		// g2d.drawLine(5, 15, 5, 60);
-		// g2d.drawLine(8, 15, 8, 60);
-
 	}
 }

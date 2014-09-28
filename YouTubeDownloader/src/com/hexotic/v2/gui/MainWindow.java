@@ -118,7 +118,6 @@ public class MainWindow extends JFrame {
 		downloads.getVerticalScrollBar().setUnitIncrement(25);
 		downloads.setBorder(BorderFactory.createEmptyBorder());
 		app.add(downloads, BorderLayout.CENTER);
-		app.add(new FooterAnimation(), BorderLayout.SOUTH);
 		
 		main.add(app, BorderLayout.CENTER);
 		main.setSize(1000, 700);

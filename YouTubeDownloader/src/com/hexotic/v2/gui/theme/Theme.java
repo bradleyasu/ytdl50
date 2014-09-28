@@ -10,7 +10,7 @@ public final class Theme {
 	public static final Color CONTROL_BAR_BORDER = new Color(0xdadada);
 
 	public static final Font CONTROL_BAR_FONT = new Font("Arial", Font.BOLD, 11);
-	
+	public static final Font SWITCH_FONT = new Font("Arial", Font.BOLD, 10);
 	
 	public static final Color MAIN_BACKGROUND = new Color(0xf1f1f1);
 	
