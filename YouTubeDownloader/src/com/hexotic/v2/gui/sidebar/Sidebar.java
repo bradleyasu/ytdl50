@@ -30,6 +30,7 @@ import com.hexotic.v2.gui.theme.Theme;
  */
 public class Sidebar extends JXCollapsiblePane {
 
+	private static final long serialVersionUID = -9063386111354561300L;
 	private List<SidebarItem> sidebarItems = new ArrayList<SidebarItem>();
 	
 	public Sidebar() {
@@ -42,8 +43,10 @@ public class Sidebar extends JXCollapsiblePane {
 		sidebarItems.add(new SidebarSwitch(i++, "Proxy:", "Disabled", "Enabled"));
 		sidebarItems.add(new SidebarButton("Configure Proxy Settings", i++));
 		
+//		sidebarItems.add(new SidebarButton("Install Chrome Extension", i++));
 		
-		this.setCollapsed(false);
+		
+		this.setCollapsed(true);
 		this.setAnimated(true);
 		this.setDirection(Direction.RIGHT);
 		this.setContentPane(new SideBarPanel());
@@ -55,6 +58,7 @@ public class Sidebar extends JXCollapsiblePane {
 	
 	
 	class SideBarPanel extends JPanel {
+		private static final long serialVersionUID = 8471609150957256466L;
 		private JScrollPane scroller;
 		private JPanel items;
 		

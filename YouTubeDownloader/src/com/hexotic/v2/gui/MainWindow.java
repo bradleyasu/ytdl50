@@ -23,6 +23,7 @@ import com.hexotic.lib.ui.panels.SimpleScroller;
 import com.hexotic.lib.util.WinOps;
 import com.hexotic.v2.console.Console;
 import com.hexotic.v2.console.Log;
+import com.hexotic.v2.downloader.popup.PopupFactory;
 import com.hexotic.v2.downloader.popup.PopupWindow;
 import com.hexotic.v2.gui.downloadbar.DownloadBar;
 import com.hexotic.v2.gui.downloadbar.DownloadBarListener;
@@ -97,7 +98,8 @@ public class MainWindow extends JFrame {
 		// main.setIcon(true);
 		// } catch (PropertyVetoException e1) {
 		// }
-		sidebar.toggle();
+		//sidebar.toggle();
+		new Thread(downloadBar).start();
 	}
 
 	private void createMain() {
@@ -155,7 +157,7 @@ public class MainWindow extends JFrame {
 				if(e.getX() < 10 && sidebar.isCollapsed()) {
 					sidebar.toggle();
 				}
-				if(e.getX() > 220 && !sidebar.isCollapsed()) {
+				if(e.getX() > 200 && e.getX() < 210 && !sidebar.isCollapsed()) {
 					sidebar.toggle();
 				}
 			}
@@ -179,7 +181,8 @@ public class MainWindow extends JFrame {
 
 	
 	private void createOverlay() {
-		overlay = new PopupWindow();
+//		overlay = new PopupWindow();
+		overlay = PopupFactory.getPopupWindow();
 
 		// Set the overlay to always be on top
 		overlay.getLayeredPane().setLayer(overlay, JLayeredPane.POPUP_LAYER.intValue());

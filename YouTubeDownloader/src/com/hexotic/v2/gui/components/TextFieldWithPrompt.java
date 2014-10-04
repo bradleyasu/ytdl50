@@ -1,7 +1,6 @@
 package com.hexotic.v2.gui.components;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontFormatException;
 import java.awt.GradientPaint;

@@ -60,6 +60,7 @@ public class Downloader {
 		
 		String[] cmd = { "-o", "\""+downloadDirectory+"\\%(title)s.%(ext)s\"",  url};
 		execute(cmd);
+		
 	}
 	
 	private String execute(String[] parameters) throws IOException {

@@ -160,6 +160,12 @@ public class Item extends JPanel implements Runnable {
 			public void run() {
 				try{
 					downloader.download(url, true, "D:\\test");
+					Log.getInstance().debug(this, "Download processing finished");
+					if(progress.getProgress() != 100){
+						progress.setProgress(100);
+						failed = true;
+					}
+					
 				} catch (IOException e) {
 					Log.getInstance().error(this, "Couldn't download video: " + url, e);
 					failed = true;

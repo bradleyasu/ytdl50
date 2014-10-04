@@ -28,12 +28,14 @@ import com.hexotic.v2.gui.theme.Theme;
  * @author Bradley Sheets
  * 
  */
-public class DownloadBar extends JPanel {
+public class DownloadBar extends JPanel implements Runnable{
 
 	private static final long serialVersionUID = 5261700324127818276L;
 	private TextFieldWithPrompt urlInput;
 
 	private SoftButton downloadButton;
+	
+	private int bannerX = -10;
 
 	private List<DownloadBarListener> listeners = new ArrayList<DownloadBarListener>();
 
@@ -72,6 +74,7 @@ public class DownloadBar extends JPanel {
 				if (e.getKeyCode() == KeyEvent.VK_ENTER) {
 					notifyListeners(urlInput.getText());
 					urlInput.setText("");
+					urlInput.requestFocus();
 				}
 				if (urlInput.getText().length() == 7) {
 					urlInput.setAccepted(true);
@@ -102,6 +105,25 @@ public class DownloadBar extends JPanel {
 			}
 		}
 	}
+	
+	
+	@Override
+	public void run(){
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e1) {
+		}
+		while(this.bannerX < 4){
+			try {
+				Thread.sleep(20);
+				bannerX++;
+				revalidate();
+				repaint();
+			} catch (InterruptedException e) {
+			}			
+		}
+
+	}
 
 	@Override
 	protected void paintComponent(Graphics g) {
@@ -115,16 +137,16 @@ public class DownloadBar extends JPanel {
 		int width = 10;
 		int y = 0;
 		g2d.setColor(Theme.DARK);
-		g2d.fillRect(0, y += 10, width, width);
+		g2d.fillRect(bannerX > 0? 0 : bannerX, y += 10, width, width);
 
 		g2d.setColor(Theme.MAIN_COLOR_ONE);
-		g2d.fillRect(0, y += 10, width, width);
+		g2d.fillRect(bannerX > 0? 0 : bannerX-1, y += 10, width, width);
 		g2d.setColor(Theme.MAIN_COLOR_TWO);
-		g2d.fillRect(0, y += 10, width, width);
+		g2d.fillRect(bannerX > 0? 0 : bannerX-2, y += 10, width, width);
 		g2d.setColor(Theme.MAIN_COLOR_THREE);
-		g2d.fillRect(0, y += 10, width, width);
+		g2d.fillRect(bannerX > 0? 0 : bannerX-3, y += 10, width, width);
 		g2d.setColor(Theme.MAIN_COLOR_FOUR);
-		g2d.fillRect(0, y += 10, width, width);
+		g2d.fillRect(bannerX > 0? 0 : bannerX-4, y += 10, width, width);
 
 	}
 }
