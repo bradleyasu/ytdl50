@@ -69,6 +69,9 @@ public class Item extends JPanel implements Runnable {
 
 		// Begin the "cycle" animation
 		progress.cycle();
+		
+
+		
 	}
 
 	@Override

@@ -1,14 +1,20 @@
 package com.hexotic.v2.gui.support;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
-import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.RenderingHints;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Properties;
 
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 import javax.swing.BorderFactory;
 import javax.swing.JEditorPane;
 import javax.swing.JLabel;
@@ -18,11 +24,14 @@ import javax.swing.JScrollPane;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.buttons.SoftButton;
 import com.hexotic.lib.ui.panels.SimpleScroller;
+import com.hexotic.v2.console.Log;
+import com.hexotic.v2.downloader.popup.PopupFactory;
 import com.hexotic.v2.gui.components.TextFieldWithPrompt;
 import com.hexotic.v2.gui.theme.Theme;
 
 public class ContactPanel extends JPanel {
-
+	
+	private static final long serialVersionUID = -8754064883335870669L;
 	private TextFieldWithPrompt email;
 	private JEditorPane feedback;
 
@@ -53,20 +62,50 @@ public class ContactPanel extends JPanel {
 		label.setFont(Theme.CONTROL_BAR_FONT.deriveFont(18f));
 		label.setPreferredSize(new Dimension(500, 30));
 		
+		sendButton.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+					PopupFactory.getPopupWindow().propagateClose();
+					sendMail();
+			}
+		});
+		
 		
 		this.add(label);
 		this.add(email);
 		this.add(scroller);
 		this.add(sendButton);
 	}
+
+	private void sendMail(){
+		String to = "support@hexotic.net";
+		String from = "support@hexotic.net";
+		if(!email.getText().isEmpty()){
+			from = email.getText();
+		}
+		String host = "mail.hexotic.net";
+		Properties properties = System.getProperties();
+		properties.setProperty("mail.smtp.host", host);
+		properties.setProperty("mail.smtp.host", host);
+		properties.put("mail.smtp.port", "587");
+		
+		Session session = Session.getDefaultInstance(properties);
+		try{
+			MimeMessage message = new MimeMessage(session);	
+			message.setFrom(new InternetAddress(from));
+			message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+			message.setSubject("Youtube Downloader Feedback and Support");
+			message.setText(feedback.getText());
+			Transport.send(message);
+		}catch (MessagingException mex) {
+			Log.getInstance().error(this, "Failed to send email", mex);
+		}
+	}
 	
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
-//		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-		g2d.drawImage(Resources.getInstance().getImage("support/letter.png"),getWidth()-102, getHeight()-100, 100,100,null);
+		g2d.drawImage(Resources.getInstance().getImage("support/letter.png"), getWidth() - 102, getHeight() - 100, 100, 100, null);
 
 	}
 

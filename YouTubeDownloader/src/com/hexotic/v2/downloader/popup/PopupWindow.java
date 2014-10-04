@@ -59,5 +59,10 @@ public class PopupWindow extends JInternalFrame {
 		glass.setPrompt(panel);
 		return this;
 	}
+	
+	public void propagateClose() {
+		glass.close();
+		this.setVisible(false);
+	}
 
 }
