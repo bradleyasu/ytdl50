@@ -35,6 +35,7 @@ public class ProgressCircle implements Drawable, Runnable {
 
 	private Color fontColor = Color.white;
 	private Font font = new Font("Arial", Font.BOLD, 28);
+	private boolean cycle = false;
 
 	public ProgressCircle() {
 
@@ -103,11 +104,16 @@ public class ProgressCircle implements Drawable, Runnable {
 
 	public void cycle() {
 		new Thread(this).start();
+		cycle = true;
+	}
+	
+	public void stopCycle() {
+		cycle = false;
 	}
 	
 	@Override
 	public void run() {
-		while(progress < 100) {
+		while(cycle) {
 				this.arcStart -= 5;
 			try {
 				Thread.sleep(75);

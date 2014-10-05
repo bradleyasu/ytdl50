@@ -23,6 +23,7 @@ import com.hexotic.lib.ui.panels.SimpleScroller;
 import com.hexotic.lib.util.WinOps;
 import com.hexotic.v2.console.Console;
 import com.hexotic.v2.console.Log;
+import com.hexotic.v2.downloader.Downloader;
 import com.hexotic.v2.downloader.popup.PopupFactory;
 import com.hexotic.v2.downloader.popup.PopupWindow;
 import com.hexotic.v2.gui.downloadbar.DownloadBar;
@@ -121,7 +122,11 @@ public class MainWindow extends JFrame {
 				if(input.startsWith("/")){
 					if(input.contains("console")){
 						console.setVisible(!console.isVisible());
-					} else if (input.contains("overlay")){
+					} else if(input.contains("supported")){ 
+						console.setVisible(true);
+						Downloader downloader = new Downloader();
+						downloader.getSupported();
+					}else if (input.contains("overlay")){
 						overlay.setVisible(true);
 						JPanel panel = new JPanel();
 						panel.setPreferredSize(new Dimension(500, 200));
@@ -130,7 +135,15 @@ public class MainWindow extends JFrame {
 						
 					}
 				} else {
-					downloadContainer.addDownload(input);
+					if(downloadContainer.isYoutubePlaylist(input)){
+						try {
+							downloadContainer.addPlaylist(input);
+						} catch (Exception e) {
+							Log.getInstance().error(this, "Failed to download playlist", e);
+						}
+					} else {
+						downloadContainer.addDownload(input);
+					}
 				}
 			}
 		});

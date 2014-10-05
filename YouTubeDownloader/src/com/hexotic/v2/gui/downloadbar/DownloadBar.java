@@ -6,18 +6,29 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.HeadlessException;
 import java.awt.RenderingHints;
+import java.awt.Toolkit;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
+
+import org.apache.commons.validator.routines.UrlValidator;
 
 import com.hexotic.lib.ui.buttons.SoftButton;
+import com.hexotic.v2.console.Log;
 import com.hexotic.v2.gui.components.TextFieldWithPrompt;
 import com.hexotic.v2.gui.theme.Theme;
 
@@ -37,6 +48,8 @@ public class DownloadBar extends JPanel implements Runnable{
 	
 	private int bannerX = -10;
 
+	private UrlValidator urlValidator = new UrlValidator();
+	
 	private List<DownloadBarListener> listeners = new ArrayList<DownloadBarListener>();
 
 	public DownloadBar() {
@@ -64,6 +77,28 @@ public class DownloadBar extends JPanel implements Runnable{
 			}
 		});
 
+		urlInput.addMouseListener(new MouseListener(){
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(SwingUtilities.isRightMouseButton(e)){
+					urlInput.setText(getClipboard());
+					urlInput.setAccepted(true);
+				}
+			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+			}
+			@Override
+			public void mousePressed(MouseEvent e) {
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+			}
+		});
+		
 		urlInput.addKeyListener(new KeyListener() {
 			@Override
 			public void keyPressed(KeyEvent e) {
@@ -76,11 +111,7 @@ public class DownloadBar extends JPanel implements Runnable{
 					urlInput.setText("");
 					urlInput.requestFocus();
 				}
-				if (urlInput.getText().length() == 7) {
-					urlInput.setAccepted(true);
-				} else {
-					urlInput.setAccepted(false);
-				}
+				urlInput.setAccepted(urlValidator.isValid(urlInput.getText()) || urlInput.getText().startsWith("/"));
 			}
 
 			@Override
@@ -125,6 +156,24 @@ public class DownloadBar extends JPanel implements Runnable{
 
 	}
 
+	public String getClipboard(){
+		String clipboard = "";
+		try {
+			clipboard = (String) Toolkit.getDefaultToolkit().getSystemClipboard().getData(DataFlavor.stringFlavor);
+			if(!urlValidator.isValid(clipboard)){
+				clipboard = "";
+				Log.getInstance().warn(this, "Invalid URL on clipboard");
+			}
+		} catch (HeadlessException e) {
+			Log.getInstance().error(this, "Couldn't get clipboard content", e);
+		} catch (UnsupportedFlavorException e) {
+			Log.getInstance().error(this, "Couldn't get clipboard content", e);
+		} catch (IOException e) {
+			Log.getInstance().error(this, "Couldn't get clipboard content", e);
+		} 
+		return clipboard;
+	}
+	
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);

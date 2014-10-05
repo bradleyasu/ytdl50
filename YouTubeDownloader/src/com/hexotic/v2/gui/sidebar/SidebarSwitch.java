@@ -1,11 +1,11 @@
 package com.hexotic.v2.gui.sidebar;
 
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 
 import javax.swing.JLabel;
 
 import com.hexotic.lib.switches.BasicSwitch;
+import com.hexotic.lib.switches.SwitchListener;
 import com.hexotic.v2.gui.theme.Theme;
 
 public class SidebarSwitch extends SidebarItem {
@@ -27,5 +27,11 @@ public class SidebarSwitch extends SidebarItem {
 		this.add(basicSwitch);
 	}
 
+	public void setState(boolean state){
+		basicSwitch.setState(state);
+	}
+	public void addSwitchListener(SwitchListener listener){
+		basicSwitch.addSwitchListener(listener);
+	}
 	
 }

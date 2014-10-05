@@ -13,6 +13,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 import com.hexotic.lib.resource.Resources;
+import com.hexotic.utils.Settings;
 import com.hexotic.v2.console.Log;
 import com.hexotic.v2.downloader.DownloadListener;
 import com.hexotic.v2.downloader.Downloader;
@@ -29,7 +30,7 @@ import com.hexotic.v2.gui.theme.Theme;
  * @author Bradley Sheets
  * 
  */
-public class Item extends JPanel implements Runnable {
+public class Item extends JPanel implements Runnable, Comparable<Item> {
 
 	/* Generated Serial Version ID */
 	private static final long serialVersionUID = -7562231924818463232L;
@@ -53,8 +54,10 @@ public class Item extends JPanel implements Runnable {
 	private boolean downloaded = false;
 	
 	private boolean failed = false;
-
-	public Item(String url) {
+	private int id = 0;
+	
+	public Item(String url, int id) {
+		this.id = id;
 		this.setPreferredSize(new Dimension(Theme.DOWNLOAD_ITEM_WIDTH, Theme.DOWNLOAD_ITEM_HEIGHT));
 		this.setBackground(Theme.DOWNLOAD_ITEM_BACKGROUND);
 		this.setBorder(BorderFactory.createLineBorder(Theme.DOWNLOAD_ITEM_BORDER));
@@ -151,9 +154,6 @@ public class Item extends JPanel implements Runnable {
 				    	status = "99";
 				    }
 				    progress.setProgress(Double.parseDouble(status));
-				    if(Double.parseDouble(status) >= 100){
-				    	downloaded = true;
-				    }
 				}
 			}
 		});
@@ -162,19 +162,24 @@ public class Item extends JPanel implements Runnable {
 			@Override
 			public void run() {
 				try{
-					downloader.download(url, true, "D:\\test");
+					String downloadDir = Settings.getInstance().getProperty("downloadDir", "");
+					downloader.download(url, Boolean.valueOf(Settings.getInstance().getProperty("audioFormat", "false")), downloadDir);
 					Log.getInstance().debug(this, "Download processing finished");
 					if(progress.getProgress() != 100){
 						progress.setProgress(100);
 						failed = true;
 					}
-					
+					downloaded = true;
 				} catch (IOException e) {
 					Log.getInstance().error(this, "Couldn't download video: " + url, e);
 					failed = true;
 				}
 			}
 		}).start();;
+	}
+	
+	public int getId() {
+		return id;
 	}
 	
 	/**
@@ -197,9 +202,15 @@ public class Item extends JPanel implements Runnable {
 				Log.getInstance().error(this, "Animation Error", e);
 			}
 		}
+		progress.stopCycle();
 		// just one final time to make sure everything is up to date
 		this.revalidate();
 		this.repaint();
+	}
+	
+	@Override
+	public int compareTo(Item item){
+		return getId() - item.getId();
 	}
 
 }

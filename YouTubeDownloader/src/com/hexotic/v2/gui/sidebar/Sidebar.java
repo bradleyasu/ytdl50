@@ -16,8 +16,11 @@ import javax.swing.JScrollPane;
 
 import org.jdesktop.swingx.JXCollapsiblePane;
 
+import com.hexotic.lib.switches.SwitchEvent;
+import com.hexotic.lib.switches.SwitchListener;
 import com.hexotic.lib.ui.layout.AnimatedGridLayout;
 import com.hexotic.lib.ui.panels.SimpleScroller;
+import com.hexotic.utils.Settings;
 import com.hexotic.v2.gui.theme.Theme;
 
 /**
@@ -35,10 +38,24 @@ public class Sidebar extends JXCollapsiblePane {
 	
 	public Sidebar() {
 		int i = 0;
-		sidebarItems.add(new SidebarSwitch(i++, "Download as:", "Video", "Audio"));
+		SidebarSwitch formatSwitch = new SidebarSwitch(i++, "Download as:", "Video", "Audio");
+		formatSwitch.setState(Boolean.valueOf(Settings.getInstance().getProperty("audioFormat", "false")));
+		formatSwitch.addSwitchListener(new SwitchListener(){
+			@Override
+			public void switchTriggered(SwitchEvent event) {
+				if(event.getState() == SwitchEvent.ON){
+					Settings.getInstance().saveProperty("audioFormat", "true");
+				} else {
+					Settings.getInstance().saveProperty("audioFormat", "false");
+				}
+			}
+			
+		});
+		sidebarItems.add(formatSwitch);
 		sidebarItems.add(new SidebarButton("Change Download Directory", i++));
 		sidebarItems.add(new SidebarSwitch(i++, "quick paste:", "Off", "On"));
 		sidebarItems.add(new SidebarSwitch(i++, "on complete:", "Keep", "Remove"));
+		
 		
 		sidebarItems.add(new SidebarSwitch(i++, "Proxy:", "Disabled", "Enabled"));
 		sidebarItems.add(new SidebarButton("Configure Proxy Settings", i++));

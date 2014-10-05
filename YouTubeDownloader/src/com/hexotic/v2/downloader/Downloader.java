@@ -57,10 +57,22 @@ public class Downloader {
 	}
 
 	public void download(String url, boolean audio, String downloadDirectory) throws IOException {
-		
-		String[] cmd = { "-o", "\""+downloadDirectory+"\\%(title)s.%(ext)s\"",  url};
-		execute(cmd);
-		
+		if(audio){
+			String[] cmd = { "-x", "--audio-format", "mp3", "-o", "\""+downloadDirectory+"\\%(title)s.%(ext)s\"",  url};
+			execute(cmd);	
+		} else {
+			String[] cmd = { "-o", "\""+downloadDirectory+"\\%(title)s.%(ext)s\"",  url};
+			execute(cmd);
+		}
+	}
+	
+	public void getSupported(){
+		String[] arr = {"--list-extractors"};
+		try {
+			execute(arr);
+		} catch (IOException e) {
+			Log.getInstance().error(this, "Failed to list extractors", e);
+		}
 	}
 	
 	private String execute(String[] parameters) throws IOException {
