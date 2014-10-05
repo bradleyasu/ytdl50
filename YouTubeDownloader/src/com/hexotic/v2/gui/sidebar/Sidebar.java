@@ -37,9 +37,16 @@ public class Sidebar extends JXCollapsiblePane {
 	private List<SidebarItem> sidebarItems = new ArrayList<SidebarItem>();
 	
 	public Sidebar() {
+		// ID for each sidebar item
 		int i = 0;
+		
+		// Create the Audio/Video format switch
 		SidebarSwitch formatSwitch = new SidebarSwitch(i++, "Download as:", "Video", "Audio");
+		
+		// By default, set the state of the switch to whatever the saved setting is
 		formatSwitch.setState(Boolean.valueOf(Settings.getInstance().getProperty("audioFormat", "false")));
+		
+		// If the user changes the switch, immediately save the settings
 		formatSwitch.addSwitchListener(new SwitchListener(){
 			@Override
 			public void switchTriggered(SwitchEvent event) {
@@ -52,6 +59,7 @@ public class Sidebar extends JXCollapsiblePane {
 			
 		});
 		sidebarItems.add(formatSwitch);
+		
 		sidebarItems.add(new SidebarButton("Change Download Directory", i++));
 		sidebarItems.add(new SidebarSwitch(i++, "quick paste:", "Off", "On"));
 		sidebarItems.add(new SidebarSwitch(i++, "on complete:", "Keep", "Remove"));

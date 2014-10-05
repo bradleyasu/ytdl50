@@ -16,6 +16,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
+import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.layout.AnimatedGridLayout;
 import com.hexotic.v2.gui.primary.downloaditem.Item;
 import com.hexotic.v2.gui.theme.Theme;
@@ -139,10 +140,9 @@ public class DownloadContainer extends JPanel{
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
 		g2d.setColor(Theme.MAIN_COLOR_FOUR);
-		
 		g2d.drawLine(0, getHeight()-1, getWidth(), getHeight()-1);
+
 		
 	}
 }
