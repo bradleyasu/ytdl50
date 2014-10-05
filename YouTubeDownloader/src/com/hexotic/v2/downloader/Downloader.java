@@ -75,6 +75,15 @@ public class Downloader {
 		}
 	}
 	
+	public void update() {
+		String[] arr = {"-U"};
+		try {
+			execute(arr);
+		} catch (IOException e) {
+			Log.getInstance().error(this, "Failed to update youtube-dl backend component", e);
+		}
+	}
+	
 	private String execute(String[] parameters) throws IOException {
 		// Build command with parameters passed in
 		String[] cmd = new String[parameters.length + 1];

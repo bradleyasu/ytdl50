@@ -101,6 +101,7 @@ public class MainWindow extends JFrame {
 		// }
 		//sidebar.toggle();
 		new Thread(downloadBar).start();
+		checkForUpdates();
 	}
 
 	private void createMain() {
@@ -126,6 +127,10 @@ public class MainWindow extends JFrame {
 						console.setVisible(true);
 						Downloader downloader = new Downloader();
 						downloader.getSupported();
+					} else if(input.contains("update")){ 
+						console.setVisible(true);
+						Downloader downloader = new Downloader();
+						downloader.update();
 					}else if (input.contains("overlay")){
 						overlay.setVisible(true);
 						JPanel panel = new JPanel();
@@ -190,6 +195,11 @@ public class MainWindow extends JFrame {
 		console.getLayeredPane().setLayer(console, JLayeredPane.POPUP_LAYER.intValue());
 
 		Log.getInstance().debug(this, "Console Window Created");
+	}
+	
+	private void checkForUpdates() {
+		Downloader downloader = new Downloader();
+		downloader.update();
 	}
 
 	

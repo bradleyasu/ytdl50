@@ -206,6 +206,9 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 		// just one final time to make sure everything is up to date
 		this.revalidate();
 		this.repaint();
+		if("true".equals(Settings.getInstance().getProperty("removeOnComplete", "false"))){
+			this.setVisible(false);
+		}
 	}
 	
 	@Override
