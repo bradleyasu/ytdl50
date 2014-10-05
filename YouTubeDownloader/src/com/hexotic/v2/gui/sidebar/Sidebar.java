@@ -43,9 +43,12 @@ public class Sidebar extends JXCollapsiblePane {
 		// ID for each sidebar item
 		int i = 0;
 
-		sidebarItems.add(setupSwitch("audioFormat", "Download as: ", "Video", "Audio", i++));
+		sidebarItems.add(setupSwitch("audioFormat", "Download as:", "Video", "Audio", i++));
 
-		SidebarButton changeDirectory = new SidebarButton("Change Download Directory", i++);
+		String downloadDir = Settings.getInstance().getProperty("downloadDir", "Desktop");
+		String[] arr = downloadDir.split("\\\\");
+		downloadDir = arr[arr.length-1];
+		SidebarButton changeDirectory = new SidebarButton("Download to: "+downloadDir, i++);
 		changeDirectory.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PopupFactory.getPopupWindow().setPrompt(new ChangeDirectoryPanel());

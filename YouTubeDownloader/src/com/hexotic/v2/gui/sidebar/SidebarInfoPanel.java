@@ -72,7 +72,7 @@ public class SidebarInfoPanel extends JPanel {
 		GradientPaint gp1 = new GradientPaint(0, 0, Theme.DARK, 0, getHeight(), Theme.DARK_SHADOW, true);
 
 		g2d.setPaint(gp1);
-		g2d.fillRect(0, 0, getWidth(), getHeight());
+		g2d.fillRect(0, 0, getWidth()-5, getHeight());
 
 	}
 }

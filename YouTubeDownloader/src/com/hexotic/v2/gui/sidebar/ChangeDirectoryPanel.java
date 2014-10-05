@@ -78,5 +78,19 @@ public class ChangeDirectoryPanel extends JPanel {
 		
 		this.add(saveChangesBtn);
 		
+		SoftButton cancelBtn = new SoftButton("Cancel");
+		cancelBtn.setPreferredSize(new Dimension(80, 20));
+		cancelBtn.setBackgroundColor(Theme.DARK);
+		cancelBtn.setForegroundColor(Theme.MAIN_BACKGROUND);
+		cancelBtn.setFont(Theme.CONTROL_BAR_FONT);
+		cancelBtn.setArc(0);
+		
+		cancelBtn.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				PopupFactory.getPopupWindow().propagateClose();
+			}
+		});
+		
+		this.add(cancelBtn);
 	}
 }
