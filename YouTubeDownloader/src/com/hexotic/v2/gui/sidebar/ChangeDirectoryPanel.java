@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.event.TreeSelectionEvent;
@@ -26,6 +27,7 @@ public class ChangeDirectoryPanel extends JPanel {
 	private int height = 375;
 	private XTree chooser;
 	private TextFieldWithPrompt selectedDirectory;
+	private SoftButton button;
 	
 	public ChangeDirectoryPanel() {
 		this.setLayout(new FlowLayout());
@@ -72,6 +74,12 @@ public class ChangeDirectoryPanel extends JPanel {
 		saveChangesBtn.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				Settings.getInstance().saveProperty("downloadDir", selectedDirectory.getText());
+				if(button != null){
+					String downloadDir = selectedDirectory.getText();
+					String[] arr = downloadDir.split("\\\\");
+					downloadDir = arr[arr.length-1];
+					button.setSoftButtonText("Download to: "+ downloadDir);
+				}
 				PopupFactory.getPopupWindow().propagateClose();
 			}
 		});
@@ -92,5 +100,9 @@ public class ChangeDirectoryPanel extends JPanel {
 		});
 		
 		this.add(cancelBtn);
+	}
+	
+	public void updateControl(SoftButton button){
+		this.button = button;
 	}
 }

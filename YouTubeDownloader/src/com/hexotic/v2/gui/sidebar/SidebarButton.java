@@ -27,4 +27,9 @@ public class SidebarButton extends SidebarItem {
 	public void addActionListener(ActionListener al) {
 		button.addActionListener(al);
 	}
+	
+	public SoftButton getButton() {
+		return button;
+	}
+
 }

@@ -20,6 +20,7 @@ import org.jdesktop.swingx.JXCollapsiblePane;
 
 import com.hexotic.lib.switches.SwitchEvent;
 import com.hexotic.lib.switches.SwitchListener;
+import com.hexotic.lib.ui.buttons.SoftButton;
 import com.hexotic.lib.ui.layout.AnimatedGridLayout;
 import com.hexotic.lib.ui.panels.SimpleScroller;
 import com.hexotic.utils.Settings;
@@ -51,7 +52,11 @@ public class Sidebar extends JXCollapsiblePane {
 		SidebarButton changeDirectory = new SidebarButton("Download to: "+downloadDir, i++);
 		changeDirectory.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PopupFactory.getPopupWindow().setPrompt(new ChangeDirectoryPanel());
+				ChangeDirectoryPanel prompt = new ChangeDirectoryPanel();
+				// We want to update the button on complete
+				prompt.updateControl((SoftButton)e.getSource());
+				
+				PopupFactory.getPopupWindow().setPrompt(prompt);
 			}
 		});
 		sidebarItems.add(changeDirectory);
