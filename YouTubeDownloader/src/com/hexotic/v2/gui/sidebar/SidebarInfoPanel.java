@@ -17,6 +17,7 @@ import com.hexotic.lib.ui.buttons.SoftButton;
 import com.hexotic.v2.downloader.popup.PopupFactory;
 import com.hexotic.v2.gui.support.AboutPanel;
 import com.hexotic.v2.gui.support.ContactPanel;
+import com.hexotic.v2.gui.support.ReleaseNotes;
 import com.hexotic.v2.gui.theme.Theme;
 
 public class SidebarInfoPanel extends JPanel {
@@ -42,6 +43,12 @@ public class SidebarInfoPanel extends JPanel {
 		bugsBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PopupFactory.getPopupWindow().setPrompt(new ContactPanel());
+			}
+		});
+		
+		releaseBtn.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				PopupFactory.getPopupWindow().setPrompt(new ReleaseNotes());
 			}
 		});
 

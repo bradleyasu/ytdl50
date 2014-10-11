@@ -39,6 +39,17 @@ public class Downloader {
 		}
 	}
 
+	/**
+	 * Get a thumbnail image of a video url with the --get-thumbnail 
+	 * option for youtube-dl
+	 * 
+	 * @param url	
+	 * 				URL to get the thumbnail for
+	 * 
+	 * @return
+	 * 				Thumbnail for the video
+	 * @throws IOException
+	 */
 	public Image getThumbnailUrl(String url) throws IOException {
 		String[] args = {"--get-thumbnail", url };
 		String thumbnailUrl = execute(args).trim();
@@ -48,7 +59,16 @@ public class Downloader {
 		return icon.getImage();
 	}
 	
-	
+	/**
+	 * Uses --get-title and a specified url to get the title of 
+	 * a video 
+	 * 
+	 * @param url 
+	 * 				URL to get the title of
+	 * @return
+	 * 				Title of the video at the url
+	 * @throws IOException
+	 */
 	public String getTitle(String url) throws IOException {
 		String[] args = {"--get-title", url };
 		String videoTitle = execute(args).trim();
@@ -56,25 +76,63 @@ public class Downloader {
 		return videoTitle;
 	}
 
+	/**
+	 * Download a video with the options provided.  This method will execute
+	 * the youtube-dl download functionality and evaluate user settings as paramter
+	 * input for youtube-dl
+	 * 
+	 * @param url
+	 * 				URL to download
+	 * @param audio
+	 * 				Audio format if true, video if false
+	 * @param downloadDirectory
+	 * 				The Location to download the video/audio (Desktop used by default)
+	 * @throws IOException
+	 */
 	public void download(String url, boolean audio, String downloadDirectory) throws IOException {
+		
+		// Create a chace for the arguments (not sure how many there will be yet)
+		List<String> argCache = new ArrayList<String>();
+
 		if(audio){
-			String[] cmd = { "-x", "--audio-format", "mp3", "-o", "\""+downloadDirectory+"\\%(title)s.%(ext)s\"",  url};
-			execute(cmd);	
-		} else {
-			String[] cmd = { "-o", "\""+downloadDirectory+"\\%(title)s.%(ext)s\"",  url};
-			execute(cmd);
+			argCache.add("-x");
+			argCache.add("--audio-format");
+			argCache.add("mp3");
 		}
+		
+		argCache.add("-o");
+		argCache.add("\""+downloadDirectory+"\\%(title)s.%(ext)s\"");
+		argCache.add(url);
+		
+		
+		// Translate all of the parameters into an array
+		String[] param = new String[argCache.size()];
+		for(int i = 0 ; i < argCache.size(); i++){
+			param[i] = argCache.get(i);
+		}
+		
+		// Execute yt-dl with parameters
+		execute(param);
 	}
 	
-	public void getSupported(){
+	/**
+	 * Lists all supported extractors and returns in a 
+	 * string array
+	 */
+	public String[] getSupported(){
 		String[] arr = {"--list-extractors"};
+		String[] extractors = {""};
 		try {
-			execute(arr);
+			extractors = execute(arr).split("\n");
 		} catch (IOException e) {
 			Log.getInstance().error(this, "Failed to list extractors", e);
 		}
+		return extractors;
 	}
-	
+
+	/**
+	 * Uses the youtube-dl -U parameter to update the youtube-dl module
+	 */
 	public void update() {
 		String[] arr = {"-U"};
 		try {
@@ -115,10 +173,23 @@ public class Downloader {
 		return out.toString();
 	}
 
+	/**
+	 * Download listeners allow other objects to listen for output changes
+	 * on the youtube-dl command line output
+	 * 
+	 * @param listener  
+	 * 				Listener object to add
+	 */
 	public void addDownloadListener(DownloadListener listener) {
 		listeners.add(listener);
 	}
 	
+	/**
+	 * If youtube-dl output changes, notify any listeners attached
+	 * 
+	 * @param data
+	 * 			Data the listeners need to be notified of - youtube-dl CLI output string
+	 */
 	private void notifyListeners(String data){
 		for(DownloadListener listener : listeners) {
 			listener.outputUpdated(data);

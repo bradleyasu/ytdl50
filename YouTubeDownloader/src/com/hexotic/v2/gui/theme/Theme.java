@@ -8,6 +8,8 @@ public final class Theme {
 	// Top/Control bar colors 
 	public static final Color CONTROL_BAR_BACKGROUND = new Color(0xfafafa);
 	public static final Color CONTROL_BAR_BORDER = new Color(0xdadada);
+	
+	public static final Color TRANSPARENT = new Color(0,0,0,0);
 
 	public static final Font CONTROL_BAR_FONT = new Font("Arial", Font.BOLD, 11);
 	public static final Font SWITCH_FONT = new Font("Arial", Font.BOLD, 10);

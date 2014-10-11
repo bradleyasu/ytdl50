@@ -22928,3 +22928,1984 @@ java.net.MalformedURLException: no protocol:
 03:08:13,575 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
 03:08:13,883 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
 03:08:13,897 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+12:47:41,617 DEBUG - MainWindow [ Main Window Created ]
+12:47:41,734 DEBUG - MainWindow [ Console Window Created ]
+12:47:41,866 DEBUG - MainWindow [ Console Window Created ]
+12:47:42,115 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+12:47:42,814 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+12:47:42,826 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+12:48:59,529 FATAL - DownloadBar [ Couldn't get clipboard content ]
+java.awt.datatransfer.UnsupportedFlavorException: Unicode String
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar.getClipboard(DownloadBar.java:162)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar$2.mouseClicked(DownloadBar.java:84)
+	at java.awt.AWTEventMulticaster.mouseClicked(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$200(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+12:48:59,722 FATAL - DownloadBar [ Couldn't get clipboard content ]
+java.awt.datatransfer.UnsupportedFlavorException: Unicode String
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar.getClipboard(DownloadBar.java:162)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar$2.mouseClicked(DownloadBar.java:84)
+	at java.awt.AWTEventMulticaster.mouseClicked(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$200(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+12:49:00,964 FATAL - DownloadBar [ Couldn't get clipboard content ]
+java.awt.datatransfer.UnsupportedFlavorException: Unicode String
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar.getClipboard(DownloadBar.java:162)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar$2.mouseClicked(DownloadBar.java:84)
+	at java.awt.AWTEventMulticaster.mouseClicked(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$200(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+12:49:01,128 FATAL - DownloadBar [ Couldn't get clipboard content ]
+java.awt.datatransfer.UnsupportedFlavorException: Unicode String
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar.getClipboard(DownloadBar.java:162)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar$2.mouseClicked(DownloadBar.java:84)
+	at java.awt.AWTEventMulticaster.mouseClicked(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$200(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+12:49:01,290 FATAL - DownloadBar [ Couldn't get clipboard content ]
+java.awt.datatransfer.UnsupportedFlavorException: Unicode String
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar.getClipboard(DownloadBar.java:162)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar$2.mouseClicked(DownloadBar.java:84)
+	at java.awt.AWTEventMulticaster.mouseClicked(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$200(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+12:49:01,446 FATAL - DownloadBar [ Couldn't get clipboard content ]
+java.awt.datatransfer.UnsupportedFlavorException: Unicode String
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar.getClipboard(DownloadBar.java:162)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar$2.mouseClicked(DownloadBar.java:84)
+	at java.awt.AWTEventMulticaster.mouseClicked(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$200(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+12:49:01,830 FATAL - DownloadBar [ Couldn't get clipboard content ]
+java.awt.datatransfer.UnsupportedFlavorException: Unicode String
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar.getClipboard(DownloadBar.java:162)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar$2.mouseClicked(DownloadBar.java:84)
+	at java.awt.AWTEventMulticaster.mouseClicked(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$200(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+12:49:02,024 FATAL - DownloadBar [ Couldn't get clipboard content ]
+java.awt.datatransfer.UnsupportedFlavorException: Unicode String
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar.getClipboard(DownloadBar.java:162)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar$2.mouseClicked(DownloadBar.java:84)
+	at java.awt.AWTEventMulticaster.mouseClicked(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$200(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+12:49:02,206 FATAL - DownloadBar [ Couldn't get clipboard content ]
+java.awt.datatransfer.UnsupportedFlavorException: Unicode String
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar.getClipboard(DownloadBar.java:162)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar$2.mouseClicked(DownloadBar.java:84)
+	at java.awt.AWTEventMulticaster.mouseClicked(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$200(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+12:49:02,394 FATAL - DownloadBar [ Couldn't get clipboard content ]
+java.awt.datatransfer.UnsupportedFlavorException: Unicode String
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar.getClipboard(DownloadBar.java:162)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar$2.mouseClicked(DownloadBar.java:84)
+	at java.awt.AWTEventMulticaster.mouseClicked(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$200(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+12:49:03,240 FATAL - DownloadBar [ Couldn't get clipboard content ]
+java.awt.datatransfer.UnsupportedFlavorException: Unicode String
+	at sun.awt.datatransfer.SunClipboard.getData(Unknown Source)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar.getClipboard(DownloadBar.java:162)
+	at com.hexotic.v2.gui.downloadbar.DownloadBar$2.mouseClicked(DownloadBar.java:84)
+	at java.awt.AWTEventMulticaster.mouseClicked(Unknown Source)
+	at java.awt.Component.processMouseEvent(Unknown Source)
+	at javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.awt.Component.processEvent(Unknown Source)
+	at java.awt.Container.processEvent(Unknown Source)
+	at java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.awt.Component.dispatchEvent(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$200(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.awt.EventQueue$4.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+12:59:21,384 DEBUG - MainWindow [ Main Window Created ]
+12:59:21,403 DEBUG - MainWindow [ Console Window Created ]
+12:59:21,421 DEBUG - MainWindow [ Console Window Created ]
+12:59:21,523 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+12:59:22,167 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+12:59:22,180 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:03:38,430 DEBUG - MainWindow [ Main Window Created ]
+13:03:38,449 DEBUG - MainWindow [ Console Window Created ]
+13:03:38,455 DEBUG - MainWindow [ Console Window Created ]
+13:03:38,557 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:03:38,892 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:03:38,907 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:04:44,493 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe --get-thumbnail http://www.youtube.com/watch?v=L9szn1QQfas  ]
+13:04:46,989 DEBUG - Downloader [ https://i.ytimg.com/vi/L9szn1QQfas/maxresdefault.jpg ]
+13:04:46,999 DEBUG - Downloader [ Loaded Image Thumnail: https://i.ytimg.com/vi/L9szn1QQfas/maxresdefault.jpg ]
+13:04:47,741 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe --get-title http://www.youtube.com/watch?v=L9szn1QQfas  ]
+13:04:50,224 DEBUG - Downloader [ TRON: LEGACY Official Trailer ]
+13:04:50,233 DEBUG - Downloader [ Loaded Video Title: TRON: LEGACY Official Trailer ]
+13:04:50,248 DEBUG - Item [ Download Started: http://www.youtube.com/watch?v=L9szn1QQfas ]
+13:04:50,263 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -o "C:\Users\Bradley\Desktop\%(title)s.%(ext)s" http://www.youtube.com/watch?v=L9szn1QQfas  ]
+13:04:50,492 DEBUG - Downloader [ [youtube] Setting language ]
+13:04:51,758 DEBUG - Downloader [ [youtube] Confirming age ]
+13:04:52,097 DEBUG - Downloader [ [youtube] L9szn1QQfas: Downloading webpage ]
+13:04:52,380 DEBUG - Downloader [ [youtube] L9szn1QQfas: Downloading video info webpage ]
+13:04:52,600 DEBUG - Downloader [ [youtube] L9szn1QQfas: Extracting video information ]
+13:04:53,034 DEBUG - Downloader [ [download] Destination: C:\Users\Bradley\Desktop\TRON - LEGACY Official Trailer.mp4 ]
+13:04:53,035 DEBUG - Downloader [  ]
+13:04:53,035 DEBUG - Downloader [ [download]   0.0% of 22.13MiB at 45.45KiB/s ETA 08:18 ]
+13:04:53,035 DEBUG - Downloader [ [download]   0.0% of 22.13MiB at 130.43KiB/s ETA 02:53 ]
+13:04:53,036 DEBUG - Downloader [ [download]   0.0% of 22.13MiB at 304.35KiB/s ETA 01:14 ]
+13:04:53,051 DEBUG - Downloader [ [download]   0.1% of 22.13MiB at 652.17KiB/s ETA 00:34 ]
+13:04:53,074 DEBUG - Downloader [ [download]   0.1% of 22.13MiB at 815.79KiB/s ETA 00:27 ]
+13:04:53,097 DEBUG - Downloader [ [download]   0.3% of 22.13MiB at  1.01MiB/s ETA 00:21  ]
+13:04:53,120 DEBUG - Downloader [ [download]   0.6% of 22.13MiB at  1.46MiB/s ETA 00:15  ]
+13:04:53,152 DEBUG - Downloader [ [download]   1.1% of 22.13MiB at  2.31MiB/s ETA 00:09  ]
+13:04:53,206 DEBUG - Downloader [ [download]   2.3% of 22.13MiB at  3.59MiB/s ETA 00:06  ]
+13:04:53,299 DEBUG - Downloader [ [download]   4.5% of 22.13MiB at  5.15MiB/s ETA 00:04  ]
+13:04:53,473 DEBUG - Downloader [ [download]   9.0% of 22.13MiB at  6.97MiB/s ETA 00:02  ]
+13:04:53,781 DEBUG - Downloader [ [download]  18.1% of 22.13MiB at  8.67MiB/s ETA 00:02  ]
+13:04:54,143 DEBUG - Downloader [ [download]  36.2% of 22.13MiB at 10.40MiB/s ETA 00:01  ]
+13:04:54,551 DEBUG - Downloader [ [download]  54.2% of 22.13MiB at 10.61MiB/s ETA 00:00  ]
+13:04:54,874 DEBUG - Downloader [ [download]  72.3% of 22.13MiB at 10.40MiB/s ETA 00:00  ]
+13:04:55,053 DEBUG - Downloader [ [download]  90.4% of 22.13MiB at 10.74MiB/s ETA 00:00  ]
+13:04:55,056 DEBUG - Downloader [ [download] 100.0% of 22.13MiB at 10.85MiB/s ETA 00:00  ]
+13:04:55,056 DEBUG - Downloader [ [download] 100% of 22.13MiB in 00:02                   ]
+13:04:55,071 DEBUG -  [ Download processing finished ]
+13:04:59,317 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe --get-thumbnail http://www.youtube.com/watch?v=L9szn1QQfas  ]
+13:05:01,665 DEBUG - Downloader [ https://i.ytimg.com/vi/L9szn1QQfas/maxresdefault.jpg ]
+13:05:01,675 DEBUG - Downloader [ Loaded Image Thumnail: https://i.ytimg.com/vi/L9szn1QQfas/maxresdefault.jpg ]
+13:05:01,676 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe --get-title http://www.youtube.com/watch?v=L9szn1QQfas  ]
+13:05:04,114 DEBUG - Downloader [ TRON: LEGACY Official Trailer ]
+13:05:04,123 DEBUG - Downloader [ Loaded Video Title: TRON: LEGACY Official Trailer ]
+13:05:04,123 DEBUG - Item [ Download Started: http://www.youtube.com/watch?v=L9szn1QQfas ]
+13:05:04,124 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -x --audio-format mp3 -o "C:\Users\Bradley\Desktop\%(title)s.%(ext)s" http://www.youtube.com/watch?v=L9szn1QQfas  ]
+13:05:05,092 DEBUG - Downloader [ [youtube] Setting language ]
+13:05:06,336 DEBUG - Downloader [ [youtube] Confirming age ]
+13:05:06,668 DEBUG - Downloader [ [youtube] L9szn1QQfas: Downloading webpage ]
+13:05:06,983 DEBUG - Downloader [ [youtube] L9szn1QQfas: Downloading video info webpage ]
+13:05:07,209 DEBUG - Downloader [ [youtube] L9szn1QQfas: Extracting video information ]
+13:05:07,460 DEBUG - Downloader [ [download] Destination: C:\Users\Bradley\Desktop\TRON - LEGACY Official Trailer.m4a ]
+13:05:07,460 DEBUG - Downloader [  ]
+13:05:07,460 DEBUG - Downloader [ [download]   0.0% of 2.13MiB at 43.48KiB/s ETA 00:50 ]
+13:05:07,460 DEBUG - Downloader [ [download]   0.1% of 2.13MiB at 125.00KiB/s ETA 00:17 ]
+13:05:07,461 DEBUG - Downloader [ [download]   0.3% of 2.13MiB at 291.67KiB/s ETA 00:07 ]
+13:05:07,489 DEBUG - Downloader [ [download]   0.7% of 2.13MiB at 625.00KiB/s ETA 00:03 ]
+13:05:07,515 DEBUG - Downloader [ [download]   1.4% of 2.13MiB at 584.91KiB/s ETA 00:03 ]
+13:05:07,539 DEBUG - Downloader [ [download]   2.9% of 2.13MiB at 797.47KiB/s ETA 00:02 ]
+13:05:07,583 DEBUG - Downloader [ [download]   5.8% of 2.13MiB at  1.20MiB/s ETA 00:01  ]
+13:05:07,612 DEBUG - Downloader [ [download]  11.7% of 2.13MiB at  1.71MiB/s ETA 00:01  ]
+13:05:07,647 DEBUG - Downloader [ [download]  23.5% of 2.13MiB at  2.85MiB/s ETA 00:00  ]
+13:05:07,715 DEBUG - Downloader [ [download]  47.0% of 2.13MiB at  4.73MiB/s ETA 00:00  ]
+13:05:07,723 DEBUG - Downloader [ [download]  94.0% of 2.13MiB at  7.16MiB/s ETA 00:00  ]
+13:05:07,726 DEBUG - Downloader [ [download] 100.0% of 2.13MiB at  7.41MiB/s ETA 00:00  ]
+13:05:07,726 DEBUG - Downloader [ [download] 100% of 2.13MiB in 00:00                   ]
+13:05:07,788 DEBUG - Downloader [ [ffmpeg] Destination: C:\Users\Bradley\Desktop\TRON - LEGACY Official Trailer.mp3 ]
+13:05:10,633 DEBUG - Downloader [ Deleting original file C:\Users\Bradley\Desktop\TRON - LEGACY Official Trailer.m4a (pass -k to keep) ]
+13:05:10,643 DEBUG -  [ Download processing finished ]
+13:14:56,536 DEBUG - MainWindow [ Main Window Created ]
+13:14:56,554 DEBUG - MainWindow [ Console Window Created ]
+13:14:56,560 DEBUG - MainWindow [ Console Window Created ]
+13:14:56,656 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:14:56,943 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:14:56,957 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:22:58,717 DEBUG - MainWindow [ Main Window Created ]
+13:22:58,732 DEBUG - MainWindow [ Console Window Created ]
+13:22:58,739 DEBUG - MainWindow [ Console Window Created ]
+13:22:58,838 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:22:59,163 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:22:59,177 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:28:22,688 DEBUG - MainWindow [ Main Window Created ]
+13:28:22,703 DEBUG - MainWindow [ Console Window Created ]
+13:28:22,709 DEBUG - MainWindow [ Console Window Created ]
+13:28:22,807 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:28:23,102 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:28:23,116 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:28:44,837 DEBUG - MainWindow [ Main Window Created ]
+13:28:44,853 DEBUG - MainWindow [ Console Window Created ]
+13:28:44,859 DEBUG - MainWindow [ Console Window Created ]
+13:28:44,958 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:28:45,248 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:28:45,259 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:29:44,377 DEBUG - MainWindow [ Main Window Created ]
+13:29:44,392 DEBUG - MainWindow [ Console Window Created ]
+13:29:44,398 DEBUG - MainWindow [ Console Window Created ]
+13:29:44,496 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:29:44,774 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:29:44,788 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:30:07,933 DEBUG - MainWindow [ Main Window Created ]
+13:30:07,948 DEBUG - MainWindow [ Console Window Created ]
+13:30:07,955 DEBUG - MainWindow [ Console Window Created ]
+13:30:08,053 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:30:08,361 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:30:08,375 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:30:22,040 DEBUG - MainWindow [ Main Window Created ]
+13:30:22,055 DEBUG - MainWindow [ Console Window Created ]
+13:30:22,061 DEBUG - MainWindow [ Console Window Created ]
+13:30:22,161 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:30:22,435 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:30:22,449 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:31:03,650 DEBUG - MainWindow [ Main Window Created ]
+13:31:03,665 DEBUG - MainWindow [ Console Window Created ]
+13:31:03,671 DEBUG - MainWindow [ Console Window Created ]
+13:31:03,768 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:31:04,046 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:31:04,060 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:31:15,704 DEBUG - MainWindow [ Main Window Created ]
+13:31:15,719 DEBUG - MainWindow [ Console Window Created ]
+13:31:15,725 DEBUG - MainWindow [ Console Window Created ]
+13:31:15,823 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:31:16,072 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:31:16,086 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:31:25,507 DEBUG - MainWindow [ Main Window Created ]
+13:31:25,522 DEBUG - MainWindow [ Console Window Created ]
+13:31:25,529 DEBUG - MainWindow [ Console Window Created ]
+13:31:25,627 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:31:25,881 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:31:25,890 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:32:25,670 DEBUG - MainWindow [ Main Window Created ]
+13:32:25,685 DEBUG - MainWindow [ Console Window Created ]
+13:32:25,692 DEBUG - MainWindow [ Console Window Created ]
+13:32:25,789 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:32:26,098 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:32:26,112 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:32:40,882 DEBUG - MainWindow [ Main Window Created ]
+13:32:40,897 DEBUG - MainWindow [ Console Window Created ]
+13:32:40,904 DEBUG - MainWindow [ Console Window Created ]
+13:32:41,002 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:32:41,282 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:32:41,295 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:33:13,115 DEBUG - MainWindow [ Main Window Created ]
+13:33:13,130 DEBUG - MainWindow [ Console Window Created ]
+13:33:13,137 DEBUG - MainWindow [ Console Window Created ]
+13:33:13,235 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:33:13,543 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:33:13,551 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:36:40,182 DEBUG - MainWindow [ Main Window Created ]
+13:36:40,197 DEBUG - MainWindow [ Console Window Created ]
+13:36:40,203 DEBUG - MainWindow [ Console Window Created ]
+13:36:40,303 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:36:40,606 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:36:40,620 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:37:12,276 DEBUG - MainWindow [ Main Window Created ]
+13:37:12,291 DEBUG - MainWindow [ Console Window Created ]
+13:37:12,298 DEBUG - MainWindow [ Console Window Created ]
+13:37:12,395 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:37:12,679 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:37:12,693 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:37:56,460 DEBUG - MainWindow [ Main Window Created ]
+13:37:56,475 DEBUG - MainWindow [ Console Window Created ]
+13:37:56,481 DEBUG - MainWindow [ Console Window Created ]
+13:37:56,579 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:37:56,863 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:37:56,877 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:38:17,108 DEBUG - MainWindow [ Main Window Created ]
+13:38:17,124 DEBUG - MainWindow [ Console Window Created ]
+13:38:17,130 DEBUG - MainWindow [ Console Window Created ]
+13:38:17,230 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:38:17,544 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:38:17,553 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:38:32,770 DEBUG - MainWindow [ Main Window Created ]
+13:38:32,785 DEBUG - MainWindow [ Console Window Created ]
+13:38:32,791 DEBUG - MainWindow [ Console Window Created ]
+13:38:32,891 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:38:33,160 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:38:33,175 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:39:20,744 DEBUG - MainWindow [ Main Window Created ]
+13:39:20,759 DEBUG - MainWindow [ Console Window Created ]
+13:39:20,765 DEBUG - MainWindow [ Console Window Created ]
+13:39:20,863 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:39:21,147 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:39:21,160 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:39:46,312 DEBUG - MainWindow [ Main Window Created ]
+13:39:46,327 DEBUG - MainWindow [ Console Window Created ]
+13:39:46,333 DEBUG - MainWindow [ Console Window Created ]
+13:39:46,436 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:39:46,689 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:39:46,703 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:40:52,938 DEBUG - MainWindow [ Main Window Created ]
+13:40:52,953 DEBUG - MainWindow [ Console Window Created ]
+13:40:52,959 DEBUG - MainWindow [ Console Window Created ]
+13:40:53,058 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:40:53,339 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:40:53,353 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:43:08,086 DEBUG - MainWindow [ Main Window Created ]
+13:43:08,102 DEBUG - MainWindow [ Console Window Created ]
+13:43:08,108 DEBUG - MainWindow [ Console Window Created ]
+13:43:08,207 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:43:08,487 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:43:08,502 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:43:35,437 DEBUG - MainWindow [ Main Window Created ]
+13:43:35,452 DEBUG - MainWindow [ Console Window Created ]
+13:43:35,458 DEBUG - MainWindow [ Console Window Created ]
+13:43:35,557 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:43:35,835 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:43:35,849 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:44:08,766 DEBUG - MainWindow [ Main Window Created ]
+13:44:08,781 DEBUG - MainWindow [ Console Window Created ]
+13:44:08,787 DEBUG - MainWindow [ Console Window Created ]
+13:44:08,887 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:44:09,166 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:44:09,178 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:44:29,262 DEBUG - MainWindow [ Main Window Created ]
+13:44:29,278 DEBUG - MainWindow [ Console Window Created ]
+13:44:29,284 DEBUG - MainWindow [ Console Window Created ]
+13:44:29,383 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:44:29,668 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:44:29,680 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:45:02,784 DEBUG - MainWindow [ Main Window Created ]
+13:45:02,799 DEBUG - MainWindow [ Console Window Created ]
+13:45:02,806 DEBUG - MainWindow [ Console Window Created ]
+13:45:02,904 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:45:03,212 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:45:03,226 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:47:53,427 DEBUG - MainWindow [ Main Window Created ]
+13:47:53,443 DEBUG - MainWindow [ Console Window Created ]
+13:47:53,449 DEBUG - MainWindow [ Console Window Created ]
+13:47:53,549 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:47:53,862 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:47:53,876 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:48:37,929 DEBUG - MainWindow [ Main Window Created ]
+13:48:37,945 DEBUG - MainWindow [ Console Window Created ]
+13:48:37,951 DEBUG - MainWindow [ Console Window Created ]
+13:48:38,052 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:48:38,345 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:48:38,359 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+13:50:19,421 DEBUG - MainWindow [ Main Window Created ]
+13:50:19,436 DEBUG - MainWindow [ Console Window Created ]
+13:50:19,442 DEBUG - MainWindow [ Console Window Created ]
+13:50:19,541 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+13:50:19,829 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+13:50:19,843 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+14:50:13,750 DEBUG - MainWindow [ Main Window Created ]
+14:50:13,765 DEBUG - MainWindow [ Console Window Created ]
+14:50:13,771 DEBUG - MainWindow [ Console Window Created ]
+14:50:13,870 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+14:50:14,172 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+14:50:14,186 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+14:51:18,234 DEBUG - MainWindow [ Main Window Created ]
+14:51:18,250 DEBUG - MainWindow [ Console Window Created ]
+14:51:18,256 DEBUG - MainWindow [ Console Window Created ]
+14:51:18,355 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+14:51:18,673 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+14:51:18,687 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+14:52:14,463 DEBUG - MainWindow [ Main Window Created ]
+14:52:14,478 DEBUG - MainWindow [ Console Window Created ]
+14:52:14,484 DEBUG - MainWindow [ Console Window Created ]
+14:52:14,584 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+14:52:14,878 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+14:52:14,891 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+14:52:31,708 DEBUG - MainWindow [ Main Window Created ]
+14:52:31,723 DEBUG - MainWindow [ Console Window Created ]
+14:52:31,729 DEBUG - MainWindow [ Console Window Created ]
+14:52:31,827 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+14:52:32,135 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+14:52:32,145 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+14:53:30,327 DEBUG - MainWindow [ Main Window Created ]
+14:53:30,343 DEBUG - MainWindow [ Console Window Created ]
+14:53:30,349 DEBUG - MainWindow [ Console Window Created ]
+14:53:30,448 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+14:53:30,729 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+14:53:30,740 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+14:54:33,961 DEBUG - MainWindow [ Main Window Created ]
+14:54:33,977 DEBUG - MainWindow [ Console Window Created ]
+14:54:33,983 DEBUG - MainWindow [ Console Window Created ]
+14:54:34,081 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+14:54:34,369 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+14:54:34,383 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+14:55:12,758 DEBUG - MainWindow [ Main Window Created ]
+14:55:12,773 DEBUG - MainWindow [ Console Window Created ]
+14:55:12,779 DEBUG - MainWindow [ Console Window Created ]
+14:55:12,878 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+14:55:13,192 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+14:55:13,207 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+14:56:23,395 DEBUG - MainWindow [ Main Window Created ]
+14:56:23,410 DEBUG - MainWindow [ Console Window Created ]
+14:56:23,416 DEBUG - MainWindow [ Console Window Created ]
+14:56:23,516 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+14:56:23,829 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+14:56:23,843 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+14:56:42,161 DEBUG - MainWindow [ Main Window Created ]
+14:56:42,177 DEBUG - MainWindow [ Console Window Created ]
+14:56:42,183 DEBUG - MainWindow [ Console Window Created ]
+14:56:42,283 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+14:56:42,600 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+14:56:42,610 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+14:57:06,781 DEBUG - MainWindow [ Main Window Created ]
+14:57:06,796 DEBUG - MainWindow [ Console Window Created ]
+14:57:06,802 DEBUG - MainWindow [ Console Window Created ]
+14:57:06,901 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+14:57:07,189 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+14:57:07,203 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+14:57:39,760 DEBUG - MainWindow [ Main Window Created ]
+14:57:39,775 DEBUG - MainWindow [ Console Window Created ]
+14:57:39,781 DEBUG - MainWindow [ Console Window Created ]
+14:57:39,880 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+14:57:40,194 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+14:57:40,208 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:07:54,482 DEBUG - MainWindow [ Main Window Created ]
+15:07:54,497 DEBUG - MainWindow [ Console Window Created ]
+15:07:54,504 DEBUG - MainWindow [ Console Window Created ]
+15:07:54,605 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:07:54,919 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:07:54,933 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:08:17,139 DEBUG - MainWindow [ Main Window Created ]
+15:08:17,154 DEBUG - MainWindow [ Console Window Created ]
+15:08:17,161 DEBUG - MainWindow [ Console Window Created ]
+15:08:17,263 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:08:17,555 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:08:17,565 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:08:28,892 DEBUG - MainWindow [ Main Window Created ]
+15:08:28,907 DEBUG - MainWindow [ Console Window Created ]
+15:08:28,913 DEBUG - MainWindow [ Console Window Created ]
+15:08:29,014 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:08:29,274 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:08:29,288 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:08:47,368 DEBUG - MainWindow [ Main Window Created ]
+15:08:47,383 DEBUG - MainWindow [ Console Window Created ]
+15:08:47,389 DEBUG - MainWindow [ Console Window Created ]
+15:08:47,493 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:08:47,813 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:08:47,827 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:10:01,227 DEBUG - MainWindow [ Main Window Created ]
+15:10:01,243 DEBUG - MainWindow [ Console Window Created ]
+15:10:01,249 DEBUG - MainWindow [ Console Window Created ]
+15:10:01,348 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:10:01,667 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:10:01,682 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:10:20,116 DEBUG - MainWindow [ Main Window Created ]
+15:10:20,131 DEBUG - MainWindow [ Console Window Created ]
+15:10:20,138 DEBUG - MainWindow [ Console Window Created ]
+15:10:20,238 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:10:20,561 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:10:20,570 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:10:29,399 DEBUG - MainWindow [ Main Window Created ]
+15:10:29,414 DEBUG - MainWindow [ Console Window Created ]
+15:10:29,421 DEBUG - MainWindow [ Console Window Created ]
+15:10:29,520 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:10:29,796 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:10:29,805 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:11:08,258 DEBUG - MainWindow [ Main Window Created ]
+15:11:08,273 DEBUG - MainWindow [ Console Window Created ]
+15:11:08,280 DEBUG - MainWindow [ Console Window Created ]
+15:11:08,380 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:11:08,697 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:11:08,711 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:11:27,903 DEBUG - MainWindow [ Main Window Created ]
+15:11:27,918 DEBUG - MainWindow [ Console Window Created ]
+15:11:27,925 DEBUG - MainWindow [ Console Window Created ]
+15:11:28,023 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:11:28,329 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:11:28,343 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:11:45,976 DEBUG - MainWindow [ Main Window Created ]
+15:11:45,992 DEBUG - MainWindow [ Console Window Created ]
+15:11:45,998 DEBUG - MainWindow [ Console Window Created ]
+15:11:46,099 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:11:46,427 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:11:46,441 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:12:21,387 DEBUG - MainWindow [ Main Window Created ]
+15:12:21,402 DEBUG - MainWindow [ Console Window Created ]
+15:12:21,408 DEBUG - MainWindow [ Console Window Created ]
+15:12:21,508 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:12:21,807 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:12:21,822 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:12:32,621 DEBUG - MainWindow [ Main Window Created ]
+15:12:32,636 DEBUG - MainWindow [ Console Window Created ]
+15:12:32,643 DEBUG - MainWindow [ Console Window Created ]
+15:12:32,744 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:12:32,991 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:12:33,005 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:12:39,412 DEBUG - MainWindow [ Main Window Created ]
+15:12:39,427 DEBUG - MainWindow [ Console Window Created ]
+15:12:39,433 DEBUG - MainWindow [ Console Window Created ]
+15:12:39,532 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:12:39,788 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:12:39,802 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:13:56,204 DEBUG - MainWindow [ Main Window Created ]
+15:13:56,219 DEBUG - MainWindow [ Console Window Created ]
+15:13:56,226 DEBUG - MainWindow [ Console Window Created ]
+15:13:56,326 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:13:56,604 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:13:56,618 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:17:16,526 DEBUG - MainWindow [ Main Window Created ]
+15:17:16,541 DEBUG - MainWindow [ Console Window Created ]
+15:17:16,548 DEBUG - MainWindow [ Console Window Created ]
+15:17:16,646 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:17:16,925 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:17:16,936 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+15:17:29,086 DEBUG - MainWindow [ Main Window Created ]
+15:17:29,101 DEBUG - MainWindow [ Console Window Created ]
+15:17:29,108 DEBUG - MainWindow [ Console Window Created ]
+15:17:29,208 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+15:17:29,457 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05) ]
+15:17:29,466 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+16:54:33,823 DEBUG - MainWindow [ Main Window Created ]
+16:54:34,043 DEBUG - MainWindow [ Console Window Created ]
+16:54:34,055 DEBUG - MainWindow [ Console Window Created ]
+16:54:34,856 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+16:54:35,730 DEBUG - Downloader [ Updating to version 2014.10.05.2 ... ]
+16:54:39,391 DEBUG - Downloader [ Waiting for file handle to be closed ... ]
+16:54:43,433 DEBUG - Downloader [ Updated youtube-dl to version 2014.10.05.2. ]
+16:54:43,437 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+17:14:17,273 DEBUG - MainWindow [ Main Window Created ]
+17:14:17,293 DEBUG - MainWindow [ Console Window Created ]
+17:14:17,300 DEBUG - MainWindow [ Console Window Created ]
+17:14:17,401 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+17:14:17,712 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+17:14:17,726 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+17:14:40,339 DEBUG - MainWindow [ Main Window Created ]
+17:14:40,354 DEBUG - MainWindow [ Console Window Created ]
+17:14:40,360 DEBUG - MainWindow [ Console Window Created ]
+17:14:40,458 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+17:14:40,773 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+17:14:40,785 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+17:17:37,013 DEBUG - MainWindow [ Main Window Created ]
+17:17:37,028 DEBUG - MainWindow [ Console Window Created ]
+17:17:37,035 DEBUG - MainWindow [ Console Window Created ]
+17:17:37,132 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+17:17:37,457 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+17:17:37,471 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+17:20:40,702 DEBUG - MainWindow [ Main Window Created ]
+17:20:40,717 DEBUG - MainWindow [ Console Window Created ]
+17:20:40,723 DEBUG - MainWindow [ Console Window Created ]
+17:20:40,823 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+17:20:41,131 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+17:20:41,140 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+23:56:21,667 DEBUG - MainWindow [ Main Window Created ]
+23:56:21,683 DEBUG - MainWindow [ Console Window Created ]
+23:56:21,689 DEBUG - MainWindow [ Console Window Created ]
+23:56:21,786 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+23:56:22,118 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+23:56:22,127 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+23:56:27,431 DEBUG - MainWindow [ Main Window Created ]
+23:56:27,446 DEBUG - MainWindow [ Console Window Created ]
+23:56:27,452 DEBUG - MainWindow [ Console Window Created ]
+23:56:27,551 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+23:56:27,842 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+23:56:27,854 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+17:44:10,516 DEBUG - MainWindow [ Main Window Created ]
+17:44:10,562 DEBUG - MainWindow [ Console Window Created ]
+17:44:10,638 DEBUG - MainWindow [ Console Window Created ]
+17:44:10,877 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+17:44:11,561 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+17:44:11,574 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+17:44:39,600 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe --get-thumbnail https://www.youtube.com/watch?v=8ff61oYjWPc  ]
+17:44:44,143 DEBUG - Downloader [ https://i.ytimg.com/vi/8ff61oYjWPc/hqdefault.jpg ]
+17:44:44,152 DEBUG - Downloader [ Loaded Image Thumnail: https://i.ytimg.com/vi/8ff61oYjWPc/hqdefault.jpg ]
+17:44:44,984 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe --get-title https://www.youtube.com/watch?v=8ff61oYjWPc  ]
+17:44:48,108 DEBUG - Downloader [ Elevator (2011) Full version movie in English ]
+17:44:48,117 DEBUG - Downloader [ Loaded Video Title: Elevator (2011) Full version movie in English ]
+17:44:48,128 DEBUG - Item [ Download Started: https://www.youtube.com/watch?v=8ff61oYjWPc ]
+17:44:48,152 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -o "D:\Movies\%(title)s.%(ext)s" https://www.youtube.com/watch?v=8ff61oYjWPc  ]
+17:44:48,380 DEBUG - Downloader [ [youtube] Setting language ]
+17:44:49,935 DEBUG - Downloader [ [youtube] Confirming age ]
+17:44:50,273 DEBUG - Downloader [ [youtube] 8ff61oYjWPc: Downloading webpage ]
+17:44:50,754 DEBUG - Downloader [ [youtube] 8ff61oYjWPc: Downloading video info webpage ]
+17:44:51,186 DEBUG - Downloader [ [youtube] 8ff61oYjWPc: Extracting video information ]
+17:44:52,045 DEBUG - Downloader [ [download] Destination: D:\Movies\Elevator (2011) Full version movie in English.mp4 ]
+17:44:52,045 DEBUG - Downloader [  ]
+17:44:52,045 DEBUG - Downloader [ [download]   0.0% of 767.15MiB at 83.33KiB/s ETA 02:37:06 ]
+17:44:52,046 DEBUG - Downloader [ [download]   0.0% of 767.15MiB at 250.00KiB/s ETA 52:22   ]
+17:44:52,054 DEBUG - Downloader [ [download]   0.0% of 767.15MiB at 583.33KiB/s ETA 22:26   ]
+17:44:52,067 DEBUG - Downloader [ [download]   0.0% of 767.15MiB at 750.00KiB/s ETA 17:27   ]
+17:44:52,086 DEBUG - Downloader [ [download]   0.0% of 767.15MiB at 911.77KiB/s ETA 14:21   ]
+17:44:52,112 DEBUG - Downloader [ [download]   0.0% of 767.15MiB at  1.16MiB/s ETA 11:00    ]
+17:44:52,154 DEBUG - Downloader [ [download]   0.0% of 767.15MiB at  1.57MiB/s ETA 08:08    ]
+17:44:52,193 DEBUG - Downloader [ [download]   0.0% of 767.15MiB at  2.08MiB/s ETA 06:09    ]
+17:44:52,246 DEBUG - Downloader [ [download]   0.1% of 767.15MiB at  3.14MiB/s ETA 04:04    ]
+17:44:52,342 DEBUG - Downloader [ [download]   0.1% of 767.15MiB at  4.69MiB/s ETA 02:43    ]
+17:44:52,498 DEBUG - Downloader [ [download]   0.3% of 767.15MiB at  6.49MiB/s ETA 01:57    ]
+17:44:52,804 DEBUG - Downloader [ [download]   0.5% of 767.15MiB at  8.62MiB/s ETA 01:28    ]
+17:44:53,112 DEBUG - Downloader [ [download]   1.0% of 767.15MiB at 10.39MiB/s ETA 01:13    ]
+17:44:53,387 DEBUG - Downloader [ [download]   1.6% of 767.15MiB at 11.12MiB/s ETA 01:07    ]
+17:44:53,660 DEBUG - Downloader [ [download]   2.1% of 767.15MiB at 11.82MiB/s ETA 01:03    ]
+17:44:53,955 DEBUG - Downloader [ [download]   2.6% of 767.15MiB at 12.30MiB/s ETA 01:00    ]
+17:44:54,230 DEBUG - Downloader [ [download]   3.1% of 767.15MiB at 12.49MiB/s ETA 00:59    ]
+17:44:54,524 DEBUG - Downloader [ [download]   3.6% of 767.15MiB at 12.74MiB/s ETA 00:57    ]
+17:44:54,882 DEBUG - Downloader [ [download]   4.2% of 767.15MiB at 12.85MiB/s ETA 00:57    ]
+17:44:56,035 DEBUG - Downloader [ [download]   4.7% of 767.15MiB at 12.64MiB/s ETA 00:57    ]
+17:44:56,272 DEBUG - Downloader [ [download]   5.2% of 767.15MiB at 10.00MiB/s ETA 01:12    ]
+17:44:56,674 DEBUG - Downloader [ [download]   5.7% of 767.15MiB at 10.26MiB/s ETA 01:10    ]
+17:44:57,033 DEBUG - Downloader [ [download]   6.2% of 767.15MiB at 10.23MiB/s ETA 01:10    ]
+17:44:57,394 DEBUG - Downloader [ [download]   6.7% of 767.15MiB at 10.30MiB/s ETA 01:09    ]
+17:44:57,745 DEBUG - Downloader [ [download]   7.2% of 767.15MiB at 10.35MiB/s ETA 01:08    ]
+17:44:58,036 DEBUG - Downloader [ [download]   7.8% of 767.15MiB at 10.41MiB/s ETA 01:07    ]
+17:44:58,310 DEBUG - Downloader [ [download]   8.3% of 767.15MiB at 10.57MiB/s ETA 01:06    ]
+17:44:58,586 DEBUG - Downloader [ [download]   8.8% of 767.15MiB at 10.75MiB/s ETA 01:05    ]
+17:44:58,854 DEBUG - Downloader [ [download]   9.3% of 767.15MiB at 10.91MiB/s ETA 01:03    ]
+17:44:59,126 DEBUG - Downloader [ [download]   9.8% of 767.15MiB at 11.07MiB/s ETA 01:02    ]
+17:44:59,399 DEBUG - Downloader [ [download]  10.4% of 767.15MiB at 11.21MiB/s ETA 01:01    ]
+17:44:59,701 DEBUG - Downloader [ [download]  10.9% of 767.15MiB at 11.33MiB/s ETA 01:00    ]
+17:45:00,049 DEBUG - Downloader [ [download]  11.4% of 767.15MiB at 11.41MiB/s ETA 00:59    ]
+17:45:00,665 DEBUG - Downloader [ [download]  11.9% of 767.15MiB at 11.41MiB/s ETA 00:59    ]
+17:45:01,272 DEBUG - Downloader [ [download]  12.4% of 767.15MiB at 11.06MiB/s ETA 01:00    ]
+17:45:01,860 DEBUG - Downloader [ [download]  13.0% of 767.15MiB at 10.77MiB/s ETA 01:02    ]
+17:45:02,522 DEBUG - Downloader [ [download]  13.5% of 767.15MiB at 10.53MiB/s ETA 01:03    ]
+17:45:03,253 DEBUG - Downloader [ [download]  14.0% of 767.15MiB at 10.25MiB/s ETA 01:04    ]
+17:45:03,949 DEBUG - Downloader [ [download]  14.5% of 767.15MiB at  9.94MiB/s ETA 01:05    ]
+17:45:04,629 DEBUG - Downloader [ [download]  15.1% of 767.15MiB at  9.69MiB/s ETA 01:07    ]
+17:45:05,278 DEBUG - Downloader [ [download]  15.6% of 767.15MiB at  9.49MiB/s ETA 01:08    ]
+17:45:05,903 DEBUG - Downloader [ [download]  16.1% of 767.15MiB at  9.32MiB/s ETA 01:09    ]
+17:45:06,580 DEBUG - Downloader [ [download]  16.6% of 767.15MiB at  9.19MiB/s ETA 01:09    ]
+17:45:07,169 DEBUG - Downloader [ [download]  17.1% of 767.15MiB at  9.04MiB/s ETA 01:10    ]
+17:45:07,730 DEBUG - Downloader [ [download]  17.7% of 767.15MiB at  8.95MiB/s ETA 01:10    ]
+17:45:08,269 DEBUG - Downloader [ [download]  18.2% of 767.15MiB at  8.89MiB/s ETA 01:10    ]
+17:45:08,794 DEBUG - Downloader [ [download]  18.7% of 767.15MiB at  8.84MiB/s ETA 01:10    ]
+17:45:09,302 DEBUG - Downloader [ [download]  19.2% of 767.15MiB at  8.80MiB/s ETA 01:10    ]
+17:45:09,793 DEBUG - Downloader [ [download]  19.7% of 767.15MiB at  8.77MiB/s ETA 01:10    ]
+17:45:10,272 DEBUG - Downloader [ [download]  20.3% of 767.15MiB at  8.75MiB/s ETA 01:09    ]
+17:45:10,739 DEBUG - Downloader [ [download]  20.8% of 767.15MiB at  8.74MiB/s ETA 01:09    ]
+17:45:11,203 DEBUG - Downloader [ [download]  21.3% of 767.15MiB at  8.74MiB/s ETA 01:09    ]
+17:45:11,648 DEBUG - Downloader [ [download]  21.8% of 767.15MiB at  8.74MiB/s ETA 01:08    ]
+17:45:12,147 DEBUG - Downloader [ [download]  22.4% of 767.15MiB at  8.74MiB/s ETA 01:08    ]
+17:45:12,717 DEBUG - Downloader [ [download]  22.9% of 767.15MiB at  8.72MiB/s ETA 01:07    ]
+17:45:13,236 DEBUG - Downloader [ [download]  23.4% of 767.15MiB at  8.68MiB/s ETA 01:07    ]
+17:45:13,739 DEBUG - Downloader [ [download]  23.9% of 767.15MiB at  8.65MiB/s ETA 01:07    ]
+17:45:14,213 DEBUG - Downloader [ [download]  24.4% of 767.15MiB at  8.64MiB/s ETA 01:07    ]
+17:45:14,662 DEBUG - Downloader [ [download]  25.0% of 767.15MiB at  8.63MiB/s ETA 01:06    ]
+17:45:15,113 DEBUG - Downloader [ [download]  25.5% of 767.15MiB at  8.64MiB/s ETA 01:06    ]
+17:45:15,547 DEBUG - Downloader [ [download]  26.0% of 767.15MiB at  8.64MiB/s ETA 01:05    ]
+17:45:16,076 DEBUG - Downloader [ [download]  26.5% of 767.15MiB at  8.65MiB/s ETA 01:05    ]
+17:45:16,670 DEBUG - Downloader [ [download]  27.0% of 767.15MiB at  8.63MiB/s ETA 01:04    ]
+17:45:17,399 DEBUG - Downloader [ [download]  27.6% of 767.15MiB at  8.58MiB/s ETA 01:04    ]
+17:45:18,102 DEBUG - Downloader [ [download]  28.1% of 767.15MiB at  8.49MiB/s ETA 01:04    ]
+17:45:18,891 DEBUG - Downloader [ [download]  28.6% of 767.15MiB at  8.42MiB/s ETA 01:05    ]
+17:45:19,721 DEBUG - Downloader [ [download]  29.1% of 767.15MiB at  8.32MiB/s ETA 01:05    ]
+17:45:20,510 DEBUG - Downloader [ [download]  29.7% of 767.15MiB at  8.22MiB/s ETA 01:05    ]
+17:45:21,246 DEBUG - Downloader [ [download]  30.2% of 767.15MiB at  8.13MiB/s ETA 01:05    ]
+17:45:21,938 DEBUG - Downloader [ [download]  30.7% of 767.15MiB at  8.06MiB/s ETA 01:05    ]
+17:45:22,599 DEBUG - Downloader [ [download]  31.2% of 767.15MiB at  8.01MiB/s ETA 01:05    ]
+17:45:23,420 DEBUG - Downloader [ [download]  31.7% of 767.15MiB at  7.97MiB/s ETA 01:05    ]
+17:45:24,346 DEBUG - Downloader [ [download]  32.3% of 767.15MiB at  7.88MiB/s ETA 01:05    ]
+17:45:25,262 DEBUG - Downloader [ [download]  32.8% of 767.15MiB at  7.78MiB/s ETA 01:06    ]
+17:45:26,121 DEBUG - Downloader [ [download]  33.3% of 767.15MiB at  7.69MiB/s ETA 01:06    ]
+17:45:26,926 DEBUG - Downloader [ [download]  33.8% of 767.15MiB at  7.61MiB/s ETA 01:06    ]
+17:45:27,725 DEBUG - Downloader [ [download]  34.3% of 767.15MiB at  7.55MiB/s ETA 01:06    ]
+17:45:28,612 DEBUG - Downloader [ [download]  34.9% of 767.15MiB at  7.49MiB/s ETA 01:06    ]
+17:45:29,404 DEBUG - Downloader [ [download]  35.4% of 767.15MiB at  7.42MiB/s ETA 01:06    ]
+17:45:30,151 DEBUG - Downloader [ [download]  35.9% of 767.15MiB at  7.37MiB/s ETA 01:06    ]
+17:45:30,878 DEBUG - Downloader [ [download]  36.4% of 767.15MiB at  7.33MiB/s ETA 01:06    ]
+17:45:31,684 DEBUG - Downloader [ [download]  37.0% of 767.15MiB at  7.30MiB/s ETA 01:06    ]
+17:45:32,536 DEBUG - Downloader [ [download]  37.5% of 767.15MiB at  7.25MiB/s ETA 01:06    ]
+17:45:33,306 DEBUG - Downloader [ [download]  38.0% of 767.15MiB at  7.20MiB/s ETA 01:06    ]
+17:45:34,160 DEBUG - Downloader [ [download]  38.5% of 767.15MiB at  7.16MiB/s ETA 01:05    ]
+17:45:35,080 DEBUG - Downloader [ [download]  39.0% of 767.15MiB at  7.11MiB/s ETA 01:05    ]
+17:45:35,935 DEBUG - Downloader [ [download]  39.6% of 767.15MiB at  7.05MiB/s ETA 01:05    ]
+17:45:36,726 DEBUG - Downloader [ [download]  40.1% of 767.15MiB at  7.00MiB/s ETA 01:05    ]
+17:45:37,479 DEBUG - Downloader [ [download]  40.6% of 767.15MiB at  6.97MiB/s ETA 01:05    ]
+17:45:38,361 DEBUG - Downloader [ [download]  41.1% of 767.15MiB at  6.94MiB/s ETA 01:05    ]
+17:45:39,162 DEBUG - Downloader [ [download]  41.6% of 767.15MiB at  6.90MiB/s ETA 01:04    ]
+17:45:40,396 DEBUG - Downloader [ [download]  42.2% of 767.15MiB at  6.86MiB/s ETA 01:04    ]
+17:45:41,629 DEBUG - Downloader [ [download]  42.7% of 767.15MiB at  6.77MiB/s ETA 01:04    ]
+17:45:42,653 DEBUG - Downloader [ [download]  43.1% of 767.15MiB at  6.67MiB/s ETA 01:05    ]
+17:45:43,568 DEBUG - Downloader [ [download]  43.5% of 767.15MiB at  6.59MiB/s ETA 01:05    ]
+17:45:44,463 DEBUG - Downloader [ [download]  43.8% of 767.15MiB at  6.52MiB/s ETA 01:06    ]
+17:45:45,353 DEBUG - Downloader [ [download]  44.2% of 767.15MiB at  6.46MiB/s ETA 01:06    ]
+17:45:46,379 DEBUG - Downloader [ [download]  44.6% of 767.15MiB at  6.41MiB/s ETA 01:06    ]
+17:45:47,375 DEBUG - Downloader [ [download]  45.0% of 767.15MiB at  6.36MiB/s ETA 01:06    ]
+17:45:48,365 DEBUG - Downloader [ [download]  45.5% of 767.15MiB at  6.31MiB/s ETA 01:06    ]
+17:45:49,485 DEBUG - Downloader [ [download]  45.9% of 767.15MiB at  6.26MiB/s ETA 01:06    ]
+17:45:50,356 DEBUG - Downloader [ [download]  46.4% of 767.15MiB at  6.20MiB/s ETA 01:06    ]
+17:45:51,266 DEBUG - Downloader [ [download]  46.8% of 767.15MiB at  6.16MiB/s ETA 01:06    ]
+17:45:52,171 DEBUG - Downloader [ [download]  47.3% of 767.15MiB at  6.13MiB/s ETA 01:06    ]
+17:45:53,010 DEBUG - Downloader [ [download]  47.8% of 767.15MiB at  6.10MiB/s ETA 01:05    ]
+17:45:53,788 DEBUG - Downloader [ [download]  48.3% of 767.15MiB at  6.08MiB/s ETA 01:05    ]
+17:45:54,515 DEBUG - Downloader [ [download]  48.9% of 767.15MiB at  6.07MiB/s ETA 01:04    ]
+17:45:55,203 DEBUG - Downloader [ [download]  49.4% of 767.15MiB at  6.06MiB/s ETA 01:04    ]
+17:45:55,861 DEBUG - Downloader [ [download]  49.9% of 767.15MiB at  6.06MiB/s ETA 01:03    ]
+17:45:56,491 DEBUG - Downloader [ [download]  50.4% of 767.15MiB at  6.06MiB/s ETA 01:02    ]
+17:45:57,096 DEBUG - Downloader [ [download]  50.9% of 767.15MiB at  6.06MiB/s ETA 01:02    ]
+17:45:57,885 DEBUG - Downloader [ [download]  51.5% of 767.15MiB at  6.07MiB/s ETA 01:01    ]
+17:45:58,813 DEBUG - Downloader [ [download]  52.0% of 767.15MiB at  6.06MiB/s ETA 01:00    ]
+17:45:59,682 DEBUG - Downloader [ [download]  52.5% of 767.15MiB at  6.03MiB/s ETA 01:00    ]
+17:46:00,496 DEBUG - Downloader [ [download]  53.0% of 767.15MiB at  6.01MiB/s ETA 00:59    ]
+17:46:01,247 DEBUG - Downloader [ [download]  53.6% of 767.15MiB at  6.00MiB/s ETA 00:59    ]
+17:46:01,952 DEBUG - Downloader [ [download]  54.1% of 767.15MiB at  5.99MiB/s ETA 00:58    ]
+17:46:02,624 DEBUG - Downloader [ [download]  54.6% of 767.15MiB at  5.99MiB/s ETA 00:58    ]
+17:46:03,267 DEBUG - Downloader [ [download]  55.1% of 767.15MiB at  5.99MiB/s ETA 00:57    ]
+17:46:03,879 DEBUG - Downloader [ [download]  55.6% of 767.15MiB at  5.99MiB/s ETA 00:56    ]
+17:46:04,471 DEBUG - Downloader [ [download]  56.2% of 767.15MiB at  6.00MiB/s ETA 00:56    ]
+17:46:05,048 DEBUG - Downloader [ [download]  56.7% of 767.15MiB at  6.00MiB/s ETA 00:55    ]
+17:46:05,613 DEBUG - Downloader [ [download]  57.2% of 767.15MiB at  6.01MiB/s ETA 00:54    ]
+17:46:06,310 DEBUG - Downloader [ [download]  57.7% of 767.15MiB at  6.02MiB/s ETA 00:53    ]
+17:46:06,953 DEBUG - Downloader [ [download]  58.2% of 767.15MiB at  6.02MiB/s ETA 00:53    ]
+17:46:07,544 DEBUG - Downloader [ [download]  58.8% of 767.15MiB at  6.02MiB/s ETA 00:52    ]
+17:46:08,124 DEBUG - Downloader [ [download]  59.3% of 767.15MiB at  6.02MiB/s ETA 00:51    ]
+17:46:08,684 DEBUG - Downloader [ [download]  59.8% of 767.15MiB at  6.03MiB/s ETA 00:51    ]
+17:46:09,244 DEBUG - Downloader [ [download]  60.3% of 767.15MiB at  6.04MiB/s ETA 00:50    ]
+17:46:09,962 DEBUG - Downloader [ [download]  60.9% of 767.15MiB at  6.05MiB/s ETA 00:49    ]
+17:46:10,635 DEBUG - Downloader [ [download]  61.4% of 767.15MiB at  6.04MiB/s ETA 00:49    ]
+17:46:11,287 DEBUG - Downloader [ [download]  61.9% of 767.15MiB at  6.04MiB/s ETA 00:48    ]
+17:46:12,059 DEBUG - Downloader [ [download]  62.4% of 767.15MiB at  6.04MiB/s ETA 00:47    ]
+17:46:12,866 DEBUG - Downloader [ [download]  62.9% of 767.15MiB at  6.03MiB/s ETA 00:47    ]
+17:46:13,639 DEBUG - Downloader [ [download]  63.5% of 767.15MiB at  6.02MiB/s ETA 00:46    ]
+17:46:14,365 DEBUG - Downloader [ [download]  64.0% of 767.15MiB at  6.01MiB/s ETA 00:45    ]
+17:46:15,062 DEBUG - Downloader [ [download]  64.5% of 767.15MiB at  6.01MiB/s ETA 00:45    ]
+17:46:15,726 DEBUG - Downloader [ [download]  65.0% of 767.15MiB at  6.01MiB/s ETA 00:44    ]
+17:46:16,351 DEBUG - Downloader [ [download]  65.5% of 767.15MiB at  6.01MiB/s ETA 00:43    ]
+17:46:16,956 DEBUG - Downloader [ [download]  66.1% of 767.15MiB at  6.01MiB/s ETA 00:43    ]
+17:46:17,542 DEBUG - Downloader [ [download]  66.6% of 767.15MiB at  6.02MiB/s ETA 00:42    ]
+17:46:18,108 DEBUG - Downloader [ [download]  67.1% of 767.15MiB at  6.02MiB/s ETA 00:41    ]
+17:46:18,653 DEBUG - Downloader [ [download]  67.6% of 767.15MiB at  6.03MiB/s ETA 00:41    ]
+17:46:19,191 DEBUG - Downloader [ [download]  68.2% of 767.15MiB at  6.04MiB/s ETA 00:40    ]
+17:46:19,702 DEBUG - Downloader [ [download]  68.7% of 767.15MiB at  6.04MiB/s ETA 00:39    ]
+17:46:20,200 DEBUG - Downloader [ [download]  69.2% of 767.15MiB at  6.05MiB/s ETA 00:39    ]
+17:46:20,817 DEBUG - Downloader [ [download]  69.7% of 767.15MiB at  6.07MiB/s ETA 00:38    ]
+17:46:21,401 DEBUG - Downloader [ [download]  70.2% of 767.15MiB at  6.07MiB/s ETA 00:37    ]
+17:46:21,967 DEBUG - Downloader [ [download]  70.8% of 767.15MiB at  6.07MiB/s ETA 00:36    ]
+17:46:22,737 DEBUG - Downloader [ [download]  71.3% of 767.15MiB at  6.08MiB/s ETA 00:36    ]
+17:46:23,628 DEBUG - Downloader [ [download]  71.8% of 767.15MiB at  6.07MiB/s ETA 00:35    ]
+17:46:24,468 DEBUG - Downloader [ [download]  72.3% of 767.15MiB at  6.06MiB/s ETA 00:35    ]
+17:46:25,355 DEBUG - Downloader [ [download]  72.8% of 767.15MiB at  6.05MiB/s ETA 00:34    ]
+17:46:26,257 DEBUG - Downloader [ [download]  73.4% of 767.15MiB at  6.03MiB/s ETA 00:33    ]
+17:46:27,087 DEBUG - Downloader [ [download]  73.9% of 767.15MiB at  6.02MiB/s ETA 00:33    ]
+17:46:27,890 DEBUG - Downloader [ [download]  74.4% of 767.15MiB at  6.01MiB/s ETA 00:32    ]
+17:46:28,657 DEBUG - Downloader [ [download]  74.9% of 767.15MiB at  6.00MiB/s ETA 00:32    ]
+17:46:29,390 DEBUG - Downloader [ [download]  75.4% of 767.15MiB at  5.99MiB/s ETA 00:31    ]
+17:46:30,090 DEBUG - Downloader [ [download]  76.0% of 767.15MiB at  5.99MiB/s ETA 00:30    ]
+17:46:30,751 DEBUG - Downloader [ [download]  76.5% of 767.15MiB at  5.98MiB/s ETA 00:30    ]
+17:46:31,565 DEBUG - Downloader [ [download]  77.0% of 767.15MiB at  5.98MiB/s ETA 00:29    ]
+17:46:32,503 DEBUG - Downloader [ [download]  77.5% of 767.15MiB at  5.98MiB/s ETA 00:28    ]
+17:46:33,983 DEBUG - Downloader [ [download]  78.1% of 767.15MiB at  5.96MiB/s ETA 00:28    ]
+17:46:34,863 DEBUG - Downloader [ [download]  78.6% of 767.15MiB at  5.91MiB/s ETA 00:27    ]
+17:46:35,742 DEBUG - Downloader [ [download]  78.9% of 767.15MiB at  5.89MiB/s ETA 00:27    ]
+17:46:36,637 DEBUG - Downloader [ [download]  79.3% of 767.15MiB at  5.87MiB/s ETA 00:27    ]
+17:46:37,555 DEBUG - Downloader [ [download]  79.8% of 767.15MiB at  5.85MiB/s ETA 00:26    ]
+17:46:38,453 DEBUG - Downloader [ [download]  80.3% of 767.15MiB at  5.84MiB/s ETA 00:25    ]
+17:46:39,452 DEBUG - Downloader [ [download]  80.8% of 767.15MiB at  5.83MiB/s ETA 00:25    ]
+17:46:40,334 DEBUG - Downloader [ [download]  81.3% of 767.15MiB at  5.81MiB/s ETA 00:24    ]
+17:46:41,173 DEBUG - Downloader [ [download]  81.9% of 767.15MiB at  5.80MiB/s ETA 00:23    ]
+17:46:41,985 DEBUG - Downloader [ [download]  82.4% of 767.15MiB at  5.79MiB/s ETA 00:23    ]
+17:46:42,945 DEBUG - Downloader [ [download]  82.9% of 767.15MiB at  5.78MiB/s ETA 00:22    ]
+17:46:44,185 DEBUG - Downloader [ [download]  83.4% of 767.15MiB at  5.77MiB/s ETA 00:22    ]
+17:46:45,063 DEBUG - Downloader [ [download]  84.0% of 767.15MiB at  5.74MiB/s ETA 00:21    ]
+17:46:45,973 DEBUG - Downloader [ [download]  84.4% of 767.15MiB at  5.73MiB/s ETA 00:20    ]
+17:46:46,870 DEBUG - Downloader [ [download]  84.9% of 767.15MiB at  5.71MiB/s ETA 00:20    ]
+17:46:47,861 DEBUG - Downloader [ [download]  85.4% of 767.15MiB at  5.70MiB/s ETA 00:19    ]
+17:46:48,798 DEBUG - Downloader [ [download]  85.9% of 767.15MiB at  5.69MiB/s ETA 00:19    ]
+17:46:49,691 DEBUG - Downloader [ [download]  86.4% of 767.15MiB at  5.68MiB/s ETA 00:18    ]
+17:46:50,769 DEBUG - Downloader [ [download]  86.9% of 767.15MiB at  5.67MiB/s ETA 00:17    ]
+17:46:51,929 DEBUG - Downloader [ [download]  87.5% of 767.15MiB at  5.65MiB/s ETA 00:17    ]
+17:46:52,834 DEBUG - Downloader [ [download]  87.9% of 767.15MiB at  5.63MiB/s ETA 00:16    ]
+17:46:53,744 DEBUG - Downloader [ [download]  88.4% of 767.15MiB at  5.61MiB/s ETA 00:15    ]
+17:46:54,644 DEBUG - Downloader [ [download]  88.8% of 767.15MiB at  5.60MiB/s ETA 00:15    ]
+17:46:55,491 DEBUG - Downloader [ [download]  89.3% of 767.15MiB at  5.59MiB/s ETA 00:14    ]
+17:46:56,278 DEBUG - Downloader [ [download]  89.9% of 767.15MiB at  5.58MiB/s ETA 00:13    ]
+17:46:57,162 DEBUG - Downloader [ [download]  90.4% of 767.15MiB at  5.58MiB/s ETA 00:13    ]
+17:46:58,026 DEBUG - Downloader [ [download]  90.9% of 767.15MiB at  5.57MiB/s ETA 00:12    ]
+17:46:59,351 DEBUG - Downloader [ [download]  91.4% of 767.15MiB at  5.57MiB/s ETA 00:11    ]
+17:47:00,477 DEBUG - Downloader [ [download]  91.9% of 767.15MiB at  5.54MiB/s ETA 00:11    ]
+17:47:01,361 DEBUG - Downloader [ [download]  92.3% of 767.15MiB at  5.52MiB/s ETA 00:10    ]
+17:47:02,227 DEBUG - Downloader [ [download]  92.7% of 767.15MiB at  5.50MiB/s ETA 00:10    ]
+17:47:03,146 DEBUG - Downloader [ [download]  93.1% of 767.15MiB at  5.49MiB/s ETA 00:09    ]
+17:47:04,040 DEBUG - Downloader [ [download]  93.6% of 767.15MiB at  5.47MiB/s ETA 00:09    ]
+17:47:04,901 DEBUG - Downloader [ [download]  94.1% of 767.15MiB at  5.47MiB/s ETA 00:08    ]
+17:47:05,717 DEBUG - Downloader [ [download]  94.6% of 767.15MiB at  5.46MiB/s ETA 00:07    ]
+17:47:06,673 DEBUG - Downloader [ [download]  95.1% of 767.15MiB at  5.46MiB/s ETA 00:06    ]
+17:47:07,519 DEBUG - Downloader [ [download]  95.6% of 767.15MiB at  5.45MiB/s ETA 00:06    ]
+17:47:08,316 DEBUG - Downloader [ [download]  96.1% of 767.15MiB at  5.44MiB/s ETA 00:05    ]
+17:47:09,088 DEBUG - Downloader [ [download]  96.7% of 767.15MiB at  5.44MiB/s ETA 00:04    ]
+17:47:09,923 DEBUG - Downloader [ [download]  97.2% of 767.15MiB at  5.44MiB/s ETA 00:03    ]
+17:47:10,795 DEBUG - Downloader [ [download]  97.7% of 767.15MiB at  5.44MiB/s ETA 00:03    ]
+17:47:11,589 DEBUG - Downloader [ [download]  98.2% of 767.15MiB at  5.43MiB/s ETA 00:02    ]
+17:47:12,342 DEBUG - Downloader [ [download]  98.7% of 767.15MiB at  5.43MiB/s ETA 00:01    ]
+17:47:13,081 DEBUG - Downloader [ [download]  99.3% of 767.15MiB at  5.43MiB/s ETA 00:01    ]
+17:47:13,380 DEBUG - Downloader [ [download]  99.8% of 767.15MiB at  5.43MiB/s ETA 00:00    ]
+17:47:13,382 DEBUG - Downloader [ [download] 100.0% of 767.15MiB at  5.43MiB/s ETA 00:00    ]
+17:47:13,383 DEBUG - Downloader [ [download] 100% of 767.15MiB in 02:21                     ]
+17:47:13,399 DEBUG -  [ Download processing finished ]
+17:52:18,306 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe --get-thumbnail https://www.youtube.com/watch?v=ElAVE2fTQ1Q  ]
+17:52:21,506 DEBUG - Downloader [ https://i.ytimg.com/vi/ElAVE2fTQ1Q/maxresdefault.jpg ]
+17:52:21,515 DEBUG - Downloader [ Loaded Image Thumnail: https://i.ytimg.com/vi/ElAVE2fTQ1Q/maxresdefault.jpg ]
+17:52:21,718 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe --get-title https://www.youtube.com/watch?v=ElAVE2fTQ1Q  ]
+17:52:24,439 DEBUG - Downloader [ Black Eagle (1988/Full movie/English) Jean-Claude Van Damme ]
+17:52:24,448 DEBUG - Downloader [ Loaded Video Title: Black Eagle (1988/Full movie/English) Jean-Claude Van Damme ]
+17:52:24,448 DEBUG - Item [ Download Started: https://www.youtube.com/watch?v=ElAVE2fTQ1Q ]
+17:52:24,448 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -o "D:\Movies\%(title)s.%(ext)s" https://www.youtube.com/watch?v=ElAVE2fTQ1Q  ]
+17:52:24,676 DEBUG - Downloader [ [youtube] Setting language ]
+17:52:26,404 DEBUG - Downloader [ [youtube] Confirming age ]
+17:52:26,739 DEBUG - Downloader [ [youtube] ElAVE2fTQ1Q: Downloading webpage ]
+17:52:27,060 DEBUG - Downloader [ [youtube] ElAVE2fTQ1Q: Downloading video info webpage ]
+17:52:27,314 DEBUG - Downloader [ [youtube] ElAVE2fTQ1Q: Extracting video information ]
+17:52:28,005 DEBUG - Downloader [ [download] Destination: D:\Movies\Black Eagle (1988_Full movie_English) Jean-Claude Van Damme.mp4 ]
+17:52:28,006 DEBUG - Downloader [  ]
+17:52:28,006 DEBUG - Downloader [ [download]   0.0% of 1.30GiB at     ---b/s ETA Unknown ETA ]
+17:52:28,006 DEBUG - Downloader [ [download]   0.0% of 1.30GiB at     ---b/s ETA Unknown ETA ]
+17:52:28,026 DEBUG - Downloader [ [download]   0.0% of 1.30GiB at     ---b/s ETA Unknown ETA ]
+17:52:28,044 DEBUG - Downloader [ [download]   0.0% of 1.30GiB at 714.29KiB/s ETA 31:51      ]
+17:52:28,061 DEBUG - Downloader [ [download]   0.0% of 1.30GiB at 794.88KiB/s ETA 28:37      ]
+17:52:28,081 DEBUG - Downloader [ [download]   0.0% of 1.30GiB at  1.10MiB/s ETA 20:13       ]
+17:52:28,114 DEBUG - Downloader [ [download]   0.0% of 1.30GiB at  1.65MiB/s ETA 13:37       ]
+17:52:28,139 DEBUG - Downloader [ [download]   0.0% of 1.30GiB at  2.28MiB/s ETA 09:43       ]
+17:52:28,184 DEBUG - Downloader [ [download]   0.0% of 1.30GiB at  3.72MiB/s ETA 05:57       ]
+17:52:28,273 DEBUG - Downloader [ [download]   0.1% of 1.30GiB at  5.61MiB/s ETA 03:57       ]
+17:52:28,439 DEBUG - Downloader [ [download]   0.1% of 1.30GiB at  7.46MiB/s ETA 02:58       ]
+17:52:28,748 DEBUG - Downloader [ [download]   0.3% of 1.30GiB at  9.21MiB/s ETA 02:24       ]
+17:52:29,068 DEBUG - Downloader [ [download]   0.6% of 1.30GiB at 10.77MiB/s ETA 02:03       ]
+17:52:29,378 DEBUG - Downloader [ [download]   0.9% of 1.30GiB at 11.29MiB/s ETA 01:57       ]
+17:52:29,677 DEBUG - Downloader [ [download]   1.2% of 1.30GiB at 11.66MiB/s ETA 01:53       ]
+17:52:29,951 DEBUG - Downloader [ [download]   1.5% of 1.30GiB at 11.96MiB/s ETA 01:49       ]
+17:52:30,235 DEBUG - Downloader [ [download]   1.8% of 1.30GiB at 12.34MiB/s ETA 01:46       ]
+17:52:30,586 DEBUG - Downloader [ [download]   2.1% of 1.30GiB at 12.56MiB/s ETA 01:43       ]
+17:52:31,050 DEBUG - Downloader [ [download]   2.4% of 1.30GiB at 12.40MiB/s ETA 01:44       ]
+17:52:31,507 DEBUG - Downloader [ [download]   2.7% of 1.30GiB at 11.82MiB/s ETA 01:49       ]
+17:52:31,942 DEBUG - Downloader [ [download]   3.0% of 1.30GiB at 11.42MiB/s ETA 01:53       ]
+17:52:32,369 DEBUG - Downloader [ [download]   3.3% of 1.30GiB at 11.18MiB/s ETA 01:55       ]
+17:52:33,027 DEBUG - Downloader [ [download]   3.6% of 1.30GiB at 11.00MiB/s ETA 01:56       ]
+17:52:34,012 DEBUG - Downloader [ [download]   3.9% of 1.30GiB at 10.35MiB/s ETA 02:03       ]
+17:52:34,919 DEBUG - Downloader [ [download]   4.2% of 1.30GiB at  9.32MiB/s ETA 02:17       ]
+17:52:35,749 DEBUG - Downloader [ [download]   4.5% of 1.30GiB at  8.68MiB/s ETA 02:26       ]
+17:52:36,525 DEBUG - Downloader [ [download]   4.8% of 1.30GiB at  8.26MiB/s ETA 02:33       ]
+17:52:37,313 DEBUG - Downloader [ [download]   5.1% of 1.30GiB at  7.98MiB/s ETA 02:38       ]
+17:52:38,236 DEBUG - Downloader [ [download]   5.4% of 1.30GiB at  7.74MiB/s ETA 02:43       ]
+17:52:39,714 DEBUG - Downloader [ [download]   5.7% of 1.30GiB at  7.43MiB/s ETA 02:49       ]
+17:52:40,697 DEBUG - Downloader [ [download]   6.0% of 1.30GiB at  6.83MiB/s ETA 03:03       ]
+17:52:41,648 DEBUG - Downloader [ [download]   6.2% of 1.30GiB at  6.52MiB/s ETA 03:11       ]
+17:52:42,652 DEBUG - Downloader [ [download]   6.4% of 1.30GiB at  6.26MiB/s ETA 03:19       ]
+17:52:43,611 DEBUG - Downloader [ [download]   6.6% of 1.30GiB at  6.03MiB/s ETA 03:26       ]
+17:52:44,646 DEBUG - Downloader [ [download]   6.8% of 1.30GiB at  5.85MiB/s ETA 03:32       ]
+17:52:45,535 DEBUG - Downloader [ [download]   7.1% of 1.30GiB at  5.67MiB/s ETA 03:38       ]
+17:52:46,425 DEBUG - Downloader [ [download]   7.3% of 1.30GiB at  5.55MiB/s ETA 03:42       ]
+17:52:47,286 DEBUG - Downloader [ [download]   7.5% of 1.30GiB at  5.46MiB/s ETA 03:45       ]
+17:52:48,169 DEBUG - Downloader [ [download]   7.8% of 1.30GiB at  5.41MiB/s ETA 03:47       ]
+17:52:48,787 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+17:52:49,101 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+17:52:49,278 DEBUG - Downloader [ [download]   8.1% of 1.30GiB at  5.37MiB/s ETA 03:48       ]
+17:52:50,369 DEBUG - Downloader [ [download]   8.4% of 1.30GiB at  5.28MiB/s ETA 03:51       ]
+17:52:51,309 DEBUG - Downloader [ [download]   8.7% of 1.30GiB at  5.18MiB/s ETA 03:54       ]
+17:52:52,392 DEBUG - Downloader [ [download]   8.9% of 1.30GiB at  5.11MiB/s ETA 03:57       ]
+17:52:53,279 DEBUG - Downloader [ [download]   9.2% of 1.30GiB at  5.03MiB/s ETA 04:00       ]
+17:52:54,167 DEBUG - Downloader [ [download]   9.4% of 1.30GiB at  4.99MiB/s ETA 04:02       ]
+17:52:55,069 DEBUG - Downloader [ [download]   9.7% of 1.30GiB at  4.96MiB/s ETA 04:02       ]
+17:52:55,908 DEBUG - Downloader [ [download]  10.0% of 1.30GiB at  4.94MiB/s ETA 04:02       ]
+17:52:56,678 DEBUG - Downloader [ [download]  10.3% of 1.30GiB at  4.93MiB/s ETA 04:02       ]
+17:52:57,402 DEBUG - Downloader [ [download]  10.6% of 1.30GiB at  4.94MiB/s ETA 04:01       ]
+17:52:58,095 DEBUG - Downloader [ [download]  10.9% of 1.30GiB at  4.96MiB/s ETA 03:59       ]
+17:52:58,741 DEBUG - Downloader [ [download]  11.2% of 1.30GiB at  4.98MiB/s ETA 03:57       ]
+17:52:59,359 DEBUG - Downloader [ [download]  11.5% of 1.30GiB at  5.00MiB/s ETA 03:55       ]
+17:53:00,089 DEBUG - Downloader [ [download]  11.8% of 1.30GiB at  5.03MiB/s ETA 03:53       ]
+17:53:01,150 DEBUG - Downloader [ [download]  12.1% of 1.30GiB at  5.04MiB/s ETA 03:52       ]
+17:53:01,955 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe --list-extractors  ]
+17:53:02,175 DEBUG - Downloader [ 1up.com ]
+17:53:02,175 DEBUG - Downloader [ 220.ro ]
+17:53:02,175 DEBUG - Downloader [ 3sat ]
+17:53:02,175 DEBUG - Downloader [ 4tube ]
+17:53:02,175 DEBUG - Downloader [ 56.com ]
+17:53:02,176 DEBUG - Downloader [ 5min ]
+17:53:02,176 DEBUG - Downloader [ 8tracks ]
+17:53:02,177 DEBUG - Downloader [ 9gag ]
+17:53:02,177 DEBUG - Downloader [ abc.net.au ]
+17:53:02,177 DEBUG - Downloader [ AcademicEarth:Course ]
+17:53:02,178 DEBUG - Downloader [ AddAnime ]
+17:53:02,178 DEBUG - Downloader [ AdultSwim ]
+17:53:02,179 DEBUG - Downloader [ Aftonbladet ]
+17:53:02,179 DEBUG - Downloader [ Allocine ]
+17:53:02,179 DEBUG - Downloader [ anitube.se ]
+17:53:02,179 DEBUG - Downloader [ AnySex ]
+17:53:02,179 DEBUG - Downloader [ Aparat ]
+17:53:02,180 DEBUG - Downloader [ AppleTrailers ]
+17:53:02,180 DEBUG - Downloader [ archive.org ]
+17:53:02,180 DEBUG - Downloader [ ARD ]
+17:53:02,181 DEBUG - Downloader [ ARD:mediathek ]
+17:53:02,181 DEBUG - Downloader [ arte.tv ]
+17:53:02,181 DEBUG - Downloader [ arte.tv:+7 ]
+17:53:02,182 DEBUG - Downloader [ arte.tv:concert ]
+17:53:02,182 DEBUG - Downloader [ arte.tv:creative ]
+17:53:02,182 DEBUG - Downloader [ arte.tv:ddc ]
+17:53:02,182 DEBUG - Downloader [ arte.tv:embed ]
+17:53:02,182 DEBUG - Downloader [ arte.tv:future ]
+17:53:02,182 DEBUG - Downloader [ AUEngine ]
+17:53:02,183 DEBUG - Downloader [ bambuser ]
+17:53:02,183 DEBUG - Downloader [ bambuser:channel ]
+17:53:02,183 DEBUG - Downloader [ Bandcamp ]
+17:53:02,183 DEBUG - Downloader [ Bandcamp:album ]
+17:53:02,183 DEBUG - Downloader [ bbc.co.uk ]
+17:53:02,184 DEBUG - Downloader [ Beeg ]
+17:53:02,184 DEBUG - Downloader [ BehindKink ]
+17:53:02,185 DEBUG - Downloader [ BiliBili ]
+17:53:02,185 DEBUG - Downloader [ blinkx ]
+17:53:02,185 DEBUG - Downloader [ blip.tv:user ]
+17:53:02,185 DEBUG - Downloader [ BlipTV ]
+17:53:02,186 DEBUG - Downloader [ Bloomberg ]
+17:53:02,186 DEBUG - Downloader [ BR ]
+17:53:02,186 DEBUG - Downloader [ Break ]
+17:53:02,187 DEBUG - Downloader [ Brightcove ]
+17:53:02,187 DEBUG - Downloader [ BYUtv ]
+17:53:02,187 DEBUG - Downloader [ Canal13cl ]
+17:53:02,187 DEBUG - Downloader [ canalc2.tv ]
+17:53:02,187 DEBUG - Downloader [ canalplus.fr ]
+17:53:02,187 DEBUG - Downloader [ CBS ]
+17:53:02,188 DEBUG - Downloader [ CBSNews ]
+17:53:02,188 DEBUG - Downloader [ CeskaTelevize ]
+17:53:02,189 DEBUG - Downloader [ channel9 ]
+17:53:02,189 DEBUG - Downloader [ Chilloutzone ]
+17:53:02,189 DEBUG - Downloader [ Cinemassacre ]
+17:53:02,189 DEBUG - Downloader [ clipfish ]
+17:53:02,190 DEBUG - Downloader [ cliphunter ]
+17:53:02,190 DEBUG - Downloader [ Clipsyndicate ]
+17:53:02,190 DEBUG - Downloader [ Cloudy ]
+17:53:02,190 DEBUG - Downloader [ Clubic ]
+17:53:02,190 DEBUG - Downloader [ cmt.com ]
+17:53:02,191 DEBUG - Downloader [ CNET ]
+17:53:02,191 DEBUG - Downloader [ CNN ]
+17:53:02,191 DEBUG - Downloader [ CNNBlogs ]
+17:53:02,191 DEBUG - Downloader [ CollegeHumor ]
+17:53:02,192 DEBUG - Downloader [ ComedyCentral ]
+17:53:02,192 DEBUG - Downloader [ ComedyCentralShows ]
+17:53:02,192 DEBUG - Downloader [ CondeNast ]
+17:53:02,192 DEBUG - Downloader [ Cracked ]
+17:53:02,193 DEBUG - Downloader [ Criterion ]
+17:53:02,193 DEBUG - Downloader [ Crunchyroll ]
+17:53:02,193 DEBUG - Downloader [ CSpan ]
+17:53:02,193 DEBUG - Downloader [ culturebox.francetvinfo.fr ]
+17:53:02,193 DEBUG - Downloader [ d8.tv ]
+17:53:02,194 DEBUG - Downloader [ dailymotion ]
+17:53:02,194 DEBUG - Downloader [ dailymotion:playlist ]
+17:53:02,194 DEBUG - Downloader [ dailymotion:user ]
+17:53:02,194 DEBUG - Downloader [ daum.net ]
+17:53:02,194 DEBUG - Downloader [ DBTV ]
+17:53:02,194 DEBUG - Downloader [ DeezerPlaylist ]
+17:53:02,195 DEBUG - Downloader [ defense.gouv.fr ]
+17:53:02,195 DEBUG - Downloader [ Discovery ]
+17:53:02,195 DEBUG - Downloader [ divxstage ]
+17:53:02,196 DEBUG - Downloader [ Dotsub ]
+17:53:02,196 DEBUG - Downloader [ Dropbox ]
+17:53:02,196 DEBUG - Downloader [ DrTuber ]
+17:53:02,196 DEBUG - Downloader [ DRTV ]
+17:53:02,196 DEBUG - Downloader [ Dump ]
+17:53:02,197 DEBUG - Downloader [ EbaumsWorld ]
+17:53:02,197 DEBUG - Downloader [ eHow ]
+17:53:02,198 DEBUG - Downloader [ Einthusan ]
+17:53:02,198 DEBUG - Downloader [ eitb.tv ]
+17:53:02,198 DEBUG - Downloader [ EllenTV ]
+17:53:02,198 DEBUG - Downloader [ EllenTV:clips ]
+17:53:02,198 DEBUG - Downloader [ ElPais ]
+17:53:02,198 DEBUG - Downloader [ EMPFlix ]
+17:53:02,199 DEBUG - Downloader [ Engadget ]
+17:53:02,199 DEBUG - Downloader [ Eporner ]
+17:53:02,200 DEBUG - Downloader [ Escapist ]
+17:53:02,200 DEBUG - Downloader [ EveryonesMixtape ]
+17:53:02,200 DEBUG - Downloader [ exfm ]
+17:53:02,200 DEBUG - Downloader [ ExpoTV ]
+17:53:02,200 DEBUG - Downloader [ ExtremeTube ]
+17:53:02,200 DEBUG - Downloader [ facebook ]
+17:53:02,201 DEBUG - Downloader [ faz.net ]
+17:53:02,201 DEBUG - Downloader [ fc2 ]
+17:53:02,201 DEBUG - Downloader [ fernsehkritik.tv ]
+17:53:02,201 DEBUG - Downloader [ fernsehkritik.tv:postecke ]
+17:53:02,201 DEBUG - Downloader [ Firedrive ]
+17:53:02,202 DEBUG - Downloader [ Firstpost ]
+17:53:02,202 DEBUG - Downloader [ firsttv ]
+17:53:02,202 DEBUG - Downloader [ Flickr ]
+17:53:02,202 DEBUG - Downloader [ france2.fr:generation-quoi ]
+17:53:02,203 DEBUG - Downloader [ FranceCulture ]
+17:53:02,203 DEBUG - Downloader [ FranceInter ]
+17:53:02,204 DEBUG - Downloader [ francetv ]
+17:53:02,204 DEBUG - Downloader [ francetvinfo.fr ]
+17:53:02,204 DEBUG - Downloader [ Freesound ]
+17:53:02,204 DEBUG - Downloader [ freespeech.org ]
+17:53:02,204 DEBUG - Downloader [ FunnyOrDie ]
+17:53:02,205 DEBUG - Downloader [ Gamekings ]
+17:53:02,205 DEBUG - Downloader [ GameOne ]
+17:53:02,205 DEBUG - Downloader [ gameone:playlist ]
+17:53:02,205 DEBUG - Downloader [ GameSpot ]
+17:53:02,206 DEBUG - Downloader [ GameStar ]
+17:53:02,206 DEBUG - Downloader [ Gametrailers ]
+17:53:02,206 DEBUG - Downloader [ GDCVault ]
+17:53:02,206 DEBUG - Downloader [ generic ]
+17:53:02,206 DEBUG - Downloader [ Globo ]
+17:53:02,207 DEBUG - Downloader [ GodTube ]
+17:53:02,207 DEBUG - Downloader [ Golem ]
+17:53:02,207 DEBUG - Downloader [ GorillaVid ]
+17:53:02,207 DEBUG - Downloader [ Goshgay ]
+17:53:02,207 DEBUG - Downloader [ Grooveshark ]
+17:53:02,207 DEBUG - Downloader [ Hark ]
+17:53:02,208 DEBUG - Downloader [ Heise ]
+17:53:02,208 DEBUG - Downloader [ Helsinki ]
+17:53:02,208 DEBUG - Downloader [ HentaiStigma ]
+17:53:02,208 DEBUG - Downloader [ HornBunny ]
+17:53:02,208 DEBUG - Downloader [ HostingBulk ]
+17:53:02,209 DEBUG - Downloader [ HotNewHipHop ]
+17:53:02,209 DEBUG - Downloader [ Howcast ]
+17:53:02,209 DEBUG - Downloader [ HowStuffWorks ]
+17:53:02,209 DEBUG - Downloader [ HuffPost ]
+17:53:02,209 DEBUG - Downloader [ Hypem ]
+17:53:02,209 DEBUG - Downloader [ Iconosquare ]
+17:53:02,210 DEBUG - Downloader [ ign.com ]
+17:53:02,210 DEBUG - Downloader [ imdb ]
+17:53:02,210 DEBUG - Downloader [ imdb:list ]
+17:53:02,210 DEBUG - Downloader [ Ina ]
+17:53:02,210 DEBUG - Downloader [ InfoQ ]
+17:53:02,211 DEBUG - Downloader [ Instagram ]
+17:53:02,211 DEBUG - Downloader [ instagram:user ]
+17:53:02,211 DEBUG - Downloader [ InternetVideoArchive ]
+17:53:02,212 DEBUG - Downloader [ IPrima ]
+17:53:02,212 DEBUG - Downloader [ ivi ]
+17:53:02,212 DEBUG - Downloader [ ivi:compilation ]
+17:53:02,212 DEBUG - Downloader [ Izlesene ]
+17:53:02,212 DEBUG - Downloader [ JadoreCettePub ]
+17:53:02,213 DEBUG - Downloader [ JeuxVideo ]
+17:53:02,213 DEBUG - Downloader [ Jove ]
+17:53:02,213 DEBUG - Downloader [ jpopsuki.tv ]
+17:53:02,214 DEBUG - Downloader [ Jukebox ]
+17:53:02,214 DEBUG - Downloader [ justin.tv ]
+17:53:02,214 DEBUG - Downloader [ Kankan ]
+17:53:02,214 DEBUG - Downloader [ keek ]
+17:53:02,214 DEBUG - Downloader [ KeezMovies ]
+17:53:02,215 DEBUG - Downloader [ KhanAcademy ]
+17:53:02,215 DEBUG - Downloader [ KickStarter ]
+17:53:02,215 DEBUG - Downloader [ kontrtube ]
+17:53:02,215 DEBUG - Downloader [ KrasView ]
+17:53:02,215 DEBUG - Downloader [ Ku6 ]
+17:53:02,216 DEBUG - Downloader [ la7.tv ]
+17:53:02,216 DEBUG - Downloader [ lifenews ]
+17:53:02,216 DEBUG - Downloader [ LiveLeak ]
+17:53:02,217 DEBUG - Downloader [ livestream ]
+17:53:02,217 DEBUG - Downloader [ livestream:original ]
+17:53:02,217 DEBUG - Downloader [ livestream:shortener ]
+17:53:02,217 DEBUG - Downloader [ lrt.lt ]
+17:53:02,217 DEBUG - Downloader [ lynda ]
+17:53:02,218 DEBUG - Downloader [ lynda:course ]
+17:53:02,218 DEBUG - Downloader [ m6 ]
+17:53:02,218 DEBUG - Downloader [ macgamestore ]
+17:53:02,218 DEBUG - Downloader [ mailru ]
+17:53:02,218 DEBUG - Downloader [ Malemotion ]
+17:53:02,218 DEBUG - Downloader [ MDR ]
+17:53:02,219 DEBUG - Downloader [ metacafe ]
+17:53:02,219 DEBUG - Downloader [ Metacritic ]
+17:53:02,219 DEBUG - Downloader [ Mgoon ]
+17:53:02,219 DEBUG - Downloader [ MinistryGrid ]
+17:53:02,219 DEBUG - Downloader [ mitele.es ]
+17:53:02,219 DEBUG - Downloader [ mixcloud ]
+17:53:02,220 DEBUG - Downloader [ MLB ]
+17:53:02,220 DEBUG - Downloader [ MoeVideo ]
+17:53:02,220 DEBUG - Downloader [ Mofosex ]
+17:53:02,220 DEBUG - Downloader [ Mojvideo ]
+17:53:02,220 DEBUG - Downloader [ Moniker ]
+17:53:02,221 DEBUG - Downloader [ mooshare ]
+17:53:02,221 DEBUG - Downloader [ Morningstar ]
+17:53:02,221 DEBUG - Downloader [ Motherless ]
+17:53:02,221 DEBUG - Downloader [ Motorsport ]
+17:53:02,221 DEBUG - Downloader [ MovieClips ]
+17:53:02,222 DEBUG - Downloader [ Moviezine ]
+17:53:02,222 DEBUG - Downloader [ movshare ]
+17:53:02,222 DEBUG - Downloader [ MPORA ]
+17:53:02,222 DEBUG - Downloader [ MTV ]
+17:53:02,222 DEBUG - Downloader [ mtviggy.com ]
+17:53:02,222 DEBUG - Downloader [ mtvservices:embedded ]
+17:53:02,223 DEBUG - Downloader [ MuenchenTV ]
+17:53:02,223 DEBUG - Downloader [ MusicPlayOn ]
+17:53:02,223 DEBUG - Downloader [ MusicVault ]
+17:53:02,223 DEBUG - Downloader [ muzu.tv ]
+17:53:02,223 DEBUG - Downloader [ [download]  12.4% of 1.30GiB at  5.00MiB/s ETA 03:53       ]
+17:53:02,223 DEBUG - Downloader [ MySpace ]
+17:53:02,224 DEBUG - Downloader [ MySpass ]
+17:53:02,224 DEBUG - Downloader [ myvideo ]
+17:53:02,224 DEBUG - Downloader [ Naver ]
+17:53:02,224 DEBUG - Downloader [ NBA ]
+17:53:02,224 DEBUG - Downloader [ NBC ]
+17:53:02,225 DEBUG - Downloader [ NBCNews ]
+17:53:02,225 DEBUG - Downloader [ ndr ]
+17:53:02,225 DEBUG - Downloader [ NDTV ]
+17:53:02,225 DEBUG - Downloader [ Newgrounds ]
+17:53:02,225 DEBUG - Downloader [ Newstube ]
+17:53:02,225 DEBUG - Downloader [ nfb ]
+17:53:02,226 DEBUG - Downloader [ nfl.com ]
+17:53:02,226 DEBUG - Downloader [ nhl.com ]
+17:53:02,226 DEBUG - Downloader [ nhl.com:videocenter ]
+17:53:02,226 DEBUG - Downloader [ niconico ]
+17:53:02,226 DEBUG - Downloader [ Noco ]
+17:53:02,226 DEBUG - Downloader [ Normalboots ]
+17:53:02,227 DEBUG - Downloader [ NosVideo ]
+17:53:02,227 DEBUG - Downloader [ novamov ]
+17:53:02,227 DEBUG - Downloader [ Nowness ]
+17:53:02,227 DEBUG - Downloader [ nowvideo ]
+17:53:02,227 DEBUG - Downloader [ npo.nl ]
+17:53:02,228 DEBUG - Downloader [ NRK ]
+17:53:02,228 DEBUG - Downloader [ NRKTV ]
+17:53:02,228 DEBUG - Downloader [ NTV ]
+17:53:02,228 DEBUG - Downloader [ Nuvid ]
+17:53:02,228 DEBUG - Downloader [ NYTimes ]
+17:53:02,229 DEBUG - Downloader [ ocw.mit.edu ]
+17:53:02,229 DEBUG - Downloader [ OktoberfestTV ]
+17:53:02,229 DEBUG - Downloader [ on.aol.com ]
+17:53:02,229 DEBUG - Downloader [ Ooyala ]
+17:53:02,229 DEBUG - Downloader [ orf:oe1 ]
+17:53:02,230 DEBUG - Downloader [ orf:tvthek ]
+17:53:02,230 DEBUG - Downloader [ ORFFM4 ]
+17:53:02,230 DEBUG - Downloader [ parliamentlive.tv ]
+17:53:02,230 DEBUG - Downloader [ Patreon ]
+17:53:02,230 DEBUG - Downloader [ PBS ]
+17:53:02,230 DEBUG - Downloader [ Photobucket ]
+17:53:02,231 DEBUG - Downloader [ PlanetaPlay ]
+17:53:02,231 DEBUG - Downloader [ play.fm ]
+17:53:02,231 DEBUG - Downloader [ played.to ]
+17:53:02,231 DEBUG - Downloader [ Playvid ]
+17:53:02,231 DEBUG - Downloader [ plus.google ]
+17:53:02,232 DEBUG - Downloader [ pluzz.francetv.fr ]
+17:53:02,232 DEBUG - Downloader [ podomatic ]
+17:53:02,232 DEBUG - Downloader [ PornHd ]
+17:53:02,232 DEBUG - Downloader [ PornHub ]
+17:53:02,232 DEBUG - Downloader [ Pornotube ]
+17:53:02,232 DEBUG - Downloader [ PornoXO ]
+17:53:02,233 DEBUG - Downloader [ PromptFile ]
+17:53:02,234 DEBUG - Downloader [ prosiebensat1 ]
+17:53:02,234 DEBUG - Downloader [ Pyvideo ]
+17:53:02,234 DEBUG - Downloader [ radiofrance ]
+17:53:02,234 DEBUG - Downloader [ Rai ]
+17:53:02,234 DEBUG - Downloader [ RBMARadio ]
+17:53:02,235 DEBUG - Downloader [ RedTube ]
+17:53:02,235 DEBUG - Downloader [ ReverbNation ]
+17:53:02,235 DEBUG - Downloader [ RingTV ]
+17:53:02,235 DEBUG - Downloader [ RottenTomatoes ]
+17:53:02,235 DEBUG - Downloader [ Roxwel ]
+17:53:02,235 DEBUG - Downloader [ RTBF ]
+17:53:02,236 DEBUG - Downloader [ RTLnow ]
+17:53:02,236 DEBUG - Downloader [ rtlxl.nl ]
+17:53:02,236 DEBUG - Downloader [ RTS ]
+17:53:02,236 DEBUG - Downloader [ rtve.es:alacarta ]
+17:53:02,236 DEBUG - Downloader [ rtve.es:live ]
+17:53:02,237 DEBUG - Downloader [ RUHD ]
+17:53:02,237 DEBUG - Downloader [ rutube ]
+17:53:02,237 DEBUG - Downloader [ rutube:channel ]
+17:53:02,237 DEBUG - Downloader [ rutube:movie ]
+17:53:02,237 DEBUG - Downloader [ rutube:person ]
+17:53:02,237 DEBUG - Downloader [ RUTV ]
+17:53:02,238 DEBUG - Downloader [ Sapo ]
+17:53:02,238 DEBUG - Downloader [ savefrom.net ]
+17:53:02,238 DEBUG - Downloader [ SBS ]
+17:53:02,238 DEBUG - Downloader [ SciVee ]
+17:53:02,238 DEBUG - Downloader [ screen.yahoo:search ]
+17:53:02,239 DEBUG - Downloader [ Screencast ]
+17:53:02,239 DEBUG - Downloader [ ServingSys ]
+17:53:02,239 DEBUG - Downloader [ Shared ]
+17:53:02,239 DEBUG - Downloader [ ShareSix ]
+17:53:02,239 DEBUG - Downloader [ Sina ]
+17:53:02,239 DEBUG - Downloader [ Slideshare ]
+17:53:02,240 DEBUG - Downloader [ Slutload ]
+17:53:02,240 DEBUG - Downloader [ smotri ]
+17:53:02,240 DEBUG - Downloader [ smotri:broadcast ]
+17:53:02,240 DEBUG - Downloader [ smotri:community ]
+17:53:02,240 DEBUG - Downloader [ smotri:user ]
+17:53:02,240 DEBUG - Downloader [ Snotr ]
+17:53:02,241 DEBUG - Downloader [ Sockshare ]
+17:53:02,241 DEBUG - Downloader [ Sohu ]
+17:53:02,241 DEBUG - Downloader [ soundcloud ]
+17:53:02,241 DEBUG - Downloader [ soundcloud:playlist ]
+17:53:02,241 DEBUG - Downloader [ soundcloud:set ]
+17:53:02,242 DEBUG - Downloader [ soundcloud:user ]
+17:53:02,242 DEBUG - Downloader [ Soundgasm ]
+17:53:02,242 DEBUG - Downloader [ southpark.cc.com ]
+17:53:02,242 DEBUG - Downloader [ southpark.de ]
+17:53:02,242 DEBUG - Downloader [ Space ]
+17:53:02,242 DEBUG - Downloader [ Spankwire ]
+17:53:02,243 DEBUG - Downloader [ Spiegel ]
+17:53:02,243 DEBUG - Downloader [ Spiegel:Article ]
+17:53:02,243 DEBUG - Downloader [ Spiegeltv ]
+17:53:02,243 DEBUG - Downloader [ Spike ]
+17:53:02,243 DEBUG - Downloader [ Sport5 ]
+17:53:02,243 DEBUG - Downloader [ SportDeutschland ]
+17:53:02,244 DEBUG - Downloader [ stanfordoc ]
+17:53:02,244 DEBUG - Downloader [ Steam ]
+17:53:02,244 DEBUG - Downloader [ streamcloud.eu ]
+17:53:02,244 DEBUG - Downloader [ StreamCZ ]
+17:53:02,245 DEBUG - Downloader [ SunPorno ]
+17:53:02,245 DEBUG - Downloader [ SWRMediathek ]
+17:53:02,245 DEBUG - Downloader [ Syfy ]
+17:53:02,245 DEBUG - Downloader [ SztvHu ]
+17:53:02,245 DEBUG - Downloader [ Tagesschau ]
+17:53:02,246 DEBUG - Downloader [ Tapely ]
+17:53:02,246 DEBUG - Downloader [ teachertube ]
+17:53:02,246 DEBUG - Downloader [ teachertube:user:collection ]
+17:53:02,246 DEBUG - Downloader [ TeachingChannel ]
+17:53:02,246 DEBUG - Downloader [ Teamcoco ]
+17:53:02,246 DEBUG - Downloader [ TechTalks ]
+17:53:02,247 DEBUG - Downloader [ techtv.mit.edu ]
+17:53:02,247 DEBUG - Downloader [ TED ]
+17:53:02,247 DEBUG - Downloader [ tegenlicht.vpro.nl ]
+17:53:02,247 DEBUG - Downloader [ TeleMB ]
+17:53:02,247 DEBUG - Downloader [ TenPlay ]
+17:53:02,248 DEBUG - Downloader [ TestURL ]
+17:53:02,248 DEBUG - Downloader [ TF1 ]
+17:53:02,248 DEBUG - Downloader [ ThePlatform ]
+17:53:02,248 DEBUG - Downloader [ TheSixtyOne ]
+17:53:02,248 DEBUG - Downloader [ ThisAV ]
+17:53:02,248 DEBUG - Downloader [ THVideo ]
+17:53:02,249 DEBUG - Downloader [ THVideoPlaylist ]
+17:53:02,249 DEBUG - Downloader [ tinypic ]
+17:53:02,249 DEBUG - Downloader [ tlc.com ]
+17:53:02,249 DEBUG - Downloader [ tlc.de ]
+17:53:02,249 DEBUG - Downloader [ TNAFlix ]
+17:53:02,249 DEBUG - Downloader [ tou.tv ]
+17:53:02,250 DEBUG - Downloader [ Toypics ]
+17:53:02,250 DEBUG - Downloader [ ToypicsUser ]
+17:53:02,250 DEBUG - Downloader [ TrailerAddict (CURRENTLY BROKEN) ]
+17:53:02,250 DEBUG - Downloader [ Trilulilu ]
+17:53:02,250 DEBUG - Downloader [ TruTube ]
+17:53:02,250 DEBUG - Downloader [ Tube8 ]
+17:53:02,251 DEBUG - Downloader [ Tudou ]
+17:53:02,251 DEBUG - Downloader [ Tumblr ]
+17:53:02,251 DEBUG - Downloader [ Turbo ]
+17:53:02,251 DEBUG - Downloader [ Tutv ]
+17:53:02,251 DEBUG - Downloader [ tv.dfb.de ]
+17:53:02,252 DEBUG - Downloader [ tvigle ]
+17:53:02,252 DEBUG - Downloader [ tvp.pl ]
+17:53:02,252 DEBUG - Downloader [ TVPlay ]
+17:53:02,252 DEBUG - Downloader [ Ubu ]
+17:53:02,252 DEBUG - Downloader [ udemy ]
+17:53:02,252 DEBUG - Downloader [ udemy:course ]
+17:53:02,253 DEBUG - Downloader [ Unistra ]
+17:53:02,253 DEBUG - Downloader [ Urort ]
+17:53:02,253 DEBUG - Downloader [ ustream ]
+17:53:02,253 DEBUG - Downloader [ ustream:channel ]
+17:53:02,253 DEBUG - Downloader [ Vbox7 ]
+17:53:02,253 DEBUG - Downloader [ VeeHD ]
+17:53:02,254 DEBUG - Downloader [ Veoh ]
+17:53:02,254 DEBUG - Downloader [ Vesti ]
+17:53:02,254 DEBUG - Downloader [ Vevo ]
+17:53:02,254 DEBUG - Downloader [ VGTV ]
+17:53:02,254 DEBUG - Downloader [ vh1.com ]
+17:53:02,254 DEBUG - Downloader [ Viddler ]
+17:53:02,255 DEBUG - Downloader [ video.google:search ]
+17:53:02,255 DEBUG - Downloader [ video.mit.edu ]
+17:53:02,255 DEBUG - Downloader [ VideoBam ]
+17:53:02,255 DEBUG - Downloader [ VideoDetective ]
+17:53:02,255 DEBUG - Downloader [ videofy.me ]
+17:53:02,255 DEBUG - Downloader [ videolectures.net ]
+17:53:02,256 DEBUG - Downloader [ VideoMega ]
+17:53:02,256 DEBUG - Downloader [ VideoPremium ]
+17:53:02,256 DEBUG - Downloader [ VideoTt ]
+17:53:02,256 DEBUG - Downloader [ videoweed ]
+17:53:02,256 DEBUG - Downloader [ Vidme ]
+17:53:02,256 DEBUG - Downloader [ viki ]
+17:53:02,257 DEBUG - Downloader [ vimeo ]
+17:53:02,257 DEBUG - Downloader [ vimeo:album ]
+17:53:02,257 DEBUG - Downloader [ vimeo:channel ]
+17:53:02,257 DEBUG - Downloader [ vimeo:group ]
+17:53:02,257 DEBUG - Downloader [ vimeo:likes ]
+17:53:02,257 DEBUG - Downloader [ vimeo:review ]
+17:53:02,258 DEBUG - Downloader [ vimeo:user ]
+17:53:02,258 DEBUG - Downloader [ vimeo:watchlater ]
+17:53:02,258 DEBUG - Downloader [ Vimple ]
+17:53:02,258 DEBUG - Downloader [ Vine ]
+17:53:02,258 DEBUG - Downloader [ vine:user ]
+17:53:02,259 DEBUG - Downloader [ vk.com ]
+17:53:02,259 DEBUG - Downloader [ Vodlocker ]
+17:53:02,259 DEBUG - Downloader [ Vporn ]
+17:53:02,259 DEBUG - Downloader [ vube ]
+17:53:02,259 DEBUG - Downloader [ VuClip ]
+17:53:02,259 DEBUG - Downloader [ vulture.com ]
+17:53:02,260 DEBUG - Downloader [ WashingtonPost ]
+17:53:02,260 DEBUG - Downloader [ wat.tv ]
+17:53:02,260 DEBUG - Downloader [ WayOfTheMaster ]
+17:53:02,260 DEBUG - Downloader [ WDR ]
+17:53:02,260 DEBUG - Downloader [ wdr:mobile ]
+17:53:02,260 DEBUG - Downloader [ WDRMaus ]
+17:53:02,261 DEBUG - Downloader [ Weibo ]
+17:53:02,261 DEBUG - Downloader [ Wimp ]
+17:53:02,261 DEBUG - Downloader [ Wistia ]
+17:53:02,261 DEBUG - Downloader [ WorldStarHipHop ]
+17:53:02,261 DEBUG - Downloader [ wrzuta.pl ]
+17:53:02,262 DEBUG - Downloader [ XBef ]
+17:53:02,262 DEBUG - Downloader [ XboxClips ]
+17:53:02,262 DEBUG - Downloader [ XHamster ]
+17:53:02,262 DEBUG - Downloader [ XNXX ]
+17:53:02,262 DEBUG - Downloader [ XTube ]
+17:53:02,262 DEBUG - Downloader [ XTubeUser ]
+17:53:02,263 DEBUG - Downloader [ XVideos ]
+17:53:02,263 DEBUG - Downloader [ Yahoo ]
+17:53:02,263 DEBUG - Downloader [ yahoo:news ]
+17:53:02,263 DEBUG - Downloader [ Ynet ]
+17:53:02,263 DEBUG - Downloader [ YouJizz ]
+17:53:02,263 DEBUG - Downloader [ Youku ]
+17:53:02,264 DEBUG - Downloader [ YouPorn ]
+17:53:02,264 DEBUG - Downloader [ YourUpload ]
+17:53:02,264 DEBUG - Downloader [ youtube ]
+17:53:02,264 DEBUG - Downloader [ youtube:channel ]
+17:53:02,264 DEBUG - Downloader [ youtube:favorites ]
+17:53:02,264 DEBUG - Downloader [ youtube:history ]
+17:53:02,265 DEBUG - Downloader [ youtube:playlist ]
+17:53:02,265 DEBUG - Downloader [ youtube:recommended ]
+17:53:02,265 DEBUG - Downloader [ youtube:search ]
+17:53:02,265 DEBUG - Downloader [ youtube:search:date ]
+17:53:02,265 DEBUG - Downloader [ youtube:search_url ]
+17:53:02,266 DEBUG - Downloader [ youtube:show ]
+17:53:02,266 DEBUG - Downloader [ youtube:subscriptions ]
+17:53:02,266 DEBUG - Downloader [ youtube:toplist ]
+17:53:02,267 DEBUG - Downloader [ youtube:truncated_url ]
+17:53:02,267 DEBUG - Downloader [ youtube:user ]
+17:53:02,267 DEBUG - Downloader [ youtube:watch_later ]
+17:53:02,267 DEBUG - Downloader [ ZDF ]
+17:53:03,105 DEBUG - Downloader [ [download]  12.7% of 1.30GiB at  4.95MiB/s ETA 03:55       ]
+17:53:04,014 DEBUG - Downloader [ [download]  13.0% of 1.30GiB at  4.93MiB/s ETA 03:55       ]
+17:53:04,843 DEBUG - Downloader [ [download]  13.3% of 1.30GiB at  4.92MiB/s ETA 03:55       ]
+17:53:05,613 DEBUG - Downloader [ [download]  13.6% of 1.30GiB at  4.91MiB/s ETA 03:54       ]
+17:53:06,501 DEBUG - Downloader [ [download]  13.9% of 1.30GiB at  4.92MiB/s ETA 03:53       ]
+17:53:07,330 DEBUG - Downloader [ [download]  14.2% of 1.30GiB at  4.91MiB/s ETA 03:53       ]
+17:53:08,097 DEBUG - Downloader [ [download]  14.5% of 1.30GiB at  4.91MiB/s ETA 03:52       ]
+17:53:09,095 DEBUG - Downloader [ [download]  14.8% of 1.30GiB at  4.91MiB/s ETA 03:51       ]
+17:53:10,262 DEBUG - Downloader [ [download]  15.1% of 1.30GiB at  4.89MiB/s ETA 03:51       ]
+17:53:11,149 DEBUG - Downloader [ [download]  15.4% of 1.30GiB at  4.85MiB/s ETA 03:52       ]
+17:53:12,059 DEBUG - Downloader [ [download]  15.6% of 1.30GiB at  4.83MiB/s ETA 03:52       ]
+17:53:13,051 DEBUG - Downloader [ [download]  15.9% of 1.30GiB at  4.82MiB/s ETA 03:52       ]
+17:53:14,014 DEBUG - Downloader [ [download]  16.2% of 1.30GiB at  4.80MiB/s ETA 03:52       ]
+17:53:14,918 DEBUG - Downloader [ [download]  16.5% of 1.30GiB at  4.79MiB/s ETA 03:52       ]
+17:53:15,790 DEBUG - Downloader [ [download]  16.8% of 1.30GiB at  4.78MiB/s ETA 03:51       ]
+17:53:16,599 DEBUG - Downloader [ [download]  17.1% of 1.30GiB at  4.78MiB/s ETA 03:51       ]
+17:53:17,563 DEBUG - Downloader [ [download]  17.4% of 1.30GiB at  4.78MiB/s ETA 03:50       ]
+17:53:18,558 DEBUG - Downloader [ [download]  17.7% of 1.30GiB at  4.77MiB/s ETA 03:50       ]
+17:53:19,585 DEBUG - Downloader [ [download]  18.0% of 1.30GiB at  4.75MiB/s ETA 03:49       ]
+17:53:20,506 DEBUG - Downloader [ [download]  18.3% of 1.30GiB at  4.74MiB/s ETA 03:49       ]
+17:53:21,345 DEBUG - Downloader [ [download]  18.6% of 1.30GiB at  4.73MiB/s ETA 03:49       ]
+17:53:22,130 DEBUG - Downloader [ [download]  18.9% of 1.30GiB at  4.73MiB/s ETA 03:48       ]
+17:53:22,865 DEBUG - Downloader [ [download]  19.2% of 1.30GiB at  4.73MiB/s ETA 03:47       ]
+17:53:23,561 DEBUG - Downloader [ [download]  19.5% of 1.30GiB at  4.74MiB/s ETA 03:46       ]
+17:53:24,400 DEBUG - Downloader [ [download]  19.8% of 1.30GiB at  4.76MiB/s ETA 03:44       ]
+17:53:25,366 DEBUG - Downloader [ [download]  20.1% of 1.30GiB at  4.76MiB/s ETA 03:43       ]
+17:53:26,409 DEBUG - Downloader [ [download]  20.4% of 1.30GiB at  4.75MiB/s ETA 03:43       ]
+17:53:27,469 DEBUG - Downloader [ [download]  20.7% of 1.30GiB at  4.73MiB/s ETA 03:43       ]
+17:53:28,377 DEBUG - Downloader [ [download]  21.0% of 1.30GiB at  4.71MiB/s ETA 03:43       ]
+17:53:29,278 DEBUG - Downloader [ [download]  21.3% of 1.30GiB at  4.70MiB/s ETA 03:43       ]
+17:53:30,111 DEBUG - Downloader [ [download]  21.6% of 1.30GiB at  4.70MiB/s ETA 03:42       ]
+17:53:31,077 DEBUG - Downloader [ [download]  21.9% of 1.30GiB at  4.70MiB/s ETA 03:41       ]
+17:53:31,951 DEBUG - Downloader [ [download]  22.2% of 1.30GiB at  4.69MiB/s ETA 03:41       ]
+17:53:32,812 DEBUG - Downloader [ [download]  22.5% of 1.30GiB at  4.69MiB/s ETA 03:40       ]
+17:53:33,830 DEBUG - Downloader [ [download]  22.8% of 1.30GiB at  4.69MiB/s ETA 03:39       ]
+17:53:34,737 DEBUG - Downloader [ [download]  23.1% of 1.30GiB at  4.67MiB/s ETA 03:39       ]
+17:53:35,582 DEBUG - Downloader [ [download]  23.4% of 1.30GiB at  4.67MiB/s ETA 03:38       ]
+17:53:36,367 DEBUG - Downloader [ [download]  23.7% of 1.30GiB at  4.67MiB/s ETA 03:37       ]
+17:53:37,102 DEBUG - Downloader [ [download]  24.0% of 1.30GiB at  4.68MiB/s ETA 03:36       ]
+17:53:38,547 DEBUG - Downloader [ [download]  24.3% of 1.30GiB at  4.68MiB/s ETA 03:35       ]
+17:53:39,111 DEBUG - Downloader [ [download]  24.6% of 1.30GiB at  4.64MiB/s ETA 03:36       ]
+17:53:39,961 DEBUG - Downloader [ [download]  24.8% of 1.30GiB at  4.65MiB/s ETA 03:35       ]
+17:53:41,116 DEBUG - Downloader [ [download]  25.1% of 1.30GiB at  4.65MiB/s ETA 03:34       ]
+17:53:42,170 DEBUG - Downloader [ [download]  25.4% of 1.30GiB at  4.63MiB/s ETA 03:34       ]
+17:53:42,873 DEBUG - Downloader [ [download]  25.6% of 1.30GiB at  4.61MiB/s ETA 03:35       ]
+17:53:44,033 DEBUG - Downloader [ [download]  25.9% of 1.30GiB at  4.61MiB/s ETA 03:34       ]
+17:53:44,788 DEBUG - Downloader [ [download]  26.2% of 1.30GiB at  4.59MiB/s ETA 03:34       ]
+17:53:45,615 DEBUG - Downloader [ [download]  26.4% of 1.30GiB at  4.59MiB/s ETA 03:33       ]
+17:53:46,623 DEBUG - Downloader [ [download]  26.7% of 1.30GiB at  4.60MiB/s ETA 03:32       ]
+17:53:47,763 DEBUG - Downloader [ [download]  27.0% of 1.30GiB at  4.59MiB/s ETA 03:32       ]
+17:53:48,707 DEBUG - Downloader [ [download]  27.3% of 1.30GiB at  4.57MiB/s ETA 03:31       ]
+17:53:49,579 DEBUG - Downloader [ [download]  27.6% of 1.30GiB at  4.56MiB/s ETA 03:31       ]
+17:53:50,472 DEBUG - Downloader [ [download]  27.9% of 1.30GiB at  4.56MiB/s ETA 03:30       ]
+17:53:51,320 DEBUG - Downloader [ [download]  28.2% of 1.30GiB at  4.56MiB/s ETA 03:30       ]
+17:53:52,208 DEBUG - Downloader [ [download]  28.5% of 1.30GiB at  4.56MiB/s ETA 03:29       ]
+17:53:53,104 DEBUG - Downloader [ [download]  28.8% of 1.30GiB at  4.56MiB/s ETA 03:28       ]
+17:53:54,339 DEBUG - Downloader [ [download]  29.1% of 1.30GiB at  4.56MiB/s ETA 03:27       ]
+17:53:55,853 DEBUG - Downloader [ [download]  29.4% of 1.30GiB at  4.54MiB/s ETA 03:27       ]
+17:53:56,821 DEBUG - Downloader [ [download]  29.6% of 1.30GiB at  4.50MiB/s ETA 03:28       ]
+17:53:57,650 DEBUG - Downloader [ [download]  29.8% of 1.30GiB at  4.47MiB/s ETA 03:29       ]
+17:53:58,511 DEBUG - Downloader [ [download]  30.0% of 1.30GiB at  4.46MiB/s ETA 03:29       ]
+17:53:59,396 DEBUG - Downloader [ [download]  30.2% of 1.30GiB at  4.44MiB/s ETA 03:29       ]
+17:54:00,293 DEBUG - Downloader [ [download]  30.4% of 1.30GiB at  4.43MiB/s ETA 03:29       ]
+17:54:01,190 DEBUG - Downloader [ [download]  30.7% of 1.30GiB at  4.43MiB/s ETA 03:28       ]
+17:54:02,044 DEBUG - Downloader [ [download]  30.9% of 1.30GiB at  4.43MiB/s ETA 03:27       ]
+17:54:02,821 DEBUG - Downloader [ [download]  31.2% of 1.30GiB at  4.43MiB/s ETA 03:26       ]
+17:54:03,599 DEBUG - Downloader [ [download]  31.5% of 1.30GiB at  4.44MiB/s ETA 03:25       ]
+17:54:04,615 DEBUG - Downloader [ [download]  31.8% of 1.30GiB at  4.44MiB/s ETA 03:24       ]
+17:54:05,655 DEBUG - Downloader [ [download]  32.1% of 1.30GiB at  4.44MiB/s ETA 03:23       ]
+17:54:06,551 DEBUG - Downloader [ [download]  32.4% of 1.30GiB at  4.43MiB/s ETA 03:23       ]
+17:54:07,406 DEBUG - Downloader [ [download]  32.7% of 1.30GiB at  4.43MiB/s ETA 03:22       ]
+17:54:08,205 DEBUG - Downloader [ [download]  33.0% of 1.30GiB at  4.43MiB/s ETA 03:21       ]
+17:54:08,958 DEBUG - Downloader [ [download]  33.3% of 1.30GiB at  4.44MiB/s ETA 03:20       ]
+17:54:09,662 DEBUG - Downloader [ [download]  33.6% of 1.30GiB at  4.44MiB/s ETA 03:19       ]
+17:54:10,404 DEBUG - Downloader [ [download]  33.9% of 1.30GiB at  4.45MiB/s ETA 03:17       ]
+17:54:11,201 DEBUG - Downloader [ [download]  34.2% of 1.30GiB at  4.46MiB/s ETA 03:16       ]
+17:54:12,153 DEBUG - Downloader [ [download]  34.5% of 1.30GiB at  4.46MiB/s ETA 03:15       ]
+17:54:13,198 DEBUG - Downloader [ [download]  34.8% of 1.30GiB at  4.46MiB/s ETA 03:14       ]
+17:54:14,380 DEBUG - Downloader [ [download]  35.1% of 1.30GiB at  4.45MiB/s ETA 03:14       ]
+17:54:15,403 DEBUG - Downloader [ [download]  35.4% of 1.30GiB at  4.44MiB/s ETA 03:13       ]
+17:54:16,276 DEBUG - Downloader [ [download]  35.7% of 1.30GiB at  4.43MiB/s ETA 03:13       ]
+17:54:17,166 DEBUG - Downloader [ [download]  35.9% of 1.30GiB at  4.42MiB/s ETA 03:13       ]
+17:54:18,062 DEBUG - Downloader [ [download]  36.2% of 1.30GiB at  4.42MiB/s ETA 03:12       ]
+17:54:18,887 DEBUG - Downloader [ [download]  36.5% of 1.30GiB at  4.42MiB/s ETA 03:11       ]
+17:54:19,649 DEBUG - Downloader [ [download]  36.8% of 1.30GiB at  4.42MiB/s ETA 03:10       ]
+17:54:20,366 DEBUG - Downloader [ [download]  37.1% of 1.30GiB at  4.43MiB/s ETA 03:09       ]
+17:54:21,047 DEBUG - Downloader [ [download]  37.4% of 1.30GiB at  4.44MiB/s ETA 03:08       ]
+17:54:21,691 DEBUG - Downloader [ [download]  37.7% of 1.30GiB at  4.44MiB/s ETA 03:07       ]
+17:54:22,572 DEBUG - Downloader [ [download]  38.0% of 1.30GiB at  4.45MiB/s ETA 03:05       ]
+17:54:23,149 DEBUG - Downloader [ [download]  38.3% of 1.30GiB at  4.45MiB/s ETA 03:04       ]
+17:54:23,646 DEBUG - Downloader [ [download]  38.6% of 1.30GiB at  4.47MiB/s ETA 03:03       ]
+17:54:24,095 DEBUG - Downloader [ [download]  38.9% of 1.30GiB at  4.48MiB/s ETA 03:01       ]
+17:54:24,801 DEBUG - Downloader [ [download]  39.2% of 1.30GiB at  4.50MiB/s ETA 03:00       ]
+17:54:25,517 DEBUG - Downloader [ [download]  39.5% of 1.30GiB at  4.51MiB/s ETA 02:59       ]
+17:54:26,296 DEBUG - Downloader [ [download]  39.8% of 1.30GiB at  4.51MiB/s ETA 02:57       ]
+17:54:27,146 DEBUG - Downloader [ [download]  40.1% of 1.30GiB at  4.52MiB/s ETA 02:56       ]
+17:54:27,942 DEBUG - Downloader [ [download]  40.4% of 1.30GiB at  4.52MiB/s ETA 02:55       ]
+17:54:28,768 DEBUG - Downloader [ [download]  40.7% of 1.30GiB at  4.52MiB/s ETA 02:54       ]
+17:54:29,652 DEBUG - Downloader [ [download]  41.0% of 1.30GiB at  4.52MiB/s ETA 02:53       ]
+17:54:30,625 DEBUG - Downloader [ [download]  41.3% of 1.30GiB at  4.52MiB/s ETA 02:53       ]
+17:54:31,603 DEBUG - Downloader [ [download]  41.6% of 1.30GiB at  4.52MiB/s ETA 02:52       ]
+17:54:32,492 DEBUG - Downloader [ [download]  41.9% of 1.30GiB at  4.52MiB/s ETA 02:51       ]
+17:54:33,511 DEBUG - Downloader [ [download]  42.2% of 1.30GiB at  4.52MiB/s ETA 02:50       ]
+17:54:34,412 DEBUG - Downloader [ [download]  42.5% of 1.30GiB at  4.51MiB/s ETA 02:49       ]
+17:54:35,275 DEBUG - Downloader [ [download]  42.8% of 1.30GiB at  4.51MiB/s ETA 02:49       ]
+17:54:36,099 DEBUG - Downloader [ [download]  43.1% of 1.30GiB at  4.51MiB/s ETA 02:48       ]
+17:54:36,870 DEBUG - Downloader [ [download]  43.4% of 1.30GiB at  4.51MiB/s ETA 02:47       ]
+17:54:37,585 DEBUG - Downloader [ [download]  43.7% of 1.30GiB at  4.52MiB/s ETA 02:46       ]
+17:54:38,274 DEBUG - Downloader [ [download]  44.0% of 1.30GiB at  4.52MiB/s ETA 02:45       ]
+17:54:38,922 DEBUG - Downloader [ [download]  44.3% of 1.30GiB at  4.53MiB/s ETA 02:43       ]
+17:54:39,539 DEBUG - Downloader [ [download]  44.6% of 1.30GiB at  4.54MiB/s ETA 02:42       ]
+17:54:40,132 DEBUG - Downloader [ [download]  44.9% of 1.30GiB at  4.55MiB/s ETA 02:41       ]
+17:54:40,702 DEBUG - Downloader [ [download]  45.2% of 1.30GiB at  4.56MiB/s ETA 02:40       ]
+17:54:41,261 DEBUG - Downloader [ [download]  45.5% of 1.30GiB at  4.57MiB/s ETA 02:39       ]
+17:54:41,789 DEBUG - Downloader [ [download]  45.8% of 1.30GiB at  4.58MiB/s ETA 02:37       ]
+17:54:42,317 DEBUG - Downloader [ [download]  46.1% of 1.30GiB at  4.59MiB/s ETA 02:36       ]
+17:54:42,840 DEBUG - Downloader [ [download]  46.4% of 1.30GiB at  4.60MiB/s ETA 02:35       ]
+17:54:44,090 DEBUG - Downloader [ [download]  46.7% of 1.30GiB at  4.62MiB/s ETA 02:34       ]
+17:54:44,842 DEBUG - Downloader [ [download]  47.0% of 1.30GiB at  4.60MiB/s ETA 02:33       ]
+17:54:45,608 DEBUG - Downloader [ [download]  47.2% of 1.30GiB at  4.60MiB/s ETA 02:33       ]
+17:54:46,351 DEBUG - Downloader [ [download]  47.5% of 1.30GiB at  4.60MiB/s ETA 02:32       ]
+17:54:47,075 DEBUG - Downloader [ [download]  47.8% of 1.30GiB at  4.61MiB/s ETA 02:31       ]
+17:54:47,735 DEBUG - Downloader [ [download]  48.1% of 1.30GiB at  4.61MiB/s ETA 02:29       ]
+17:54:48,541 DEBUG - Downloader [ [download]  48.4% of 1.30GiB at  4.62MiB/s ETA 02:28       ]
+17:54:49,445 DEBUG - Downloader [ [download]  48.7% of 1.30GiB at  4.62MiB/s ETA 02:27       ]
+17:54:50,632 DEBUG - Downloader [ [download]  49.0% of 1.30GiB at  4.62MiB/s ETA 02:27       ]
+17:54:51,508 DEBUG - Downloader [ [download]  49.3% of 1.30GiB at  4.61MiB/s ETA 02:26       ]
+17:54:52,852 DEBUG - Downloader [ [download]  49.6% of 1.30GiB at  4.61MiB/s ETA 02:26       ]
+17:54:53,807 DEBUG - Downloader [ [download]  49.9% of 1.30GiB at  4.59MiB/s ETA 02:25       ]
+17:54:54,687 DEBUG - Downloader [ [download]  50.1% of 1.30GiB at  4.58MiB/s ETA 02:25       ]
+17:54:55,589 DEBUG - Downloader [ [download]  50.3% of 1.30GiB at  4.57MiB/s ETA 02:24       ]
+17:54:56,495 DEBUG - Downloader [ [download]  50.6% of 1.30GiB at  4.57MiB/s ETA 02:24       ]
+17:54:57,355 DEBUG - Downloader [ [download]  50.8% of 1.30GiB at  4.57MiB/s ETA 02:23       ]
+17:54:58,345 DEBUG - Downloader [ [download]  51.1% of 1.30GiB at  4.57MiB/s ETA 02:22       ]
+17:54:59,216 DEBUG - Downloader [ [download]  51.4% of 1.30GiB at  4.56MiB/s ETA 02:21       ]
+17:55:00,306 DEBUG - Downloader [ [download]  51.7% of 1.30GiB at  4.56MiB/s ETA 02:21       ]
+17:55:01,595 DEBUG - Downloader [ [download]  52.0% of 1.30GiB at  4.56MiB/s ETA 02:20       ]
+17:55:02,816 DEBUG - Downloader [ [download]  52.3% of 1.30GiB at  4.54MiB/s ETA 02:19       ]
+17:55:03,949 DEBUG - Downloader [ [download]  52.5% of 1.30GiB at  4.52MiB/s ETA 02:19       ]
+17:55:04,826 DEBUG - Downloader [ [download]  52.7% of 1.30GiB at  4.51MiB/s ETA 02:19       ]
+17:55:05,667 DEBUG - Downloader [ [download]  52.9% of 1.30GiB at  4.49MiB/s ETA 02:19       ]
+17:55:06,540 DEBUG - Downloader [ [download]  53.0% of 1.30GiB at  4.49MiB/s ETA 02:19       ]
+17:55:07,419 DEBUG - Downloader [ [download]  53.2% of 1.30GiB at  4.48MiB/s ETA 02:19       ]
+17:55:08,804 DEBUG - Downloader [ [download]  53.5% of 1.30GiB at  4.47MiB/s ETA 02:18       ]
+17:55:09,819 DEBUG - Downloader [ [download]  53.8% of 1.30GiB at  4.46MiB/s ETA 02:18       ]
+17:55:10,794 DEBUG - Downloader [ [download]  54.0% of 1.30GiB at  4.45MiB/s ETA 02:18       ]
+17:55:11,675 DEBUG - Downloader [ [download]  54.2% of 1.30GiB at  4.44MiB/s ETA 02:17       ]
+17:55:12,560 DEBUG - Downloader [ [download]  54.4% of 1.30GiB at  4.43MiB/s ETA 02:17       ]
+17:55:13,529 DEBUG - Downloader [ [download]  54.6% of 1.30GiB at  4.42MiB/s ETA 02:16       ]
+17:55:14,574 DEBUG - Downloader [ [download]  54.9% of 1.30GiB at  4.42MiB/s ETA 02:16       ]
+17:55:15,482 DEBUG - Downloader [ [download]  55.1% of 1.30GiB at  4.41MiB/s ETA 02:15       ]
+17:55:16,404 DEBUG - Downloader [ [download]  55.4% of 1.30GiB at  4.41MiB/s ETA 02:14       ]
+17:55:17,284 DEBUG - Downloader [ [download]  55.7% of 1.30GiB at  4.41MiB/s ETA 02:14       ]
+17:55:18,093 DEBUG - Downloader [ [download]  56.0% of 1.30GiB at  4.41MiB/s ETA 02:13       ]
+17:55:18,925 DEBUG - Downloader [ [download]  56.3% of 1.30GiB at  4.41MiB/s ETA 02:12       ]
+17:55:19,871 DEBUG - Downloader [ [download]  56.6% of 1.30GiB at  4.41MiB/s ETA 02:11       ]
+17:55:20,769 DEBUG - Downloader [ [download]  56.9% of 1.30GiB at  4.41MiB/s ETA 02:10       ]
+17:55:21,781 DEBUG - Downloader [ [download]  57.2% of 1.30GiB at  4.41MiB/s ETA 02:09       ]
+17:55:22,949 DEBUG - Downloader [ [download]  57.5% of 1.30GiB at  4.41MiB/s ETA 02:08       ]
+17:55:24,221 DEBUG - Downloader [ [download]  57.8% of 1.30GiB at  4.40MiB/s ETA 02:07       ]
+17:55:25,188 DEBUG - Downloader [ [download]  58.0% of 1.30GiB at  4.39MiB/s ETA 02:07       ]
+17:55:26,138 DEBUG - Downloader [ [download]  58.2% of 1.30GiB at  4.38MiB/s ETA 02:07       ]
+17:55:27,141 DEBUG - Downloader [ [download]  58.4% of 1.30GiB at  4.37MiB/s ETA 02:06       ]
+17:55:28,024 DEBUG - Downloader [ [download]  58.7% of 1.30GiB at  4.37MiB/s ETA 02:06       ]
+17:55:28,921 DEBUG - Downloader [ [download]  58.9% of 1.30GiB at  4.36MiB/s ETA 02:05       ]
+17:55:29,821 DEBUG - Downloader [ [download]  59.1% of 1.30GiB at  4.36MiB/s ETA 02:05       ]
+17:55:30,701 DEBUG - Downloader [ [download]  59.4% of 1.30GiB at  4.36MiB/s ETA 02:04       ]
+17:55:31,511 DEBUG - Downloader [ [download]  59.7% of 1.30GiB at  4.36MiB/s ETA 02:03       ]
+17:55:32,464 DEBUG - Downloader [ [download]  60.0% of 1.30GiB at  4.36MiB/s ETA 02:02       ]
+17:55:33,333 DEBUG - Downloader [ [download]  60.3% of 1.30GiB at  4.36MiB/s ETA 02:01       ]
+17:55:34,142 DEBUG - Downloader [ [download]  60.6% of 1.30GiB at  4.36MiB/s ETA 02:00       ]
+17:55:35,100 DEBUG - Downloader [ [download]  60.9% of 1.30GiB at  4.36MiB/s ETA 01:59       ]
+17:55:36,045 DEBUG - Downloader [ [download]  61.2% of 1.30GiB at  4.36MiB/s ETA 01:58       ]
+17:55:37,143 DEBUG - Downloader [ [download]  61.5% of 1.30GiB at  4.36MiB/s ETA 01:57       ]
+17:55:38,328 DEBUG - Downloader [ [download]  61.8% of 1.30GiB at  4.36MiB/s ETA 01:56       ]
+17:55:39,201 DEBUG - Downloader [ [download]  62.1% of 1.30GiB at  4.35MiB/s ETA 01:56       ]
+17:55:40,346 DEBUG - Downloader [ [download]  62.3% of 1.30GiB at  4.35MiB/s ETA 01:55       ]
+17:55:41,399 DEBUG - Downloader [ [download]  62.6% of 1.30GiB at  4.34MiB/s ETA 01:55       ]
+17:55:42,501 DEBUG - Downloader [ [download]  62.8% of 1.30GiB at  4.33MiB/s ETA 01:54       ]
+17:55:43,459 DEBUG - Downloader [ [download]  63.0% of 1.30GiB at  4.32MiB/s ETA 01:54       ]
+17:55:44,421 DEBUG - Downloader [ [download]  63.2% of 1.30GiB at  4.31MiB/s ETA 01:53       ]
+17:55:45,437 DEBUG - Downloader [ [download]  63.4% of 1.30GiB at  4.31MiB/s ETA 01:53       ]
+17:55:46,325 DEBUG - Downloader [ [download]  63.7% of 1.30GiB at  4.30MiB/s ETA 01:52       ]
+17:55:47,206 DEBUG - Downloader [ [download]  63.9% of 1.30GiB at  4.29MiB/s ETA 01:52       ]
+17:55:48,116 DEBUG - Downloader [ [download]  64.1% of 1.30GiB at  4.29MiB/s ETA 01:51       ]
+17:55:49,052 DEBUG - Downloader [ [download]  64.4% of 1.30GiB at  4.29MiB/s ETA 01:50       ]
+17:55:50,075 DEBUG - Downloader [ [download]  64.7% of 1.30GiB at  4.29MiB/s ETA 01:49       ]
+17:55:50,972 DEBUG - Downloader [ [download]  65.0% of 1.30GiB at  4.29MiB/s ETA 01:48       ]
+17:55:52,080 DEBUG - Downloader [ [download]  65.3% of 1.30GiB at  4.29MiB/s ETA 01:47       ]
+17:55:53,135 DEBUG - Downloader [ [download]  65.6% of 1.30GiB at  4.29MiB/s ETA 01:47       ]
+17:55:54,224 DEBUG - Downloader [ [download]  65.9% of 1.30GiB at  4.28MiB/s ETA 01:46       ]
+17:55:55,339 DEBUG - Downloader [ [download]  66.1% of 1.30GiB at  4.27MiB/s ETA 01:45       ]
+17:55:56,319 DEBUG - Downloader [ [download]  66.3% of 1.30GiB at  4.27MiB/s ETA 01:45       ]
+17:55:57,267 DEBUG - Downloader [ [download]  66.6% of 1.30GiB at  4.26MiB/s ETA 01:44       ]
+17:55:58,172 DEBUG - Downloader [ [download]  66.8% of 1.30GiB at  4.26MiB/s ETA 01:44       ]
+17:55:59,221 DEBUG - Downloader [ [download]  67.0% of 1.30GiB at  4.25MiB/s ETA 01:43       ]
+17:56:00,172 DEBUG - Downloader [ [download]  67.3% of 1.30GiB at  4.25MiB/s ETA 01:42       ]
+17:56:01,083 DEBUG - Downloader [ [download]  67.5% of 1.30GiB at  4.24MiB/s ETA 01:42       ]
+17:56:01,988 DEBUG - Downloader [ [download]  67.8% of 1.30GiB at  4.24MiB/s ETA 01:41       ]
+17:56:02,870 DEBUG - Downloader [ [download]  68.0% of 1.30GiB at  4.24MiB/s ETA 01:40       ]
+17:56:03,741 DEBUG - Downloader [ [download]  68.3% of 1.30GiB at  4.24MiB/s ETA 01:39       ]
+17:56:04,917 DEBUG - Downloader [ [download]  68.6% of 1.30GiB at  4.24MiB/s ETA 01:38       ]
+17:56:06,434 DEBUG - Downloader [ [download]  68.9% of 1.30GiB at  4.24MiB/s ETA 01:37       ]
+17:56:07,275 DEBUG - Downloader [ [download]  69.2% of 1.30GiB at  4.22MiB/s ETA 01:37       ]
+17:56:08,148 DEBUG - Downloader [ [download]  69.4% of 1.30GiB at  4.22MiB/s ETA 01:36       ]
+17:56:09,095 DEBUG - Downloader [ [download]  69.6% of 1.30GiB at  4.21MiB/s ETA 01:36       ]
+17:56:10,169 DEBUG - Downloader [ [download]  69.8% of 1.30GiB at  4.21MiB/s ETA 01:35       ]
+17:56:11,257 DEBUG - Downloader [ [download]  70.0% of 1.30GiB at  4.20MiB/s ETA 01:35       ]
+17:56:12,111 DEBUG - Downloader [ [download]  70.3% of 1.30GiB at  4.20MiB/s ETA 01:34       ]
+17:56:13,009 DEBUG - Downloader [ [download]  70.5% of 1.30GiB at  4.19MiB/s ETA 01:33       ]
+17:56:14,080 DEBUG - Downloader [ [download]  70.7% of 1.30GiB at  4.19MiB/s ETA 01:33       ]
+17:56:15,458 DEBUG - Downloader [ [download]  71.0% of 1.30GiB at  4.19MiB/s ETA 01:32       ]
+17:56:16,709 DEBUG - Downloader [ [download]  71.3% of 1.30GiB at  4.18MiB/s ETA 01:31       ]
+17:56:17,483 DEBUG - Downloader [ [download]  71.4% of 1.30GiB at  4.17MiB/s ETA 01:31       ]
+17:56:18,585 DEBUG - Downloader [ [download]  71.6% of 1.30GiB at  4.16MiB/s ETA 01:31       ]
+17:56:19,503 DEBUG - Downloader [ [download]  71.8% of 1.30GiB at  4.15MiB/s ETA 01:30       ]
+17:56:20,582 DEBUG - Downloader [ [download]  72.0% of 1.30GiB at  4.14MiB/s ETA 01:30       ]
+17:56:21,672 DEBUG - Downloader [ [download]  72.2% of 1.30GiB at  4.14MiB/s ETA 01:29       ]
+17:56:22,484 DEBUG - Downloader [ [download]  72.3% of 1.30GiB at  4.13MiB/s ETA 01:29       ]
+17:56:23,361 DEBUG - Downloader [ [download]  72.5% of 1.30GiB at  4.12MiB/s ETA 01:28       ]
+17:56:24,390 DEBUG - Downloader [ [download]  72.7% of 1.30GiB at  4.12MiB/s ETA 01:28       ]
+17:56:25,339 DEBUG - Downloader [ [download]  72.9% of 1.30GiB at  4.11MiB/s ETA 01:27       ]
+17:56:26,318 DEBUG - Downloader [ [download]  73.1% of 1.30GiB at  4.11MiB/s ETA 01:27       ]
+17:56:27,336 DEBUG - Downloader [ [download]  73.4% of 1.30GiB at  4.11MiB/s ETA 01:26       ]
+17:56:28,239 DEBUG - Downloader [ [download]  73.6% of 1.30GiB at  4.10MiB/s ETA 01:25       ]
+17:56:29,188 DEBUG - Downloader [ [download]  73.9% of 1.30GiB at  4.10MiB/s ETA 01:25       ]
+17:56:30,167 DEBUG - Downloader [ [download]  74.1% of 1.30GiB at  4.10MiB/s ETA 01:24       ]
+17:56:31,174 DEBUG - Downloader [ [download]  74.4% of 1.30GiB at  4.10MiB/s ETA 01:23       ]
+17:56:32,320 DEBUG - Downloader [ [download]  74.7% of 1.30GiB at  4.10MiB/s ETA 01:22       ]
+17:56:33,242 DEBUG - Downloader [ [download]  75.0% of 1.30GiB at  4.09MiB/s ETA 01:21       ]
+17:56:34,136 DEBUG - Downloader [ [download]  75.2% of 1.30GiB at  4.09MiB/s ETA 01:20       ]
+17:56:35,039 DEBUG - Downloader [ [download]  75.5% of 1.30GiB at  4.09MiB/s ETA 01:19       ]
+17:56:35,865 DEBUG - Downloader [ [download]  75.8% of 1.30GiB at  4.09MiB/s ETA 01:18       ]
+17:56:36,828 DEBUG - Downloader [ [download]  76.1% of 1.30GiB at  4.09MiB/s ETA 01:17       ]
+17:56:37,750 DEBUG - Downloader [ [download]  76.4% of 1.30GiB at  4.09MiB/s ETA 01:16       ]
+17:56:38,812 DEBUG - Downloader [ [download]  76.7% of 1.30GiB at  4.09MiB/s ETA 01:15       ]
+17:56:39,708 DEBUG - Downloader [ [download]  77.0% of 1.30GiB at  4.09MiB/s ETA 01:14       ]
+17:56:40,567 DEBUG - Downloader [ [download]  77.3% of 1.30GiB at  4.09MiB/s ETA 01:14       ]
+17:56:42,796 DEBUG - Downloader [ [download]  77.6% of 1.30GiB at  4.10MiB/s ETA 01:13       ]
+17:56:43,183 DEBUG - Downloader [ [download]  77.9% of 1.30GiB at  4.08MiB/s ETA 01:12       ]
+17:56:43,913 DEBUG - Downloader [ [download]  78.0% of 1.30GiB at  4.08MiB/s ETA 01:11       ]
+17:56:44,600 DEBUG - Downloader [ [download]  78.3% of 1.30GiB at  4.08MiB/s ETA 01:10       ]
+17:56:45,248 DEBUG - Downloader [ [download]  78.6% of 1.30GiB at  4.09MiB/s ETA 01:09       ]
+17:56:45,863 DEBUG - Downloader [ [download]  78.9% of 1.30GiB at  4.09MiB/s ETA 01:08       ]
+17:56:46,459 DEBUG - Downloader [ [download]  79.2% of 1.30GiB at  4.10MiB/s ETA 01:07       ]
+17:56:46,987 DEBUG - Downloader [ [download]  79.5% of 1.30GiB at  4.10MiB/s ETA 01:06       ]
+17:56:47,537 DEBUG - Downloader [ [download]  79.8% of 1.30GiB at  4.11MiB/s ETA 01:05       ]
+17:56:48,169 DEBUG - Downloader [ [download]  80.1% of 1.30GiB at  4.12MiB/s ETA 01:04       ]
+17:56:48,916 DEBUG - Downloader [ [download]  80.4% of 1.30GiB at  4.12MiB/s ETA 01:03       ]
+17:56:49,844 DEBUG - Downloader [ [download]  80.7% of 1.30GiB at  4.13MiB/s ETA 01:02       ]
+17:56:51,203 DEBUG - Downloader [ [download]  81.0% of 1.30GiB at  4.13MiB/s ETA 01:01       ]
+17:56:52,124 DEBUG - Downloader [ [download]  81.3% of 1.30GiB at  4.12MiB/s ETA 01:00       ]
+17:56:53,157 DEBUG - Downloader [ [download]  81.5% of 1.30GiB at  4.12MiB/s ETA 00:59       ]
+17:56:54,119 DEBUG - Downloader [ [download]  81.8% of 1.30GiB at  4.11MiB/s ETA 00:59       ]
+17:56:55,126 DEBUG - Downloader [ [download]  82.0% of 1.30GiB at  4.11MiB/s ETA 00:58       ]
+17:56:56,434 DEBUG - Downloader [ [download]  82.3% of 1.30GiB at  4.11MiB/s ETA 00:57       ]
+17:56:57,285 DEBUG - Downloader [ [download]  82.5% of 1.30GiB at  4.10MiB/s ETA 00:56       ]
+17:56:58,129 DEBUG - Downloader [ [download]  82.7% of 1.30GiB at  4.09MiB/s ETA 00:56       ]
+17:56:59,167 DEBUG - Downloader [ [download]  82.9% of 1.30GiB at  4.09MiB/s ETA 00:55       ]
+17:56:59,977 DEBUG - Downloader [ [download]  83.2% of 1.30GiB at  4.09MiB/s ETA 00:54       ]
+17:57:01,082 DEBUG - Downloader [ [download]  83.4% of 1.30GiB at  4.09MiB/s ETA 00:54       ]
+17:57:01,911 DEBUG - Downloader [ [download]  83.7% of 1.30GiB at  4.09MiB/s ETA 00:53       ]
+17:57:02,830 DEBUG - Downloader [ [download]  84.0% of 1.30GiB at  4.09MiB/s ETA 00:52       ]
+17:57:03,725 DEBUG - Downloader [ [download]  84.3% of 1.30GiB at  4.09MiB/s ETA 00:51       ]
+17:57:04,578 DEBUG - Downloader [ [download]  84.6% of 1.30GiB at  4.09MiB/s ETA 00:50       ]
+17:57:05,317 DEBUG - Downloader [ [download]  84.9% of 1.30GiB at  4.09MiB/s ETA 00:49       ]
+17:57:06,021 DEBUG - Downloader [ [download]  85.2% of 1.30GiB at  4.10MiB/s ETA 00:48       ]
+17:57:06,691 DEBUG - Downloader [ [download]  85.5% of 1.30GiB at  4.10MiB/s ETA 00:47       ]
+17:57:07,321 DEBUG - Downloader [ [download]  85.8% of 1.30GiB at  4.10MiB/s ETA 00:46       ]
+17:57:07,922 DEBUG - Downloader [ [download]  86.1% of 1.30GiB at  4.11MiB/s ETA 00:45       ]
+17:57:08,509 DEBUG - Downloader [ [download]  86.4% of 1.30GiB at  4.12MiB/s ETA 00:44       ]
+17:57:09,082 DEBUG - Downloader [ [download]  86.7% of 1.30GiB at  4.12MiB/s ETA 00:43       ]
+17:57:09,627 DEBUG - Downloader [ [download]  87.0% of 1.30GiB at  4.13MiB/s ETA 00:42       ]
+17:57:10,623 DEBUG - Downloader [ [download]  87.3% of 1.30GiB at  4.13MiB/s ETA 00:41       ]
+17:57:11,063 DEBUG - Downloader [ [download]  87.6% of 1.30GiB at  4.13MiB/s ETA 00:40       ]
+17:57:11,508 DEBUG - Downloader [ [download]  87.9% of 1.30GiB at  4.14MiB/s ETA 00:39       ]
+17:57:12,015 DEBUG - Downloader [ [download]  88.2% of 1.30GiB at  4.15MiB/s ETA 00:37       ]
+17:57:12,625 DEBUG - Downloader [ [download]  88.5% of 1.30GiB at  4.15MiB/s ETA 00:36       ]
+17:57:13,242 DEBUG - Downloader [ [download]  88.8% of 1.30GiB at  4.16MiB/s ETA 00:35       ]
+17:57:13,826 DEBUG - Downloader [ [download]  89.1% of 1.30GiB at  4.16MiB/s ETA 00:34       ]
+17:57:14,797 DEBUG - Downloader [ [download]  89.4% of 1.30GiB at  4.17MiB/s ETA 00:33       ]
+17:57:15,775 DEBUG - Downloader [ [download]  89.7% of 1.30GiB at  4.17MiB/s ETA 00:32       ]
+17:57:16,838 DEBUG - Downloader [ [download]  90.0% of 1.30GiB at  4.17MiB/s ETA 00:32       ]
+17:57:17,801 DEBUG - Downloader [ [download]  90.3% of 1.30GiB at  4.17MiB/s ETA 00:31       ]
+17:57:18,973 DEBUG - Downloader [ [download]  90.6% of 1.30GiB at  4.17MiB/s ETA 00:30       ]
+17:57:20,431 DEBUG - Downloader [ [download]  90.9% of 1.30GiB at  4.16MiB/s ETA 00:29       ]
+17:57:21,489 DEBUG - Downloader [ [download]  91.1% of 1.30GiB at  4.15MiB/s ETA 00:28       ]
+17:57:22,532 DEBUG - Downloader [ [download]  91.3% of 1.30GiB at  4.15MiB/s ETA 00:28       ]
+17:57:23,690 DEBUG - Downloader [ [download]  91.4% of 1.30GiB at  4.14MiB/s ETA 00:27       ]
+17:57:24,498 DEBUG - Downloader [ [download]  91.6% of 1.30GiB at  4.13MiB/s ETA 00:27       ]
+17:57:24,851 DEBUG - Downloader [ [download]  91.7% of 1.30GiB at  4.13MiB/s ETA 00:26       ]
+17:57:25,425 DEBUG - Downloader [ [download]  91.9% of 1.30GiB at  4.13MiB/s ETA 00:26       ]
+17:57:25,942 DEBUG - Downloader [ [download]  92.2% of 1.30GiB at  4.13MiB/s ETA 00:25       ]
+17:57:26,465 DEBUG - Downloader [ [download]  92.5% of 1.30GiB at  4.14MiB/s ETA 00:24       ]
+17:57:27,150 DEBUG - Downloader [ [download]  92.8% of 1.30GiB at  4.15MiB/s ETA 00:23       ]
+17:57:27,881 DEBUG - Downloader [ [download]  93.1% of 1.30GiB at  4.15MiB/s ETA 00:22       ]
+17:57:28,605 DEBUG - Downloader [ [download]  93.4% of 1.30GiB at  4.15MiB/s ETA 00:21       ]
+17:57:29,491 DEBUG - Downloader [ [download]  93.7% of 1.30GiB at  4.16MiB/s ETA 00:20       ]
+17:57:30,320 DEBUG - Downloader [ [download]  94.0% of 1.30GiB at  4.16MiB/s ETA 00:19       ]
+17:57:31,318 DEBUG - Downloader [ [download]  94.3% of 1.30GiB at  4.16MiB/s ETA 00:18       ]
+17:57:32,265 DEBUG - Downloader [ [download]  94.6% of 1.30GiB at  4.16MiB/s ETA 00:17       ]
+17:57:33,745 DEBUG - Downloader [ [download]  94.9% of 1.30GiB at  4.16MiB/s ETA 00:16       ]
+17:57:34,564 DEBUG - Downloader [ [download]  95.2% of 1.30GiB at  4.15MiB/s ETA 00:15       ]
+17:57:35,483 DEBUG - Downloader [ [download]  95.4% of 1.30GiB at  4.15MiB/s ETA 00:14       ]
+17:57:36,366 DEBUG - Downloader [ [download]  95.7% of 1.30GiB at  4.15MiB/s ETA 00:13       ]
+17:57:37,272 DEBUG - Downloader [ [download]  95.9% of 1.30GiB at  4.15MiB/s ETA 00:13       ]
+17:57:38,659 DEBUG - Downloader [ [download]  96.2% of 1.30GiB at  4.15MiB/s ETA 00:12       ]
+17:57:39,306 DEBUG - Downloader [ [download]  96.5% of 1.30GiB at  4.14MiB/s ETA 00:11       ]
+17:57:40,173 DEBUG - Downloader [ [download]  96.7% of 1.30GiB at  4.14MiB/s ETA 00:10       ]
+17:57:41,177 DEBUG - Downloader [ [download]  97.0% of 1.30GiB at  4.15MiB/s ETA 00:09       ]
+17:57:42,124 DEBUG - Downloader [ [download]  97.3% of 1.30GiB at  4.15MiB/s ETA 00:08       ]
+17:57:43,005 DEBUG - Downloader [ [download]  97.6% of 1.30GiB at  4.15MiB/s ETA 00:07       ]
+17:57:44,046 DEBUG - Downloader [ [download]  97.9% of 1.30GiB at  4.15MiB/s ETA 00:06       ]
+17:57:44,955 DEBUG - Downloader [ [download]  98.2% of 1.30GiB at  4.15MiB/s ETA 00:05       ]
+17:57:45,839 DEBUG - Downloader [ [download]  98.5% of 1.30GiB at  4.15MiB/s ETA 00:04       ]
+17:57:46,807 DEBUG - Downloader [ [download]  98.8% of 1.30GiB at  4.15MiB/s ETA 00:03       ]
+17:57:47,811 DEBUG - Downloader [ [download]  99.1% of 1.30GiB at  4.15MiB/s ETA 00:02       ]
+17:57:48,786 DEBUG - Downloader [ [download]  99.4% of 1.30GiB at  4.15MiB/s ETA 00:01       ]
+17:57:49,571 DEBUG - Downloader [ [download]  99.7% of 1.30GiB at  4.15MiB/s ETA 00:00       ]
+17:57:49,574 DEBUG - Downloader [ [download] 100.0% of 1.30GiB at  4.15MiB/s ETA 00:00       ]
+17:57:49,574 DEBUG - Downloader [ [download] 100% of 1.30GiB in 05:21                        ]
+17:57:49,589 DEBUG -  [ Download processing finished ]
+01:35:32,491 DEBUG - MainWindow [ Main Window Created ]
+01:35:32,547 DEBUG - MainWindow [ Console Window Created ]
+01:35:32,606 DEBUG - MainWindow [ Console Window Created ]
+01:35:32,771 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+01:35:33,195 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+01:35:33,208 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+01:35:38,012 DEBUG - MainWindow [ Main Window Created ]
+01:35:38,027 DEBUG - MainWindow [ Console Window Created ]
+01:35:38,033 DEBUG - MainWindow [ Console Window Created ]
+01:35:38,140 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+01:35:38,498 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+01:35:38,512 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+01:36:32,530 DEBUG - MainWindow [ Main Window Created ]
+01:36:32,545 DEBUG - MainWindow [ Console Window Created ]
+01:36:32,551 DEBUG - MainWindow [ Console Window Created ]
+01:36:32,648 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+01:36:32,969 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+01:36:32,983 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+01:37:07,134 DEBUG - MainWindow [ Main Window Created ]
+01:37:07,150 DEBUG - MainWindow [ Console Window Created ]
+01:37:07,156 DEBUG - MainWindow [ Console Window Created ]
+01:37:07,252 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+01:37:07,538 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+01:37:07,547 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+12:37:51,940 DEBUG - MainWindow [ Main Window Created ]
+12:37:51,958 DEBUG - MainWindow [ Console Window Created ]
+12:37:51,964 DEBUG - MainWindow [ Console Window Created ]
+12:37:52,125 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+12:37:52,829 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+12:37:52,838 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
+12:38:15,360 DEBUG - MainWindow [ Main Window Created ]
+12:38:15,375 DEBUG - MainWindow [ Console Window Created ]
+12:38:15,381 DEBUG - MainWindow [ Console Window Created ]
+12:38:15,536 DEBUG - Downloader [ C:\Users\Bradley\AppData\Roaming\YouTube Downloader 5.0\execs\youtube-dl.exe -U  ]
+12:38:15,879 DEBUG - Downloader [ youtube-dl is up-to-date (2014.10.05.2) ]
+12:38:15,892 DEBUG - MainWindow [ Welcome To YouTube Downloader 5.0.11 ]
