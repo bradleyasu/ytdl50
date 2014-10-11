@@ -44,6 +44,7 @@ public class ChangeDirectoryPanel extends JPanel {
 		
 		selectedDirectory.setPreferredSize(new Dimension(width-50, 30));
 		selectedDirectory.setEditable(false);
+		selectedDirectory.setSelectionColor(Theme.MAIN_COLOR_FOUR);
 		
 		chooser = new XTree();
 		JScrollPane scroller = new JScrollPane(chooser);

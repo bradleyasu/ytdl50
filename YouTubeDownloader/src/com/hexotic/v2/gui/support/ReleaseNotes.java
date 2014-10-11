@@ -160,6 +160,7 @@ public class ReleaseNotes extends JPanel {
 			editor.setEditable(false);
 			editor.setBackground(Theme.CONTROL_BAR_BACKGROUND);
 			editor.setFont(Theme.SWITCH_FONT);
+			editor.setSelectionColor(Theme.MAIN_COLOR_FOUR);;
 
 			JScrollPane editorScroller = new JScrollPane(editor);
 			editorScroller.setBorder(BorderFactory.createLineBorder(Theme.CONTROL_BAR_BORDER));

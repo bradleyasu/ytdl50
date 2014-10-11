@@ -11,7 +11,7 @@ import java.util.Random;
 
 import javax.swing.JPanel;
 
-import com.hexotic.lib.audio.SoundFX;
+import com.hexotic.cons.Constants;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.v2.gui.theme.Theme;
 
@@ -69,10 +69,10 @@ public class LogoPanel extends JPanel{
 		
 		g2d.setColor(Theme.MAIN_BACKGROUND);
 		g2d.setFont(Theme.CONTROL_BAR_FONT);
-		g2d.drawString("YouTube Downloader", 50, 26);
+		g2d.drawString(Constants.PROG_NAME, 50, 26);
 		
 		g2d.setFont(Theme.SWITCH_FONT);
-		g2d.drawString("Version: 5.1.0", 50, 36);
+		g2d.drawString("Version: "+Constants.VERSION, 50, 36);
 		
 		if(easterEgg){
 			g2d.setColor(Theme.MAIN_COLOR_FOUR);

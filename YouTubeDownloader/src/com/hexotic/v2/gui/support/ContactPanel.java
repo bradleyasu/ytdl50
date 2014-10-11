@@ -98,6 +98,10 @@ public class ContactPanel extends JPanel {
 			}
 		});
 
+		
+		email.setSelectionColor(Theme.MAIN_COLOR_FOUR);
+		feedback.setSelectionColor(Theme.MAIN_COLOR_FOUR);
+		
 		this.add(label);
 		this.add(email);
 		this.add(scroller);
