@@ -117,8 +117,8 @@ public class ContactPanel extends JPanel {
 		String host = "mail.hexotic.net";
 		Properties properties = System.getProperties();
 		properties.setProperty("mail.smtp.host", host);
-		properties.setProperty("mail.smtp.host", host);
-		properties.put("mail.smtp.port", "587");
+		properties.setProperty("mail.smtp.localhost", host);
+		properties.put("mail.smtp.port", "26");
 
 		Session session = Session.getDefaultInstance(properties);
 		try {
