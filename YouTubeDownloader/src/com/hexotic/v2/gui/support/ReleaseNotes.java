@@ -31,6 +31,7 @@ import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.buttons.SoftButton;
 import com.hexotic.lib.ui.layout.AnimatedGridLayout;
 import com.hexotic.lib.ui.panels.SimpleScroller;
+import com.hexotic.v2.console.Log;
 import com.hexotic.v2.downloader.popup.PopupFactory;
 import com.hexotic.v2.gui.theme.Theme;
 
@@ -60,14 +61,11 @@ public class ReleaseNotes extends JPanel {
 		try {
 			importNotes();
 		} catch (InvalidFileFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Log.getInstance().error(this, "Failed to import release notes", e);
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Log.getInstance().error(this, "Failed to import release notes", e);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Log.getInstance().error(this, "Failed to import release notes", e);
 		}
 
 		JLabel title = new JLabel("Release Notes");
@@ -93,7 +91,6 @@ public class ReleaseNotes extends JPanel {
 
 	private void importNotes() throws InvalidFileFormatException, FileNotFoundException, IOException {
 		Ini ini = new Ini(Resources.getInstance().getDoc("releaseNotes.ini"));
-		System.out.println("Number of sections: " + ini.size() + "\n");
 		int id = 0;
 		for (String version : ini.keySet()) {
 			Section section = ini.get(version);

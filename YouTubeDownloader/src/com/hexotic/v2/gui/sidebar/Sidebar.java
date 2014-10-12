@@ -48,14 +48,14 @@ public class Sidebar extends JXCollapsiblePane {
 
 		String downloadDir = Settings.getInstance().getProperty("downloadDir", "Desktop");
 		String[] arr = downloadDir.split("\\\\");
-		downloadDir = arr[arr.length-1];
-		SidebarButton changeDirectory = new SidebarButton("Download to: "+downloadDir, i++);
+		downloadDir = arr[arr.length - 1];
+		SidebarButton changeDirectory = new SidebarButton("Download to: " + downloadDir, i++);
 		changeDirectory.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				ChangeDirectoryPanel prompt = new ChangeDirectoryPanel();
 				// We want to update the button on complete
-				prompt.updateControl((SoftButton)e.getSource());
-				
+				prompt.updateControl((SoftButton) e.getSource());
+
 				PopupFactory.getPopupWindow().setPrompt(prompt);
 			}
 		});
@@ -65,7 +65,13 @@ public class Sidebar extends JXCollapsiblePane {
 		sidebarItems.add(setupSwitch("removeOnComplete", "on complete: ", "Keep", "Remove", i++));
 		sidebarItems.add(setupSwitch("useProxy", "Proxy: ", "Disabled", "Enabled", i++));
 
-		sidebarItems.add(new SidebarButton("Configure Proxy Settings", i++));
+		SidebarButton changeProxy = new SidebarButton("Configure Proxy Settings", i++);
+		changeProxy.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				PopupFactory.getPopupWindow().setPrompt(new ProxyPanel());
+			}
+		});
+		sidebarItems.add(changeProxy);
 
 		// sidebarItems.add(new SidebarButton("Install Chrome Extension", i++));
 
