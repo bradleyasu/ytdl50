@@ -11,6 +11,7 @@ import java.util.List;
 
 import javax.swing.ImageIcon;
 
+import com.hexotic.utils.Settings;
 import com.hexotic.v2.console.Log;
 
 /**
@@ -89,15 +90,33 @@ public class Downloader {
 	 * 				The Location to download the video/audio (Desktop used by default)
 	 * @throws IOException
 	 */
-	public void download(String url, boolean audio, String downloadDirectory) throws IOException {
+	public void download(String url, boolean audio, String downloadDirectory, boolean useProxy) throws IOException {
 		
 		// Create a chace for the arguments (not sure how many there will be yet)
 		List<String> argCache = new ArrayList<String>();
 
+		// If audio, add youtube-dl arguments for converting to audio format
 		if(audio){
 			argCache.add("-x");
 			argCache.add("--audio-format");
 			argCache.add("mp3");
+		}
+		
+		// If proxy is enabled, generate proxy ip address from configurations and add youtube-dl arguments
+		if(useProxy){
+			boolean isHttps = Settings.getInstance().getProperty("proxyIsHttps", "false").equals("true");
+			String ip = Settings.getInstance().getProperty("proxyIP", "");
+			String port = Settings.getInstance().getProperty("proxyPort", "8080");
+		
+			argCache.add("--proxy");
+			
+			// Generate the proxy url
+			if(isHttps){
+				argCache.add("https://"+ip+":"+port);
+			} else {
+				argCache.add("http://"+ip+":"+port);
+			}
+			
 		}
 		
 		argCache.add("-o");

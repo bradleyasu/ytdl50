@@ -17,6 +17,7 @@ import com.hexotic.utils.Settings;
 import com.hexotic.v2.console.Log;
 import com.hexotic.v2.downloader.DownloadListener;
 import com.hexotic.v2.downloader.Downloader;
+import com.hexotic.v2.gui.theme.Emoticon;
 import com.hexotic.v2.gui.theme.Theme;
 
 /**
@@ -56,6 +57,12 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 	private boolean failed = false;
 	private int id = 0;
 	
+	private boolean useProxy = false;
+	
+	private boolean isAudio = false;
+	
+	private boolean downloadStarted = false;
+	
 	public Item(String url, int id) {
 		this.id = id;
 		this.setPreferredSize(new Dimension(Theme.DOWNLOAD_ITEM_WIDTH, Theme.DOWNLOAD_ITEM_HEIGHT));
@@ -85,6 +92,7 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 
 		// Draw video thumbnail image
 		g2d.drawImage(thumbnail, 0, 0, getWidth(), getHeight() - 40, null);
+		
 
 		// draw dark overlay
 		if (progress.getProgress() < 100) {
@@ -94,6 +102,15 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 			progress.Draw(g, getWidth() / 2 - size / 2, 10, size, size);
 		}
 
+		// If proxy, draw somekind of indicator (in this case, a matrix face)
+		if(downloaded && ! failed){
+			g2d.drawImage(Emoticon.SUCCESS, 5, 5, null);
+		} else if(failed){
+			g2d.drawImage(Emoticon.WARNING, 5, 5, null);
+		} else if(useProxy){
+			g2d.drawImage(Emoticon.FACE_MATRIX, 5, 5, null);
+		}
+		
 		// Draw thumbnail splitter
 		g2d.setColor(Theme.DOWNLOAD_ITEM_BORDER);
 		g2d.drawLine(0, getHeight() - 40, getWidth(), getHeight() - 40);
@@ -113,12 +130,25 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 		// Draw the title of the video
 		g2d.setFont(new Font("Arial", Font.BOLD, 12));
 		g2d.setColor(Color.BLACK);
-		g2d.drawString(title, 5, getHeight() - 24);
+		if(useProxy){
+			g2d.drawString("[ Proxy Download ]", 5, getHeight() - 24);
+		} else {
+			g2d.drawString(title, 20, getHeight() - 24);
+		}
 
+		if(!downloadStarted){
+			g2d.drawImage(Emoticon.WAIT_SMALL,  2, getHeight() - 37, null);
+		} else if(isAudio){
+			g2d.drawImage(Emoticon.AUDIO_SMALL,  2, getHeight() - 37, null);
+		} else {
+			g2d.drawImage(Emoticon.VIDEO_SMALL,  2, getHeight() - 37, null);
+		}
+		
 		// Draw the url of the video
 		g2d.setColor(new Color(0x1874CD));
 		g2d.setFont(new Font("Arial", Font.PLAIN, 9));
 		g2d.drawString(url, 5, getHeight() - 11);
+		
 
 	}
 
@@ -162,8 +192,17 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 			@Override
 			public void run() {
 				try{
+					// Set flag to indicate downloading has begun
+					downloadStarted = true;
+					
+					// get the configured download directory 
 					String downloadDir = Settings.getInstance().getProperty("downloadDir", "");
-					downloader.download(url, Boolean.valueOf(Settings.getInstance().getProperty("audioFormat", "false")), downloadDir);
+					// should this download use a proxy?
+					useProxy = Settings.getInstance().getProperty("useProxy", "false").equals("true");
+					isAudio = Boolean.valueOf(Settings.getInstance().getProperty("audioFormat", "false"));
+					
+					downloader.download(url, isAudio, downloadDir, useProxy);
+					
 					Log.getInstance().debug(this, "Download processing finished");
 					if(progress.getProgress() != 100){
 						progress.setProgress(100);
