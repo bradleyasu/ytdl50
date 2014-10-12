@@ -16,7 +16,7 @@ public class AboutPanel extends JPanel {
 
 	public AboutPanel() {
 		this.setBackground(Theme.CONTROL_BAR_BACKGROUND);
-		this.setPreferredSize(new Dimension(600, 400));
+		this.setPreferredSize(new Dimension(600, 120));
 	}
 
 	protected void paintComponent(Graphics g) {
@@ -28,11 +28,19 @@ public class AboutPanel extends JPanel {
 		g2d.setPaint(paint);
 		g2d.fillRect(0, 0, getWidth(), getHeight());
 
-		g2d.drawImage(Resources.getInstance().getImage("icon_small.png"), 20, 0, 32,32, null);
-		
+		g2d.drawImage(Resources.getInstance().getImage("icon_small.png"), 20, 0, 32, 32, null);
+
 		g2d.setFont(Theme.CONTROL_BAR_FONT.deriveFont(18.0f));
 		g2d.setColor(Theme.DARK);
 		g2d.drawString(Constants.PROG_NAME, 60, 20);
+		
+		g2d.setFont(Theme.CONTROL_BAR_FONT.deriveFont(12.0f));
+		g2d.setColor(Theme.DARK);
+		g2d.drawString("Version: " + Constants.VERSION, 165, 34);
+		
+		g2d.setFont(Theme.CONTROL_BAR_FONT);
+		g2d.drawString("Frontend software for youtube-dl command line utility, find out more at http://hexotic.net", 60, 70);
+		g2d.drawString("Copyright Hexotic Software 2014.  All Rights Reserved", 148, 90);
 	}
 
 }

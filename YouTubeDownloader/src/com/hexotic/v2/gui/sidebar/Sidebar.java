@@ -61,7 +61,8 @@ public class Sidebar extends JXCollapsiblePane {
 		});
 		sidebarItems.add(changeDirectory);
 
-		sidebarItems.add(setupSwitch("quickPaste", "Quick paste: ", "Off", "On", i++));
+		// Maybe add this back if people want it
+//		sidebarItems.add(setupSwitch("quickPaste", "Quick paste: ", "Off", "On", i++));
 		sidebarItems.add(setupSwitch("removeOnComplete", "on complete: ", "Keep", "Remove", i++));
 		sidebarItems.add(setupSwitch("useProxy", "Proxy: ", "Disabled", "Enabled", i++));
 

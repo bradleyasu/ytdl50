@@ -7,6 +7,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.RenderingHints;
+import java.io.File;
 import java.io.IOException;
 
 import javax.swing.BorderFactory;
@@ -131,7 +132,7 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 		g2d.setFont(new Font("Arial", Font.BOLD, 12));
 		g2d.setColor(Color.BLACK);
 		if(useProxy){
-			g2d.drawString("[ Proxy Download ]", 5, getHeight() - 24);
+			g2d.drawString("[ Proxy Download ]", 20, getHeight() - 24);
 		} else {
 			g2d.drawString(title, 20, getHeight() - 24);
 		}
@@ -195,8 +196,11 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 					// Set flag to indicate downloading has begun
 					downloadStarted = true;
 					
-					// get the configured download directory 
-					String downloadDir = Settings.getInstance().getProperty("downloadDir", "");
+					
+					// get the configured download directory, use desktop by default 
+					File desktop = new File(System.getProperty("user.home"), "Desktop");
+					String downloadDir = Settings.getInstance().getProperty("downloadDir", desktop.getAbsolutePath());
+					
 					// should this download use a proxy?
 					useProxy = Settings.getInstance().getProperty("useProxy", "false").equals("true");
 					isAudio = Boolean.valueOf(Settings.getInstance().getProperty("audioFormat", "false"));

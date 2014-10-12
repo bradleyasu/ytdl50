@@ -21,6 +21,7 @@ import com.hexotic.cons.Constants;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.panels.SimpleScroller;
 import com.hexotic.lib.util.WinOps;
+import com.hexotic.utils.Settings;
 import com.hexotic.v2.console.Console;
 import com.hexotic.v2.console.Log;
 import com.hexotic.v2.downloader.Downloader;
@@ -30,6 +31,8 @@ import com.hexotic.v2.gui.downloadbar.DownloadBar;
 import com.hexotic.v2.gui.downloadbar.DownloadBarListener;
 import com.hexotic.v2.gui.primary.DownloadContainer;
 import com.hexotic.v2.gui.sidebar.Sidebar;
+import com.hexotic.v2.gui.support.ReleaseNotes;
+import com.hexotic.v2.gui.support.Updater;
 import com.hexotic.v2.gui.theme.Theme;
 
 public class MainWindow extends JFrame {
@@ -102,6 +105,10 @@ public class MainWindow extends JFrame {
 		//sidebar.toggle();
 		new Thread(downloadBar).start();
 		checkForUpdates();
+		
+		// Check version number
+		checkVersion();
+		
 	}
 
 	private void createMain() {
@@ -185,6 +192,7 @@ public class MainWindow extends JFrame {
 		((BasicInternalFrameUI) main.getUI()).setNorthPane(null);
 
 		Log.getInstance().debug(this, "Main Window Created");
+		
 	}
 
 	private void createConsole() {
@@ -198,22 +206,48 @@ public class MainWindow extends JFrame {
 	}
 	
 	private void checkForUpdates() {
+		Log.getInstance().debug(this, "Checking Youtube-dl for updates");
 		Downloader downloader = new Downloader();
 		downloader.update();
+
+		Log.getInstance().debug(this, "Checking Youtube Downloader front-end for udpates");
+		new Thread(new Runnable(){
+			public void run(){
+				new Updater();
+			}
+		}).start();
+			
 	}
 
 	
 	private void createOverlay() {
-//		overlay = new PopupWindow();
 		overlay = PopupFactory.getPopupWindow();
 
 		// Set the overlay to always be on top
 		overlay.getLayeredPane().setLayer(overlay, JLayeredPane.POPUP_LAYER.intValue());
 
-		Log.getInstance().debug(this, "Console Window Created");
+		Log.getInstance().debug(this, "Overlay Window Created");
 	}
 	
 	public static void main(String[] args) {
 		Log.getInstance().debug(new MainWindow(), "Welcome To " + Constants.PROG_NAME + " " + Constants.VERSION);
+	}
+	
+	
+	private void checkVersion(){
+		boolean showRelease = false;
+		String release = Settings.getInstance().getProperty("release", null); 
+		if (release != null){
+			if (!release.equals(Constants.VERSION)){
+				showRelease = true;
+			}
+		} else {
+			showRelease = true;
+		}
+		
+		if (showRelease){
+			PopupFactory.getPopupWindow().setPrompt(new ReleaseNotes());
+			Settings.getInstance().saveProperty("release", Constants.VERSION); 
+		}
 	}
 }
