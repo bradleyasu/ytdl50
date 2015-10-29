@@ -28,7 +28,7 @@ public class AboutPanel extends JPanel {
 		GradientPaint paint = new GradientPaint(0, 0, Theme.CONTROL_BAR_BACKGROUND, 0, getHeight(), Theme.CONTROL_BAR_BORDER);
 		g2d.setPaint(paint);
 		g2d.fillRect(0, 0, getWidth(), getHeight());
-
+ 
 		try {
 			g2d.drawImage(Resources.getInstance().getImage("icon_small.png"), 20, 0, 32, 32, null);
 		} catch (ResourceException e) {}

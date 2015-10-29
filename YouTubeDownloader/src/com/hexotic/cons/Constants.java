@@ -34,7 +34,7 @@ public class Constants {
 	public static final int DOWNLOAD_READY = -1;
 	public static final int DOWNLOAD_INPROGRESS = 0;
 	public static final int DOWNLOAD_COMPLETE = 1;
-	public static final int DOWNLOAD_ABORTED = 2;
+	public static final int DOWNLOAD_ABORTED = 2; 
 	public static final int DOWNLOAD_FAILED = 3;
 	
 	public static final String[] PHRASES = {"I pity the fool",
