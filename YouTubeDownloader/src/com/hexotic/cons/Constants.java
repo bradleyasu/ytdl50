@@ -1,7 +1,7 @@
 package com.hexotic.cons;
 /**
  * This class contains constant variables that will be used throughout the
- * software.
+ * software. 
  * 
  * The version number is will be sent to updater software to decide if updates
  * are required.
@@ -9,7 +9,7 @@ package com.hexotic.cons;
  * @author Bradley Sheets
  *
  */
-public class Constants {
+public class Constants { 
 
 	public static final String VERSION = "5.1.1";
 	
