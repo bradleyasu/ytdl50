@@ -12,11 +12,12 @@ import java.util.Random;
 import javax.swing.JPanel;
 
 import com.hexotic.cons.Constants;
+import com.hexotic.lib.exceptions.ResourceException;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.v2.gui.theme.Theme;
 
 public class LogoPanel extends JPanel{
-	private Image img = Resources.getInstance().getImage("icon_small.png");
+	private Image img = null;
 	private int clickCount = 0;
 	private boolean easterEgg = false;
 	private Random random;
@@ -27,11 +28,17 @@ public class LogoPanel extends JPanel{
 		
 		this.setOpaque(false);
 		
+		try {
+			img = Resources.getInstance().getImage("icon_small.png");
+		} catch (ResourceException e2) { }
+		
 		this.addMouseListener(new MouseListener(){
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(clickCount == 10){
-					img = Resources.getInstance().getImage("doge.png");
+					try {
+						img = Resources.getInstance().getImage("doge.png");
+					} catch (ResourceException e1) { }
 					easterEgg = true;
 					random = new Random();
 				}

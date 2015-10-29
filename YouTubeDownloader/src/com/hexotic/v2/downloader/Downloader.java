@@ -52,10 +52,10 @@ public class Downloader {
 	 * @throws IOException
 	 */
 	public Image getThumbnailUrl(String url) throws IOException {
-		String[] args = {"--get-thumbnail", url };
+		String[] args = {"--no-check-certificate", "--get-thumbnail", url };
 		String thumbnailUrl = execute(args).trim();
+		thumbnailUrl = thumbnailUrl.replace("\\", "");
 		Log.getInstance().debug(this,"Loaded Image Thumnail: "+thumbnailUrl);
-		
 		ImageIcon icon = new ImageIcon(new URL(thumbnailUrl));
 		return icon.getImage();
 	}
@@ -71,7 +71,7 @@ public class Downloader {
 	 * @throws IOException
 	 */
 	public String getTitle(String url) throws IOException {
-		String[] args = {"--get-title", url };
+		String[] args = {"--no-check-certificate", "--get-title", url };
 		String videoTitle = execute(args).trim();
 		Log.getInstance().debug(this,"Loaded Video Title: "+videoTitle);
 		return videoTitle;
@@ -118,7 +118,7 @@ public class Downloader {
 			}
 			
 		}
-		
+		argCache.add("--no-check-certificate");
 		argCache.add("-o");
 		argCache.add("\""+downloadDirectory+"\\%(title)s.%(ext)s\"");
 		argCache.add(url);

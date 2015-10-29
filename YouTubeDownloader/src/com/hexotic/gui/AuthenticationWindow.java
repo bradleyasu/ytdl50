@@ -29,6 +29,7 @@ import javax.swing.table.DefaultTableModel;
 
 import org.jdesktop.swingx.border.DropShadowBorder;
 
+import com.hexotic.lib.exceptions.ResourceException;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.utils.Settings;
 import com.hexotic.utils.XButton;
@@ -117,7 +118,10 @@ class AuthenticationPanel extends JPanel{
         seperator.setForeground(new Color(0xa0a0a0));
         this.add(seperator);
         
-        JLabel add = new JLabel(new ImageIcon(Resources.getInstance().getImage("add.png")));
+        JLabel add = null;
+		try {
+			add = new JLabel(new ImageIcon(Resources.getInstance().getImage("add.png")));
+		} catch (ResourceException e1) { }
         add.setPreferredSize(new Dimension(460, 20));
         add.setHorizontalAlignment(JLabel.RIGHT);
         add.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));

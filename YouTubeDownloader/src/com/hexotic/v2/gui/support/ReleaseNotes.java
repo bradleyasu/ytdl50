@@ -27,6 +27,7 @@ import org.ini4j.InvalidFileFormatException;
 import org.ini4j.Profile.Section;
 import org.jdesktop.swingx.JXCollapsiblePane;
 
+import com.hexotic.lib.exceptions.ResourceException;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.buttons.SoftButton;
 import com.hexotic.lib.ui.layout.AnimatedGridLayout;
@@ -86,7 +87,9 @@ public class ReleaseNotes extends JPanel {
 		this.add(title);
 		this.add(scroller);
 		this.add(closeButton);
-		icon = Resources.getInstance().getImage("support/bullet.png");
+		try {
+			icon = Resources.getInstance().getImage("support/bullet.png");
+		} catch (ResourceException e1) { }
 	}
 
 	private void importNotes() throws InvalidFileFormatException, FileNotFoundException, IOException {

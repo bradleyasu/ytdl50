@@ -18,6 +18,7 @@ import javax.swing.JScrollPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 import com.hexotic.cons.Constants;
+import com.hexotic.lib.exceptions.ResourceException;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.panels.SimpleScroller;
 import com.hexotic.lib.util.WinOps;
@@ -50,7 +51,9 @@ public class MainWindow extends JFrame {
 		this.setContentPane(desktop);
 		this.setTitle(Constants.PROG_NAME + " " + Constants.VERSION + " - " + Constants.COMPANY_NAME);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setIconImage(Resources.getInstance().getImage("icon.png"));
+		try {
+			this.setIconImage(Resources.getInstance().getImage("icon.png"));
+		} catch (ResourceException e1) { }
 
 		createMain();
 		createConsole();
@@ -148,11 +151,13 @@ public class MainWindow extends JFrame {
 					}
 				} else {
 					if(downloadContainer.isYoutubePlaylist(input)){
-						try {
-							downloadContainer.addPlaylist(input);
-						} catch (Exception e) {
-							Log.getInstance().error(this, "Failed to download playlist", e);
-						}
+//						try {
+//							downloadContainer.addPlaylist(input);
+//						} catch (Exception e) {
+//							Log.getInstance().error(this, "Failed to download playlist", e);
+//						}
+						// [TODO] Temporary fix
+						downloadContainer.addDownload(input.replaceAll("&list=.*", ""));
 					} else {
 						downloadContainer.addDownload(input);
 					}

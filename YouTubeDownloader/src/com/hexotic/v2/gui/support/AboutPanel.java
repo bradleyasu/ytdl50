@@ -9,6 +9,7 @@ import java.awt.RenderingHints;
 import javax.swing.JPanel;
 
 import com.hexotic.cons.Constants;
+import com.hexotic.lib.exceptions.ResourceException;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.v2.gui.theme.Theme;
 
@@ -28,7 +29,9 @@ public class AboutPanel extends JPanel {
 		g2d.setPaint(paint);
 		g2d.fillRect(0, 0, getWidth(), getHeight());
 
-		g2d.drawImage(Resources.getInstance().getImage("icon_small.png"), 20, 0, 32, 32, null);
+		try {
+			g2d.drawImage(Resources.getInstance().getImage("icon_small.png"), 20, 0, 32, 32, null);
+		} catch (ResourceException e) {}
 
 		g2d.setFont(Theme.CONTROL_BAR_FONT.deriveFont(18.0f));
 		g2d.setColor(Theme.DARK);

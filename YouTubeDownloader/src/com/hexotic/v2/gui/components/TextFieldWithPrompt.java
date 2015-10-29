@@ -14,6 +14,7 @@ import java.io.IOException;
 import javax.swing.BorderFactory;
 import javax.swing.JTextField;
 
+import com.hexotic.lib.exceptions.ResourceException;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.v2.console.Log;
 
@@ -28,8 +29,8 @@ public class TextFieldWithPrompt extends JTextField {
 
 	private static final long serialVersionUID = 127422547464506328L;
 	private String prompt;
-	private Image confirm = Resources.getInstance().getImage("status/accept.png");
-	private Image deny = Resources.getInstance().getImage("status/deny.png");
+	private Image confirm = null;
+	private Image deny = null;
 
 	private boolean acceptedInput = false;
 
@@ -37,6 +38,11 @@ public class TextFieldWithPrompt extends JTextField {
 		super(text);
 		this.prompt = prompt;
 
+		try {
+			confirm = Resources.getInstance().getImage("status/accept.png");
+			deny = Resources.getInstance().getImage("status/deny.png");
+		} catch (ResourceException e1) { }
+		
 		this.setBorder(BorderFactory.createEmptyBorder(2, 2, 2, 25));
 		this.setForeground(new Color(0x424242));
 		try {

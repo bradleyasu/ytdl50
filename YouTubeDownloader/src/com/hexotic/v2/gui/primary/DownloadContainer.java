@@ -1,5 +1,6 @@
 package com.hexotic.v2.gui.primary;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -16,7 +17,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
-import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.layout.AnimatedGridLayout;
 import com.hexotic.v2.gui.primary.downloaditem.Item;
 import com.hexotic.v2.gui.theme.Theme;

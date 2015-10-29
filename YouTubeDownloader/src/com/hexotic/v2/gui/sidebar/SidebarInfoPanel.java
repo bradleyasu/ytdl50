@@ -1,5 +1,6 @@
 package com.hexotic.v2.gui.sidebar;
 
+import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GradientPaint;
@@ -8,12 +9,16 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JPanel;
 
 import com.hexotic.lib.ui.buttons.SoftButton;
+import com.hexotic.v2.console.Log;
 import com.hexotic.v2.downloader.popup.PopupFactory;
 import com.hexotic.v2.gui.support.AboutPanel;
 import com.hexotic.v2.gui.support.ContactPanel;
@@ -32,7 +37,8 @@ public class SidebarInfoPanel extends JPanel {
 
 		SoftButton aboutBtn = new SoftButton("About");
 		SoftButton releaseBtn = new SoftButton("Release Notes");
-		SoftButton bugsBtn = new SoftButton("Send Feedback");
+		SoftButton bugsBtn = new SoftButton("Feedback");
+		SoftButton donateBtn = new SoftButton("Donate");
 
 		aboutBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -51,10 +57,35 @@ public class SidebarInfoPanel extends JPanel {
 				PopupFactory.getPopupWindow().setPrompt(new ReleaseNotes());
 			}
 		});
+		
+		donateBtn.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e) {
+				String url = "http://donate.hexotic.net";
+
+		        if(Desktop.isDesktopSupported()){
+		            Desktop desktop = Desktop.getDesktop();
+		            try {
+		                desktop.browse(new URI(url));
+		            } catch (IOException ex) {
+		            	Log.getInstance().error(this, "Donate Error", ex);
+		            } catch (URISyntaxException e1) {
+		            	Log.getInstance().error(this, "Donate Error", e1);
+					}
+		        }else{
+		            Runtime runtime = Runtime.getRuntime();
+		            try {
+		                runtime.exec("xdg-open " + url);
+		            } catch (IOException ex) {
+		                Log.getInstance().error(this, "Donate Error", ex);
+		            }
+		        }
+			}
+		});
 
 		buttons.add(aboutBtn);
 		buttons.add(releaseBtn);
 		buttons.add(bugsBtn);
+		buttons.add(donateBtn);
 
 		for (SoftButton button : buttons) {
 			button.setPreferredSize(new Dimension(87, 25));
@@ -66,7 +97,7 @@ public class SidebarInfoPanel extends JPanel {
 			this.add(button);
 		}
 
-		buttons.get(buttons.size() - 1).setPreferredSize(new Dimension(179, 25));
+		//buttons.get(buttons.size() - 1).setPreferredSize(new Dimension(179, 25));
 
 	}
 

@@ -25,6 +25,7 @@ import javax.swing.JScrollPane;
 
 import org.apache.commons.validator.routines.EmailValidator;
 
+import com.hexotic.lib.exceptions.ResourceException;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.buttons.SoftButton;
 import com.hexotic.lib.ui.panels.SimpleScroller;
@@ -137,7 +138,9 @@ public class ContactPanel extends JPanel {
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
-		g2d.drawImage(Resources.getInstance().getImage("support/letter.png"), getWidth() - 102, getHeight() - 100, 100, 100, null);
+		try {
+			g2d.drawImage(Resources.getInstance().getImage("support/letter.png"), getWidth() - 102, getHeight() - 100, 100, 100, null);
+		} catch (ResourceException e) { }
 
 	}
 
