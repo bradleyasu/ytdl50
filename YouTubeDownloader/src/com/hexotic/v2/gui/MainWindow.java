@@ -151,13 +151,11 @@ public class MainWindow extends JFrame {
 					}
 				} else {
 					if(downloadContainer.isYoutubePlaylist(input)){
-//						try {
-//							downloadContainer.addPlaylist(input);
-//						} catch (Exception e) {
-//							Log.getInstance().error(this, "Failed to download playlist", e);
-//						}
-						// [TODO] Temporary fix
-						downloadContainer.addDownload(input.replaceAll("&list=.*", ""));
+						try {
+							downloadContainer.addPlaylist(input);
+						} catch (Exception e) {
+							Log.getInstance().error(this, "Failed to download playlist", e);
+						}
 					} else {
 						downloadContainer.addDownload(input);
 					}

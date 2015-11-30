@@ -1,6 +1,5 @@
 package com.hexotic.v2.gui.primary;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -18,6 +17,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
 import com.hexotic.lib.ui.layout.AnimatedGridLayout;
+import com.hexotic.v2.downloader.Downloader;
 import com.hexotic.v2.gui.primary.downloaditem.Item;
 import com.hexotic.v2.gui.theme.Theme;
 
@@ -47,31 +47,14 @@ public class DownloadContainer extends JPanel{
 	 * @throws Exception
 	 */
 	public void addPlaylist(String playlistUrl) throws Exception {
-		String playlistToken = extractYoutubePlaylistID(playlistUrl);
-		String[] playlists = new String[4];
-		if (playlistToken.equals("")) {
-			throw new Exception("Couldn't Extract Playlist Token");
-		}
-		playlists[0] = "https://gdata.youtube.com/feeds/api/playlists/" + playlistToken + "?v=1&start-index=1&max-results=50";
-		playlists[1] = "https://gdata.youtube.com/feeds/api/playlists/" + playlistToken + "?v=1&start-index=51&max-results=50";
-		playlists[2] = "https://gdata.youtube.com/feeds/api/playlists/" + playlistToken + "?v=1&start-index=101&max-results=50";
-		playlists[3] = "https://gdata.youtube.com/feeds/api/playlists/" + playlistToken + "?v=1&start-index=151&max-results=50";
 
-		for (String playlist : playlists) {
-			URL url = new URL(playlist);
-			URLConnection connection = url.openConnection();
-			Document doc = parseXML(connection.getInputStream());
-			NodeList descNodes = doc.getElementsByTagName("link");
-			for (int i = 0; i < descNodes.getLength(); i++) {
-				String videoUrl = descNodes.item(i).getAttributes().getNamedItem("href").toString();
-				videoUrl = videoUrl.replace("href=", "").replace("\"", "");
-				/* Only download the video if the url is a youtube video url (there are different urls throughout the page */
-				if(videoUrl.contains("youtube.com/watch?v=")){
-					addDownload(videoUrl);
-				}
+		Downloader downloader = new Downloader();
+		
+		for (String videoUrl : downloader.getPlaylistItems(playlistUrl)) {
+			if(videoUrl.contains("youtube.com/watch?v=")){
+				addDownload(videoUrl);
 			}
 		}
-
 	}
 
 	/**
@@ -82,7 +65,7 @@ public class DownloadContainer extends JPanel{
 	 * @return True if it's a playlist, false otherwise
 	 */
 	public boolean isYoutubePlaylist(String url) {
-		if (url.contains("youtube.com") && (url.contains("playlist?list=") || url.contains("&list="))) {
+		if (url.contains("youtube.com") && (url.contains("playlist?list="))) {
 			return true;
 		}
 		return false;

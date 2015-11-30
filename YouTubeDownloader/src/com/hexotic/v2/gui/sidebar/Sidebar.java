@@ -46,6 +46,18 @@ public class Sidebar extends JXCollapsiblePane {
 
 		sidebarItems.add(setupSwitch("audioFormat", "Download as:", "Video", "Audio", i++));
 
+		SidebarButton formatChooser = new SidebarButton("Preferred Formats", i++);
+		formatChooser.addActionListener(new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				FormatChooser prompt = new FormatChooser();
+				
+				PopupFactory.getPopupWindow().setPrompt(prompt);
+			}
+		});
+		
+//		sidebarItems.add(formatChooser);
+		
 		String downloadDir = Settings.getInstance().getProperty("downloadDir", "Desktop");
 		String[] arr = downloadDir.split("\\\\");
 		downloadDir = arr[arr.length - 1];
@@ -64,7 +76,9 @@ public class Sidebar extends JXCollapsiblePane {
 		// Maybe add this back if people want it
 //		sidebarItems.add(setupSwitch("quickPaste", "Quick paste: ", "Off", "On", i++));
 		sidebarItems.add(setupSwitch("removeOnComplete", "on complete: ", "Keep", "Remove", i++));
-		sidebarItems.add(setupSwitch("useProxy", "Proxy: ", "Disabled", "Enabled", i++));
+//		sidebarItems.add(setupSwitch("metadata", "metadata: ", "None", "Add", i++));
+//		sidebarItems.add(setupSwitch("subtitles", "vid subtitles: ", "None", "Embed", i++));
+		sidebarItems.add(setupSwitch("useProxy", "proxy: ", "Disabled", "Enabled", i++));
 
 		SidebarButton changeProxy = new SidebarButton("Configure Proxy Settings", i++);
 		changeProxy.addActionListener(new ActionListener(){

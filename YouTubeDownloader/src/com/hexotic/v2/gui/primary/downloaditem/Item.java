@@ -62,6 +62,10 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 	private boolean useProxy = false;
 
 	private boolean isAudio = false;
+	
+	private boolean includeMetadata = false;
+	private boolean subtitles = false;
+	
 
 	private boolean downloadStarted = false;
 
@@ -208,8 +212,11 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 					// should this download use a proxy?
 					useProxy = Settings.getInstance().getProperty("useProxy", "false").equals("true");
 					isAudio = Boolean.valueOf(Settings.getInstance().getProperty("audioFormat", "false"));
+					
+					includeMetadata = Boolean.valueOf(Settings.getInstance().getProperty("metadata", "false"));
+					subtitles = Boolean.valueOf(Settings.getInstance().getProperty("subtitles", "false"));
 
-					downloader.download(url, isAudio, downloadDir, useProxy);
+					downloader.download(url, isAudio, downloadDir, useProxy, includeMetadata, subtitles);
 
 					Log.getInstance().debug(this, "Download processing finished");
 					if (progress.getProgress() != 100) {

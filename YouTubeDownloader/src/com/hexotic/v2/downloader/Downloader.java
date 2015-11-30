@@ -11,6 +11,8 @@ import java.util.List;
 
 import javax.swing.ImageIcon;
 
+import org.json.JSONObject;
+
 import com.hexotic.utils.Settings;
 import com.hexotic.v2.console.Log;
 
@@ -52,12 +54,41 @@ public class Downloader {
 	 * @throws IOException
 	 */
 	public Image getThumbnailUrl(String url) throws IOException {
-		String[] args = {"--no-check-certificate", "--get-thumbnail", url };
+		String[] args = {"--no-check-certificate", "--get-thumbnail", "--no-playlist", url };
 		String thumbnailUrl = execute(args).trim();
 		thumbnailUrl = thumbnailUrl.replace("\\", "");
 		Log.getInstance().debug(this,"Loaded Image Thumnail: "+thumbnailUrl);
 		ImageIcon icon = new ImageIcon(new URL(thumbnailUrl));
 		return icon.getImage();
+	}
+	
+	
+	public static void main(String[] args) {
+		Downloader downloader = new Downloader();
+		try {
+			downloader.getPlaylistItems("https://www.youtube.com/watch?v=0LFVQpDKHk4&list=PL2EA61F5BAAFFCAD7");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public List<String> getPlaylistItems(String playlistUrl) throws IOException{
+		List<String> urls = new ArrayList<String>();
+		String[] args = {"--no-check-certificate", "-j", "--flat-playlist", playlistUrl};
+		String jsonRaw = execute(args).trim();
+		
+		System.out.println(jsonRaw);
+		String[] lines = jsonRaw.split("\n");
+		
+		for(String line : lines) {
+			JSONObject obj = new JSONObject(line);
+			String url = obj.getString("url");
+			urls.add("https://www.youtube.com/watch?v="+url);
+			
+		}
+		
+		return urls;
 	}
 	
 	/**
@@ -71,7 +102,7 @@ public class Downloader {
 	 * @throws IOException
 	 */
 	public String getTitle(String url) throws IOException {
-		String[] args = {"--no-check-certificate", "--get-title", url };
+		String[] args = {"--no-check-certificate", "--get-title", "--no-playlist", url };
 		String videoTitle = execute(args).trim();
 		Log.getInstance().debug(this,"Loaded Video Title: "+videoTitle);
 		return videoTitle;
@@ -90,7 +121,7 @@ public class Downloader {
 	 * 				The Location to download the video/audio (Desktop used by default)
 	 * @throws IOException
 	 */
-	public void download(String url, boolean audio, String downloadDirectory, boolean useProxy) throws IOException {
+	public void download(String url, boolean audio, String downloadDirectory, boolean useProxy, boolean metadata, boolean subtitles) throws IOException {
 		
 		// Create a chace for the arguments (not sure how many there will be yet)
 		List<String> argCache = new ArrayList<String>();
@@ -100,6 +131,21 @@ public class Downloader {
 			argCache.add("-x");
 			argCache.add("--audio-format");
 			argCache.add("mp3");
+		}
+		
+		argCache.add("--no-playlist");
+		
+		// TODO Get this working
+		if(subtitles) {
+			argCache.add("--embed-subs");
+		}
+		
+		if(metadata) {
+			argCache.add("--add-metadata");
+			if(audio){
+//				argCache.add("--embed-thumbnail");
+				//argCache.add("--metadata-from-title \"%(artist)s - %(title)s\"");
+			}
 		}
 		
 		// If proxy is enabled, generate proxy ip address from configurations and add youtube-dl arguments
@@ -186,7 +232,7 @@ public class Downloader {
 				
 		while ((line = stdInput.readLine()) != null) {
 			Log.getInstance().debug(this, line);
-			out.append(line);
+			out.append(line+"\n");
 			notifyListeners(line);
 		}
 		return out.toString();
