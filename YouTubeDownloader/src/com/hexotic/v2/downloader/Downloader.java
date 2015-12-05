@@ -131,7 +131,7 @@ public class Downloader {
 			argCache.add("-x");
 			argCache.add("--audio-format");
 			argCache.add("mp3");
-		} 
+		}
 		
 		argCache.add("--no-playlist");
 		
