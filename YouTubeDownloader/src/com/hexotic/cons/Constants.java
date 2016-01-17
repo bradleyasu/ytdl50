@@ -1,4 +1,7 @@
 package com.hexotic.cons;
+
+import java.net.URL;
+
 /**
  * This class contains constant variables that will be used throughout the
  * software. 
@@ -36,58 +39,6 @@ public class Constants {
 	public static final int DOWNLOAD_COMPLETE = 1;
 	public static final int DOWNLOAD_ABORTED = 2; 
 	public static final int DOWNLOAD_FAILED = 3;
-	
-	public static final String[] PHRASES = {"I pity the fool",
-												"Beam me up, Scotty",
-												"Live long and prosper",
-												"Who loves ya, baby?",
-												"Resistance is futile",
-												"Where's the beef?",
-												"Respect my authori-tah!",
-												"It's 1 vs. 100!",
-												"Zoinks!",
-												"More cowbell",
-												"Git-R-Done!",
-												"Time for Time Force!",
-												"Dyn-o-mite!",
-												"It's hero time",
-												"Worst download ever!",
-												"Go Home, Roger",
-												"I got it, mom!",
-												"Jinkies!",
-												"¡Ay, caramba!",
-												"Get the Steppin'",
-												"Survey says...",
-												"Mmmkay",
-												"KnoWhutImean?",
-												"You are so busted!",
-												"It's Morphin' time!",
-												"The Tribe has spoken.",
-												"Curse you Perry Platypus!",
-												"Hey there, Boo Boo!",
-												"Taste the Rainbow.",
-												"There can be only one",
-												"D'oh!",
-												"Kumbaya!",
-												"How You Doin'?",
-												"Bazinga!",
-												"Yada, yada, yada",
-												"They killed Kenny!",
-												"Swiper, no swiping!",
-												"Come on down!",
-												"Victory is mine!",
-												"Bite my shiny metal ass",
-												"Excellent!",
-												"I'm ready!",
-												"I'm going ghost!",
-												"Giggity",
-												"Don't tase me bro!",
-												"I'll be back",
-												"You talkin' to me?",
-												"To infinity and beyond!",
-												"Falcon Punch!",
-												"My Body is Ready"
-												};
-	
+
 
 }

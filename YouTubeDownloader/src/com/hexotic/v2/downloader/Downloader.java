@@ -272,9 +272,10 @@ public class Downloader {
 	 */
 	private String getDownloader() {
 		String OS = System.getProperty("os.name").toUpperCase();
+		String execDirectory = getClass().getProtectionDomain().getCodeSource().getLocation().toString();
 		String downloader;
 		if (OS.contains("WIN")) {
-			downloader = System.getenv("APPDATA") + "\\YouTube Downloader 5.0\\execs\\youtube-dl.exe";
+			downloader = execDirectory+ "\\execs\\youtube-dl.exe";
 		} else if (OS.contains("MAC")) {
 			downloader = System.getProperty("user.home") + "/Library/Application " + "Support";
 		} else if (OS.contains("NUX")) {
