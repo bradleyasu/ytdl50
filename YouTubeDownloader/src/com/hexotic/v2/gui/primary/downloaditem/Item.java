@@ -1,16 +1,20 @@
 package com.hexotic.v2.gui.primary.downloaditem;
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.RenderingHints;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-import javax.swing.BorderFactory;
 import javax.swing.JPanel;
 
 import com.hexotic.lib.exceptions.ResourceException;
@@ -68,13 +72,16 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 	
 
 	private boolean downloadStarted = false;
+	
+	private boolean hovering = false;
+	private List<ItemListener> listeners;
 
 	
 	public Item(String url, int id) {
 		this.id = id;
+		this.listeners = new ArrayList<ItemListener>();
 		this.setPreferredSize(new Dimension(Theme.DOWNLOAD_ITEM_WIDTH, Theme.DOWNLOAD_ITEM_HEIGHT));
 		this.setBackground(Theme.DOWNLOAD_ITEM_BACKGROUND);
-		this.setBorder(BorderFactory.createLineBorder(Theme.DOWNLOAD_ITEM_BORDER));
 		this.url = url;
 		try {
 			thumbnail = Resources.getInstance().getImage("item_default.png");
@@ -91,17 +98,70 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 		// Begin the "cycle" animation
 		progress.cycle();
 
-		
+		setupMenus();
 
 
 	}
+	
+	public void addItemListener(ItemListener listener){ 
+		listeners.add(listener);
+	}
 
+	private void setupMenus() {
+		this.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		
+		this.addMouseListener(new MouseListener() {
+
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent arg0) {
+				hovering = true;
+				refresh();
+			}
+
+			@Override
+			public void mouseExited(MouseEvent arg0) {
+				hovering = false;
+				refresh();
+			}
+
+			@Override
+			public void mousePressed(MouseEvent arg0) {
+				for(ItemListener listener : listeners){
+					listener.clicked();
+				}
+			}
+
+			@Override
+			public void mouseReleased(MouseEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+	}
+	
+	public void refresh() {
+		revalidate();
+		repaint();
+	}
+	
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
+		
+		Color border = Theme.DOWNLOAD_ITEM_BORDER;
+		if(hovering){
+			border = Theme.DOWNLOAD_ITEM_BORDER_HOVER;
+		}
+		
 		// Draw video thumbnail image
 		g2d.drawImage(thumbnail, 0, 0, getWidth(), getHeight() - 40, null);
 
@@ -113,7 +173,7 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 			progress.Draw(g, getWidth() / 2 - size / 2, 10, size, size);
 		}
 
-		// If proxy, draw somekind of indicator (in this case, a matrix face)
+		// If proxy, draw some kind of indicator (in this case, a matrix face)
 		if (downloaded && !failed) {
 			g2d.drawImage(Emoticon.SUCCESS, 5, 5, null);
 		} else if (failed) {
@@ -122,8 +182,11 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 			g2d.drawImage(Emoticon.FACE_MATRIX, 5, 5, null);
 		}
 
+		// Draw item border
+		g2d.setColor(border);
+		g2d.drawRect(0, 0, getWidth()-1, getHeight()-1);
+		
 		// Draw thumbnail splitter
-		g2d.setColor(Theme.DOWNLOAD_ITEM_BORDER);
 		g2d.drawLine(0, getHeight() - 40, getWidth(), getHeight() - 40);
 
 		// Draw Polygon
@@ -133,7 +196,7 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 		g2d.fillPolygon(xpoints, ypoints, 3);
 
 		// Draw Polygon border
-		g2d.setColor(Theme.DOWNLOAD_ITEM_BORDER);
+		g2d.setColor(border);
 		g2d.drawPolygon(xpoints, ypoints, 3);
 		g2d.setColor(Theme.DOWNLOAD_ITEM_BACKGROUND);
 		g2d.drawLine(xpoints[0] + 1, ypoints[0], xpoints[2] - 1, ypoints[2]);

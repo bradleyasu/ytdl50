@@ -4,8 +4,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.io.InputStream;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -14,11 +12,13 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
 
 import com.hexotic.lib.ui.layout.AnimatedGridLayout;
+import com.hexotic.lib.ui.panels.FlipPanel;
 import com.hexotic.v2.downloader.Downloader;
 import com.hexotic.v2.gui.primary.downloaditem.Item;
+import com.hexotic.v2.gui.primary.downloaditem.ItemListener;
+import com.hexotic.v2.gui.primary.downloaditem.ItemMenu;
 import com.hexotic.v2.gui.theme.Theme;
 
 public class DownloadContainer extends JPanel{
@@ -28,13 +28,25 @@ public class DownloadContainer extends JPanel{
 	private int counter = 0;
 	public DownloadContainer() {
 		this.setBackground(Theme.MAIN_BACKGROUND);
-		this.setLayout(new AnimatedGridLayout(true));
-
+		this.setLayout(new AnimatedGridLayout(false));
 	}
 	
 	public void addDownload(String url){
 		Item item = new Item(url, counter++);
-		this.add(item);
+		ItemMenu menu = new ItemMenu(item);
+
+		final FlipPanel flipper = new FlipPanel(item, menu);
+		flipper.setPreferredSize(item.getPreferredSize());
+		flipper.setDirection(FlipPanel.DOWN);
+		
+		item.addItemListener(new ItemListener(){
+			public void clicked(){
+				flipper.flip();
+			}
+		});
+		
+		//this.add(item);
+		this.add(flipper);
 		es.execute(item);
 	}
 	

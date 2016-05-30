@@ -131,6 +131,11 @@ public class Downloader {
 			argCache.add("-x");
 			argCache.add("--audio-format");
 			argCache.add("mp3");
+		} else {
+			argCache.add("--merge-output-format");
+			argCache.add("mp4");
+			argCache.add("--recode-video");
+			argCache.add("mp4");
 		}
 		
 		argCache.add("--no-playlist");
@@ -178,6 +183,25 @@ public class Downloader {
 		
 		// Execute yt-dl with parameters
 		execute(param);
+		
+	}
+	
+	/**
+	 * Iterates over several lines and tries to find the destination of the output file
+	 * if the file is in MP3 format.
+	 * 
+	 * @param output
+	 * @return
+	 */
+	private String findDestination(String output){
+		String[] data = output.split("\n");
+		String destination = "";
+		for(String s: data){
+			if(s.contains("[ffmpeg] Destination: ")){
+				destination = s.replace("[ffmpeg] Destination: ", "");
+			}
+		}
+		return destination;
 	}
 	
 	/**
@@ -272,10 +296,9 @@ public class Downloader {
 	 */
 	private String getDownloader() {
 		String OS = System.getProperty("os.name").toUpperCase();
-		String execDirectory = getClass().getProtectionDomain().getCodeSource().getLocation().toString();
 		String downloader;
 		if (OS.contains("WIN")) {
-			downloader = execDirectory+ "\\execs\\youtube-dl.exe";
+			downloader = System.getenv("APPDATA") + "\\YouTube Downloader 5.0\\execs\\youtube-dl.exe";
 		} else if (OS.contains("MAC")) {
 			downloader = System.getProperty("user.home") + "/Library/Application " + "Support";
 		} else if (OS.contains("NUX")) {
