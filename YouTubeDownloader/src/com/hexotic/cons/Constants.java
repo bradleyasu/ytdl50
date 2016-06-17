@@ -4,10 +4,10 @@ import java.net.URL;
 
 /**
  * This class contains constant variables that will be used throughout the
- * software. 
+ * software.  
  * 
  * The version number is will be sent to updater software to decide if updates
- * are required.
+ * are required. 
  * 
  * @author Bradley Sheets
  *
