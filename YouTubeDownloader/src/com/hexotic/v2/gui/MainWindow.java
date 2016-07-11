@@ -7,6 +7,10 @@ import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
+import java.io.File;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.util.zip.ZipException;
 
 import javax.swing.BorderFactory;
 import javax.swing.JDesktopPane;
@@ -19,6 +23,7 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 import com.hexotic.cons.Constants;
 import com.hexotic.lib.exceptions.ResourceException;
+import com.hexotic.lib.resource.FileInstall;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.panels.SimpleScroller;
 import com.hexotic.lib.util.WinOps;
@@ -107,11 +112,12 @@ public class MainWindow extends JFrame {
 		// }
 		//sidebar.toggle();
 		new Thread(downloadBar).start();
-		checkForUpdates();
-		
 		// Check version number
 		checkVersion();
 		
+		
+		// Check for updates
+		checkForUpdates();
 	}
 
 	private void createMain() {
@@ -251,6 +257,45 @@ public class MainWindow extends JFrame {
 		if (showRelease){
 			PopupFactory.getPopupWindow().setPrompt(new ReleaseNotes());
 			Settings.getInstance().saveProperty("release", Constants.VERSION); 
+			
+			updateExecs();
 		}
+	}
+	
+	private void updateExecs() {
+		
+		String execs = getExecPath();
+		Log.getInstance().debug(this, "Updating execs...");
+		try {
+			Resources.getInstance().installFile("youtube-dl.exe", execs+"youtube-dl.exe");
+			Log.getInstance().debug(this, "youtube-dl Updated");
+			
+			Resources.getInstance().installFile("ffmpeg.exe", execs+"ffmpeg.exe");
+			Log.getInstance().debug(this, "FFMpeg Updated");
+			
+			Resources.getInstance().installFile("ffplay.exe", execs+"ffplay.exe");
+			Log.getInstance().debug(this, "FFPlay Updated");
+			
+			Resources.getInstance().installFile("ffprobe.exe", execs+"ffprobe.exe");
+			Log.getInstance().debug(this, "FFProbe Updated");
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private String getExecPath() {
+		String OS = System.getProperty("os.name").toUpperCase();
+		String downloader;
+		if (OS.contains("WIN")) {
+			downloader = System.getenv("APPDATA") + "\\YouTube Downloader 5.0\\execs\\";
+		} else if (OS.contains("MAC")) {
+			downloader = System.getProperty("user.home") + "/Library/Application " + "Support";
+		} else if (OS.contains("NUX")) {
+			downloader = System.getProperty("user.home");
+		} else {
+			downloader = "";
+		}
+		return downloader;
 	}
 }

@@ -5,14 +5,17 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.zip.ZipException;
 
 import javax.swing.ImageIcon;
 
 import org.json.JSONObject;
 
+import com.hexotic.lib.resource.FileInstall;
 import com.hexotic.utils.Settings;
 import com.hexotic.v2.console.Log;
 
@@ -132,8 +135,8 @@ public class Downloader {
 			argCache.add("--audio-format");
 			argCache.add("mp3");
 		} else {
-			argCache.add("--merge-output-format");
-			argCache.add("mp4");
+			argCache.add("-f");
+			argCache.add("bestvideo+bestaudio");
 			argCache.add("--recode-video");
 			argCache.add("mp4");
 		}
@@ -308,4 +311,5 @@ public class Downloader {
 		}
 		return downloader;
 	}
+	
 }

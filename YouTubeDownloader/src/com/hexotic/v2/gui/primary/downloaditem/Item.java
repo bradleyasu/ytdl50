@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.FontFormatException;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -19,6 +20,7 @@ import javax.swing.JPanel;
 
 import com.hexotic.lib.exceptions.ResourceException;
 import com.hexotic.lib.resource.Resources;
+import com.hexotic.lib.ui.loaders.ProgressCircle;
 import com.hexotic.utils.Settings;
 import com.hexotic.v2.console.Log;
 import com.hexotic.v2.downloader.DownloadListener;
@@ -75,6 +77,8 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 	
 	private boolean hovering = false;
 	private List<ItemListener> listeners;
+	
+	private Font font = new Font("Arial", Font.BOLD, 28);
 
 	
 	public Item(String url, int id) {
@@ -87,6 +91,15 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 			thumbnail = Resources.getInstance().getImage("item_default.png");
 		} catch (ResourceException e) {	}
 		
+		try {
+			font = Resources.getInstance().getFont("default.ttf");
+			font = font.deriveFont(28.0f);
+		} catch (FontFormatException e) {
+			Log.getInstance().error(this, "Couldn't load font in progress elements", e);
+		} catch (IOException e) {
+			Log.getInstance().error(this, "Couldn't load font in progress elements", e);
+		}
+		
 		downloader = new Downloader();
 
 		// Create a new progress for this item
@@ -95,12 +108,18 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 		// Colorize the progress circle with the YT downloader theme
 		progress.setColor(Theme.MAIN_COLOR_TWO, Theme.MAIN_COLOR_THREE);
 
+		progress.setFont(font);
+		
 		// Begin the "cycle" animation
 		progress.cycle();
 
 		setupMenus();
 
 
+	}
+	
+	public String getUrl(){
+		return url;
 	}
 	
 	public void addItemListener(ItemListener listener){ 
@@ -166,18 +185,27 @@ public class Item extends JPanel implements Runnable, Comparable<Item> {
 		g2d.drawImage(thumbnail, 0, 0, getWidth(), getHeight() - 40, null);
 
 		// draw dark overlay
-		if (progress.getProgress() < 100) {
+		if (progress.getProgress() < 100 || !downloaded) {
 			g2d.setPaint(new Color(0, 0, 0, 145));
 			g2d.fillRect(0, 0, getWidth(), getHeight() - 40);
 			int size = getWidth() / 2;
 			progress.Draw(g, getWidth() / 2 - size / 2, 10, size, size);
 		}
+		
+		if (progress.getProgress() == 100 && !downloaded){
+			g2d.setColor(Theme.MAIN_BACKGROUND);
+			g2d.setFont(g2d.getFont().deriveFont((float) 14.0).deriveFont(Font.BOLD));
+			progress.showText(false);
+			g2d.drawString("converting", getWidth()/2-40, getHeight()/2-15);
+		}
 
 		// If proxy, draw some kind of indicator (in this case, a matrix face)
 		if (downloaded && !failed) {
 			g2d.drawImage(Emoticon.SUCCESS, 5, 5, null);
+			progress.stopCycle();
 		} else if (failed) {
 			g2d.drawImage(Emoticon.WARNING, 5, 5, null);
+			progress.stopCycle();
 		} else if (useProxy) {
 			g2d.drawImage(Emoticon.FACE_MATRIX, 5, 5, null);
 		}

@@ -1,9 +1,14 @@
 package com.hexotic.v2.gui.primary;
 
+import java.awt.Desktop;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.RenderingHints;
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -13,12 +18,12 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.w3c.dom.Document;
 
+import com.hexotic.lib.exceptions.ResourceException;
+import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.layout.AnimatedGridLayout;
-import com.hexotic.lib.ui.panels.FlipPanel;
 import com.hexotic.v2.downloader.Downloader;
 import com.hexotic.v2.gui.primary.downloaditem.Item;
 import com.hexotic.v2.gui.primary.downloaditem.ItemListener;
-import com.hexotic.v2.gui.primary.downloaditem.ItemMenu;
 import com.hexotic.v2.gui.theme.Theme;
 
 public class DownloadContainer extends JPanel{
@@ -28,25 +33,32 @@ public class DownloadContainer extends JPanel{
 	private int counter = 0;
 	public DownloadContainer() {
 		this.setBackground(Theme.MAIN_BACKGROUND);
-		this.setLayout(new AnimatedGridLayout(false));
+		this.setLayout(new AnimatedGridLayout(true));
 	}
 	
 	public void addDownload(String url){
-		Item item = new Item(url, counter++);
-		ItemMenu menu = new ItemMenu(item);
-
-		final FlipPanel flipper = new FlipPanel(item, menu);
-		flipper.setPreferredSize(item.getPreferredSize());
-		flipper.setDirection(FlipPanel.DOWN);
-		
+		final Item item = new Item(url, counter++);
+//		ItemMenu menu = new ItemMenu(item);
+//
+//		final FlipPanel flipper = new FlipPanel(item, menu);
+//		flipper.setPreferredSize(item.getPreferredSize());
+//		flipper.setDirection(FlipPanel.DOWN);
+//		
 		item.addItemListener(new ItemListener(){
 			public void clicked(){
-				flipper.flip();
+//				flipper.flip();
+				if(Desktop.isDesktopSupported()) {
+				  try {
+					Desktop.getDesktop().browse(new URI(item.getUrl()));
+					} catch (IOException e) {}
+					  catch (URISyntaxException e) {
+					}
+				}
 			}
 		});
 		
-		//this.add(item);
-		this.add(flipper);
+		this.add(item);
+		//this.add(flipper);
 		es.execute(item);
 	}
 	
@@ -136,8 +148,15 @@ public class DownloadContainer extends JPanel{
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		g2d.setColor(Theme.MAIN_COLOR_FOUR);
-		g2d.drawLine(0, getHeight()-1, getWidth(), getHeight()-1);
-
+		g2d.fillRect(0, getHeight()-3, getWidth(), getHeight());
+		
+		// Draw 'welcome' message image
+		if(counter == 0){
+			try {
+				Image img = Resources.getInstance().getImage("background.png");
+				g2d.drawImage(img, 0, 0,null);
+			} catch (ResourceException e) { }
+		}
 		
 	}
 }

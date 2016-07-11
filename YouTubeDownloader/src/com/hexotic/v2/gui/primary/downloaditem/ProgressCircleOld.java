@@ -24,7 +24,7 @@ import com.hexotic.v2.gui.theme.Theme;
  * @author Bradley Sheets
  * 
  */
-public class ProgressCircle implements Drawable, Runnable {
+public class ProgressCircleOld implements Drawable, Runnable {
 
 	/* By Default, the progress is 0% */
 	private double progress = 0;
@@ -37,7 +37,7 @@ public class ProgressCircle implements Drawable, Runnable {
 	private Font font = new Font("Arial", Font.BOLD, 28);
 	private boolean cycle = false;
 
-	public ProgressCircle() {
+	public ProgressCircleOld() {
 
 		try {
 			font = Resources.getInstance().getFont("default.ttf");

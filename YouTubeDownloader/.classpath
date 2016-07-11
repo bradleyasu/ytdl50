@@ -5,10 +5,10 @@
 	<classpathentry kind="lib" path="D:/Downloads/swingx-all-1.6.3.jar"/>
 	<classpathentry kind="lib" path="D:/Java Libraries/commons-validator-1.4.0.jar"/>
 	<classpathentry kind="lib" path="D:/Java Libraries/JID3.jar"/>
-	<classpathentry kind="lib" path="D:/Java Libraries/HexLib.jar"/>
 	<classpathentry kind="lib" path="D:/Java Libraries/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="D:/Java Libraries/mail.jar"/>
 	<classpathentry kind="lib" path="D:/Java Libraries/Ini4j/ini4j-0.5.2-SNAPSHOT.jar"/>
 	<classpathentry kind="lib" path="D:/Java Libraries/Json.jar"/>
+	<classpathentry kind="lib" path="D:/Java Libraries/HexLib.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
