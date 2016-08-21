@@ -1,6 +1,5 @@
 package com.hexotic.cons;
 
-import java.net.URL;
 
 /**
  * This class contains constant variables that will be used throughout the
@@ -14,7 +13,7 @@ import java.net.URL;
  */
 public class Constants { 
 
-	public static final String VERSION = "5.1.3";
+	public static final String VERSION = "5.1.4";
 	
 	public static final String PROG_NAME = "Youtube Downloader";
 	public static final String COMPANY_NAME = "Hexotic Software";

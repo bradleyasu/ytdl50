@@ -126,7 +126,7 @@ public class Downloader {
 	 */
 	public void download(String url, boolean audio, String downloadDirectory, boolean useProxy, boolean metadata, boolean subtitles) throws IOException {
 		
-		// Create a chace for the arguments (not sure how many there will be yet)
+		// Create a cache for the arguments (not sure how many there will be yet)
 		List<String> argCache = new ArrayList<String>();
 
 		// If audio, add youtube-dl arguments for converting to audio format
@@ -135,13 +135,14 @@ public class Downloader {
 			argCache.add("--audio-format");
 			argCache.add("mp3");
 		} else {
-			argCache.add("-f");
-			argCache.add("bestvideo+bestaudio");
+			if(url.contains("youtube") || url.contains("youtu.be")){
+				argCache.add("-f");
+				argCache.add("bestvideo+bestaudio");				
+				argCache.add("--no-playlist");
+			}
 			argCache.add("--recode-video");
 			argCache.add("mp4");
 		}
-		
-		argCache.add("--no-playlist");
 		
 		// TODO Get this working
 		if(subtitles) {
