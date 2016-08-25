@@ -28,6 +28,7 @@ import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.panels.SimpleScroller;
 import com.hexotic.lib.util.WinOps;
 import com.hexotic.utils.Settings;
+import com.hexotic.v2.commandbuilder.CommandBuilder;
 import com.hexotic.v2.console.Console;
 import com.hexotic.v2.console.Log;
 import com.hexotic.v2.downloader.Downloader;
@@ -118,6 +119,9 @@ public class MainWindow extends JFrame {
 		
 		// Check for updates
 		checkForUpdates();
+		
+		// Quick commandbuilder call which will auto-load files.  we could wait, but why not take care of it now
+		CommandBuilder.builder();
 	}
 
 	private void createMain() {

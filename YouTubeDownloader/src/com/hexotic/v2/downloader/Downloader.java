@@ -5,18 +5,18 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.ZipException;
 
 import javax.swing.ImageIcon;
 
 import org.json.JSONObject;
 
-import com.hexotic.lib.resource.FileInstall;
 import com.hexotic.utils.Settings;
+import com.hexotic.v2.commandbuilder.CommandBuilder;
+import com.hexotic.v2.commandbuilder.CommandList;
+import com.hexotic.v2.commandbuilder.DomainCommands;
 import com.hexotic.v2.console.Log;
 
 /**
@@ -130,50 +130,15 @@ public class Downloader {
 		List<String> argCache = new ArrayList<String>();
 
 		// If audio, add youtube-dl arguments for converting to audio format
+		DomainCommands commands = CommandBuilder.builder().getCommands(url);
+		CommandList commandList = commands.getVideoCommands();
 		if(audio){
-			argCache.add("-x");
-			argCache.add("--audio-format");
-			argCache.add("mp3");
-		} else {
-			if(url.contains("youtube") || url.contains("youtu.be")){
-				argCache.add("-f");
-				argCache.add("bestvideo+bestaudio");				
-				argCache.add("--no-playlist");
-			}
-			argCache.add("--recode-video");
-			argCache.add("mp4");
+			commandList = commands.getAudioCommands();
 		}
 		
-		// TODO Get this working
-		if(subtitles) {
-			argCache.add("--embed-subs");
+		for(String command : commandList.getCommands()) {
+			argCache.add(command);
 		}
-		
-		if(metadata) {
-			argCache.add("--add-metadata");
-			if(audio){
-//				argCache.add("--embed-thumbnail");
-				//argCache.add("--metadata-from-title \"%(artist)s - %(title)s\"");
-			}
-		}
-		
-		// If proxy is enabled, generate proxy ip address from configurations and add youtube-dl arguments
-		if(useProxy){
-			boolean isHttps = Settings.getInstance().getProperty("proxyIsHttps", "false").equals("true");
-			String ip = Settings.getInstance().getProperty("proxyIP", "");
-			String port = Settings.getInstance().getProperty("proxyPort", "8080");
-		
-			argCache.add("--proxy");
-			
-			// Generate the proxy url
-			if(isHttps){
-				argCache.add("https://"+ip+":"+port);
-			} else {
-				argCache.add("http://"+ip+":"+port);
-			}
-			
-		}
-		argCache.add("--no-check-certificate");
 		argCache.add("-o");
 		argCache.add("\""+downloadDirectory+"\\%(title)s.%(ext)s\"");
 		argCache.add(url);
