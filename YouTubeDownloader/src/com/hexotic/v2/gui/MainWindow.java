@@ -258,11 +258,19 @@ public class MainWindow extends JFrame {
 			showRelease = true;
 		}
 		
-		if (showRelease){
+		if (showRelease && Settings.getOS().equals("WIN")){
 			PopupFactory.getPopupWindow().setPrompt(new ReleaseNotes());
 			Settings.getInstance().saveProperty("release", Constants.VERSION); 
 			
 			updateExecs();
+		}
+		else if (Settings.getOS().equals("MAC")) {
+			if (showRelease) {
+				PopupFactory.getPopupWindow().setPrompt(new ReleaseNotes());
+				Settings.getInstance().saveProperty("release", Constants.VERSION); 
+			}
+			// If Mac, always make sure execs are updated
+			updateMacExecs();
 		}
 		
 	}
@@ -272,32 +280,44 @@ public class MainWindow extends JFrame {
 		String execs = getExecPath();
 		Log.getInstance().debug(this, "Updating execs...");
 		try {
-			Resources.getInstance().installFile("youtube-dl.exe", execs+"youtube-dl.exe");
-			Log.getInstance().debug(this, "youtube-dl Updated");
-			
-			Resources.getInstance().installFile("ffmpeg.exe", execs+"ffmpeg.exe");
-			Log.getInstance().debug(this, "FFMpeg Updated");
-			
-			Resources.getInstance().installFile("ffplay.exe", execs+"ffplay.exe");
-			Log.getInstance().debug(this, "FFPlay Updated");
-			
-			Resources.getInstance().installFile("ffprobe.exe", execs+"ffprobe.exe");
-			Log.getInstance().debug(this, "FFProbe Updated");
-			
+			if (Settings.getOS().contains("WIN")) {
+				Resources.getInstance().installFile("youtube-dl.exe", execs+"youtube-dl.exe");
+				Log.getInstance().debug(this, "youtube-dl Updated");
+				
+				Resources.getInstance().installFile("ffmpeg.exe", execs+"ffmpeg.exe");
+				Log.getInstance().debug(this, "FFMpeg Updated");
+				
+				Resources.getInstance().installFile("ffplay.exe", execs+"ffplay.exe");
+				Log.getInstance().debug(this, "FFPlay Updated");
+				
+				Resources.getInstance().installFile("ffprobe.exe", execs+"ffprobe.exe");
+				Log.getInstance().debug(this, "FFProbe Updated");
+			}			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 	
+	private void updateMacExecs() {
+		String execs = getExecPath();
+		Log.getInstance().debug(this, "Updating execs...");
+		try {
+			if (Settings.getOS().contains("MAC")) {
+				// TODO Get youtube-dl and ffmpeg if not there, else update
+			}			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	private String getExecPath() {
-		String OS = System.getProperty("os.name").toUpperCase();
 		String downloader;
-		if (OS.contains("WIN")) {
+		if (Settings.getOS().contains("WIN")) {
 			downloader = System.getenv("APPDATA") + "\\YouTube Downloader 5.0\\execs\\";
-		} else if (OS.contains("MAC")) {
-			downloader = System.getProperty("user.home") + "/Library/Application " + "Support";
-		} else if (OS.contains("NUX")) {
-			downloader = System.getProperty("user.home");
+		} else if (Settings.getOS().contains("MAC")) {
+			downloader = "/usr/local/bin/";
+		} else if (Settings.getOS().contains("NUX")) {
+			downloader = "/usr/local/bin/";
 		} else {
 			downloader = "";
 		}
