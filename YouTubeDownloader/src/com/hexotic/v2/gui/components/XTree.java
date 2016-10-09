@@ -15,6 +15,7 @@ import javax.swing.tree.DefaultTreeCellRenderer;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeNode;
 
+import com.hexotic.utils.Settings;
 import com.hexotic.v2.gui.theme.Theme;
 
 public class XTree extends JTree{
@@ -39,10 +40,23 @@ public class XTree extends JTree{
 
 	private String getFilePathFromNode(DefaultMutableTreeNode node){
 		String path = "";
-		for(TreeNode t : node.getPath()){
-			path = path + ((DefaultMutableTreeNode)t).toString()+"\\";
+		if (Settings.getOS().contains("WIN")) {
+			for(TreeNode t : node.getPath()){
+				path = path + ((DefaultMutableTreeNode)t).toString()+"\\";
+			}
+		} else if (Settings.getOS().contains("MAC")) {
+			boolean first = true;
+			for(TreeNode t : node.getPath()){
+				path = path + ((DefaultMutableTreeNode)t).toString()+"/";
+			}
 		}
 		path = path.substring(1, path.length()-1);
+		//  If mac or linux remove extra / in beginning of path
+		if (!Settings.getOS().contains("WIN")) {
+			if (path.length() > 1) {
+				path = path.substring(1);
+			}
+		}
 		return path;
 	}
 	

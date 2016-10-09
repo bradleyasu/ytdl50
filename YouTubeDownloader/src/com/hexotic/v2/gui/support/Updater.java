@@ -6,19 +6,20 @@ import java.io.InputStreamReader;
 import java.lang.management.ManagementFactory;
 
 import com.hexotic.cons.Constants;
+import com.hexotic.utils.Settings;
 import com.hexotic.v2.console.Log;
 import com.hexotic.v2.gui.MainWindow;
 
 public class Updater {
 	private String updater;
 	public Updater(){
-	    String OS = System.getProperty("os.name").toUpperCase();
-	    if (OS.contains("WIN")){
+		if (Settings.getOS().contains("WIN")){
 	        updater = System.getenv("APPDATA")+"\\YouTube Downloader 5.0\\execs\\uplink.exe";
 	        updateCheck();
-	    }else if (OS.contains("MAC")){
-	        updater = System.getProperty("user.home") + "/Library/Application " + "Support";
-	    }else if (OS.contains("NUX")){
+	    } else if (Settings.getOS().contains("MAC")) {
+	    	// TODO - Debug this 
+			updater = "/Library/Application Support/YouTube Downloader 5.0/execs";
+	    }else if (Settings.getOS().contains("NUX")){
 	        updater = System.getProperty("user.home");
 	    }else{
 	    	updater = "UNKNOWN";

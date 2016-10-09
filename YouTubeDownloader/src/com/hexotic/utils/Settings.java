@@ -13,7 +13,13 @@ public class Settings {
 	private Properties prop;
 	private File settings;
 	private Settings(){
-		settings = new File(getSettingsDirectory()+"\\"+settingsFile);
+		if (getOS().contains("WIN")) {
+			settings = new File(getSettingsDirectory()+"\\"+settingsFile);
+		}
+		else {
+			// Linux or Mac?
+			settings = new File(getSettingsDirectory()+"/"+settingsFile);
+		}
 		prop = new Properties();
 		if(settings.exists()){
 			try {
@@ -44,7 +50,9 @@ public class Settings {
 		return instance;
 	}
 	
-	
+	public static String getOS() {
+		return System.getProperty("os.name").toUpperCase();
+	}
 	
 	public File getSettingsDirectory() {
 	    String userHome = System.getProperty("user.home");

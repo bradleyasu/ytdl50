@@ -21,6 +21,7 @@ import org.w3c.dom.Document;
 import com.hexotic.lib.exceptions.ResourceException;
 import com.hexotic.lib.resource.Resources;
 import com.hexotic.lib.ui.layout.AnimatedGridLayout;
+import com.hexotic.utils.Settings;
 import com.hexotic.v2.downloader.Downloader;
 import com.hexotic.v2.gui.primary.downloaditem.Item;
 import com.hexotic.v2.gui.primary.downloaditem.ItemListener;
@@ -147,8 +148,15 @@ public class DownloadContainer extends JPanel{
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		g2d.setColor(Theme.MAIN_COLOR_FOUR);
-		g2d.fillRect(0, getHeight()-3, getWidth(), getHeight());
+
+		if (!Settings.getOS().contains("MAC")) {
+			g2d.setColor(Theme.MAIN_COLOR_FOUR);
+			g2d.drawLine(0, getHeight()-1, getWidth(), getHeight()-1);
+		}
+		else {
+			g2d.setColor(Theme.MAIN_COLOR_FOUR);
+			g2d.drawLine(0, getHeight()-1, getWidth(), getHeight()-1);
+		}
 		
 		// Draw 'welcome' message image
 		if(counter == 0){

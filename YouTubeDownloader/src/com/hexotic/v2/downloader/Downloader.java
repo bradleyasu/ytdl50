@@ -140,7 +140,12 @@ public class Downloader {
 			argCache.add(command);
 		}
 		argCache.add("-o");
-		argCache.add("\""+downloadDirectory+"\\%(title)s.%(ext)s\"");
+		if (Settings.getOS().contains("WIN")) {
+			argCache.add("\""+downloadDirectory+"\\%(title)s.%(ext)s\"");
+		}
+		else if (Settings.getOS().contains("MAC")) {
+			argCache.add(""+downloadDirectory+"/%(title)s.%(ext)s");
+		}
 		argCache.add(url);
 		
 		
@@ -264,13 +269,12 @@ public class Downloader {
 	 * @return Path to the Youtube-DL executable on the local operating system
 	 */
 	private String getDownloader() {
-		String OS = System.getProperty("os.name").toUpperCase();
 		String downloader;
-		if (OS.contains("WIN")) {
+		if (Settings.getOS().contains("WIN")) {
 			downloader = System.getenv("APPDATA") + "\\YouTube Downloader 5.0\\execs\\youtube-dl.exe";
-		} else if (OS.contains("MAC")) {
-			downloader = System.getProperty("user.home") + "/Library/Application " + "Support";
-		} else if (OS.contains("NUX")) {
+		} else if (Settings.getOS().contains("MAC")) {
+			downloader = "/usr/local/bin/youtube-dl";
+		} else if (Settings.getOS().contains("NUX")) {
 			downloader = System.getProperty("user.home");
 		} else {
 			downloader = UNKNOWN;
