@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="/Libraries/apache/log4j/builds/2.17/log4j-1.2.17.jar"/>
 	<classpathentry kind="lib" path="/Libraries/apache/commons-email/old/mail.jar"/>
 	<classpathentry kind="lib" path="/Libraries/swingx/swingx-all-1.6.4.jar"/>
+	<classpathentry kind="lib" path="/Libraries/json/Json.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

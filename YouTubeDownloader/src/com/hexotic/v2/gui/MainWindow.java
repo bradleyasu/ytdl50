@@ -264,6 +264,7 @@ public class MainWindow extends JFrame {
 			
 			updateExecs();
 		}
+		
 	}
 	
 	private void updateExecs() {
