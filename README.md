@@ -1,3 +1,6 @@
+This version is no longer active.  Version 6.0 is code named Stacher and can be found at: https://stacher.io/  <3
+======
+
 YouTube Downloader 5.0 HD
 ======
 
